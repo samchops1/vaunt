@@ -20,16 +20,29 @@ A web-based APK decompiler tool that extracts and displays the contents of Andro
 
 ## Recent Changes
 - 2025-11-03: Initial project setup with React frontend and Flask backend
+- 2025-11-03: Implemented secure APK extraction with path validation and symlink protection
+- 2025-11-03: Added androguard library for binary AndroidManifest.xml parsing
+- 2025-11-03: Implemented file download functionality with hover buttons
 
 ## Features
-- APK file upload with drag-and-drop
-- Extract and parse AndroidManifest.xml
-- Display APK information (package name, version, permissions)
-- File tree navigation of APK contents
-- Download extracted files
+- APK file upload with drag-and-drop interface
+- Binary AndroidManifest.xml parsing using androguard
+- Display APK information (package name, version, permissions, activities)
+- Interactive file tree navigation with expand/collapse
+- Individual file download with secure path validation
+- Security features: directory traversal protection, zip-slip prevention, symlink blocking
 
 ## Architecture
-- Frontend runs on port 5000 (Vite dev server)
+- Frontend runs on port 5000 (Vite dev server with proxy to backend)
 - Backend runs on port 8000 (Flask API)
-- APK files are uploaded to backend, extracted, and analyzed
+- APK files are uploaded to backend, extracted securely, and analyzed
+- Androguard library handles binary manifest parsing
 - Results returned as JSON to frontend for display
+- Download endpoint validates all paths and rejects symlinks
+
+## Security Features
+- Filename sanitization on upload
+- Safe ZIP extraction with path validation
+- Symlink detection and rejection
+- Directory traversal prevention on downloads
+- Proper error handling and cleanup on failures
