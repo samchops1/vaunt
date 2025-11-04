@@ -7,9 +7,9 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 5000,
     allowedHosts: true,
-    hmr: {
-      port: 5000,
-      host: '0.0.0.0'
+    hmr: false,
+    watch: {
+      usePolling: true
     }
   }
 })
