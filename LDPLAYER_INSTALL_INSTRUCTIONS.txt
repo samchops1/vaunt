@@ -1,0 +1,189 @@
+================================================================================
+LDPLAYER - INSTALL MODIFIED RKSTO RAGE WITH PROPER PERMISSIONS
+================================================================================
+
+METHOD 1: Using ADB (RECOMMENDED - Works Every Time)
+================================================================================
+
+STEP 1: Connect ADB to LDPlayer
+-------------------------------
+1. Open Command Prompt or PowerShell on Windows
+2. Navigate to LDPlayer ADB:
+   cd "C:\Program Files\LDPlayer9\"
+   
+   (Or wherever LDPlayer is installed)
+
+3. Connect to LDPlayer:
+   adb connect 127.0.0.1:5555
+   
+   (If port 5555 doesn't work, try 5556, 5557, etc.)
+
+4. Verify connection:
+   adb devices
+   
+   You should see: 127.0.0.1:5555    device
+
+
+STEP 2: Stop the Vaunt App
+---------------------------
+adb shell am force-stop com.volato.vaunt
+
+
+STEP 3: Get Root Access
+------------------------
+adb root
+
+(If this fails, continue anyway - LDPlayer usually has root by default)
+
+
+STEP 4: Push the Modified Database
+-----------------------------------
+1. Copy RKStorage_MODIFIED_PREMIUM to your Windows desktop or Downloads
+
+2. Push it to the device:
+   adb push "C:\Users\YourUsername\Downloads\RKStorage_MODIFIED_PREMIUM" /data/data/com.volato.vaunt/databases/RKStorage
+
+
+STEP 5: Set Correct Permissions
+--------------------------------
+adb shell
+
+Then inside the shell:
+su
+cd /data/data/com.volato.vaunt/databases/
+chmod 660 RKStorage
+chown u0_a###:u0_a### RKStorage
+
+(Replace ### with the actual app UID - you can check with: ls -la)
+
+Or simply:
+chmod 660 RKStorage
+chown system:system RKStorage
+
+Exit the shell:
+exit
+exit
+
+
+STEP 6: Clear App Cache (Optional but Recommended)
+---------------------------------------------------
+adb shell pm clear com.volato.vaunt
+
+WARNING: This will log you out! You'll need to log back in.
+
+
+STEP 7: Launch the App
+-----------------------
+Open Vaunt app in LDPlayer and log in.
+You should now have Cabin+ premium!
+
+
+================================================================================
+METHOD 2: Using Root File Manager Inside LDPlayer (EASIER)
+================================================================================
+
+STEP 1: Install Root File Manager
+----------------------------------
+1. Open Play Store in LDPlayer
+2. Search for "Root Explorer" or "MiXplorer"
+3. Install it
+
+
+STEP 2: Transfer Modified Database to LDPlayer
+-----------------------------------------------
+1. Put RKStorage_MODIFIED_PREMIUM in:
+   C:\Users\YourUsername\Documents\LDPlayer\download\
+
+2. It will appear in LDPlayer at:
+   /sdcard/Download/RKStorage_MODIFIED_PREMIUM
+
+
+STEP 3: Close Vaunt App Completely
+-----------------------------------
+- Swipe up from bottom → Close Vaunt
+- Or Settings → Apps → Vaunt → Force Stop
+
+
+STEP 4: Use Root File Manager
+------------------------------
+1. Open Root Explorer/MiXplorer
+2. Grant root access when prompted (IMPORTANT!)
+3. Navigate to: /sdcard/Download/
+4. Long-press RKStorage_MODIFIED_PREMIUM → Copy
+5. Navigate to: /data/data/com.volato.vaunt/databases/
+6. Delete or rename the old RKStorage file
+7. Paste the new file
+8. Rename it to exactly: RKStorage (remove _MODIFIED_PREMIUM)
+
+
+STEP 5: Fix Permissions in Root File Manager
+---------------------------------------------
+1. Long-press RKStorage
+2. Properties or Permissions
+3. Set permissions to: rw-rw---- (660)
+   - Owner: Read + Write
+   - Group: Read + Write  
+   - Others: None
+
+
+STEP 6: Launch App
+-------------------
+Open Vaunt and log in. You should have Cabin+ premium!
+
+
+================================================================================
+METHOD 3: Direct Windows File Access (If LDPlayer is Closed)
+================================================================================
+
+STEP 1: CLOSE LDPLAYER COMPLETELY
+----------------------------------
+Exit LDPlayer entirely (not just minimize)
+
+
+STEP 2: Locate LDPlayer Data Directory
+---------------------------------------
+Navigate to:
+C:\Users\YourUsername\AppData\Roaming\LDPlayer9\vms\leidian0\data\data\com.volato.vaunt\databases\
+
+(AppData is a hidden folder - enable "Show hidden files" in Windows Explorer)
+
+
+STEP 3: Replace the File
+-------------------------
+1. Delete or rename RKStorage
+2. Copy RKStorage_MODIFIED_PREMIUM here
+3. Rename to: RKStorage
+
+
+STEP 4: Start LDPlayer
+-----------------------
+Launch LDPlayer and run Vaunt app
+
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Issue: "Operation cannot be completed" error
+Solution: 
+- Make sure Vaunt app is FORCE STOPPED first
+- Use ADB method with proper permissions
+- Check if file is not "Read only"
+
+Issue: "Permission denied"
+Solution:
+- Use: adb root
+- Or use Root File Manager with granted root access
+- Make sure LDPlayer has root enabled in settings
+
+Issue: App crashes after replacing
+Solution:
+- Permissions are wrong. Set to 660 (rw-rw----)
+- Use: chmod 660 RKStorage
+
+Issue: Changes don't persist
+Solution:
+- Clear app cache: adb shell pm clear com.volato.vaunt
+- Make sure you modified the RIGHT RKStorage (not RKStorage-wal or RKStorage-shm)
+
+================================================================================

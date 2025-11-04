@@ -1,0 +1,92 @@
+================================================================================
+TROUBLESHOOTING: Database Changes Not Showing
+================================================================================
+
+The database was pushed successfully, but changes aren't visible.
+This could mean several things...
+
+STEP 1: Check for WAL (Write-Ahead Logging) Files
+--------------------------------------------------
+SQLite uses WAL files that can override the main database.
+
+Run these commands:
+
+adb shell
+su
+cd /data/data/com.volato.vaunt/databases/
+ls -la
+
+Look for these files:
+- RKStorage          <- Your modified one
+- RKStorage-wal      <- Write-Ahead Log (PROBLEM!)
+- RKStorage-shm      <- Shared Memory
+
+If RKStorage-wal exists, DELETE IT:
+rm RKStorage-wal
+rm RKStorage-shm
+
+exit
+exit
+
+
+STEP 2: Clear App Data/Cache
+-----------------------------
+The app might be caching old data in memory.
+
+Option A - Clear cache (keeps login):
+adb shell pm clear com.volato.vaunt
+
+Option B - Force stop and restart:
+adb shell am force-stop com.volato.vaunt
+
+Then launch the app again.
+
+
+STEP 3: Verify the Database Was Actually Modified
+--------------------------------------------------
+Let's check if your changes are actually in the file:
+
+adb pull /data/data/com.volato.vaunt/databases/RKStorage C:\temp\RKStorage_check
+
+Then check the file with Python or SQLite Browser to verify:
+- membershipTier should be 'cabin+'
+- subscriptionStatus should be 3
+
+
+STEP 4: Check Server-Side Validation (IMPORTANT!)
+--------------------------------------------------
+This is likely the issue. The app might be validating your membership
+status with the SERVER when you open it.
+
+Look for these signs:
+- Does the app make a network request on launch?
+- Does it say "Loading..." or refresh your profile?
+- Does it show your membership status IMMEDIATELY or after a delay?
+
+If there's a delay, the server is probably overriding your local changes.
+
+
+STEP 5: Check What Actually Changed
+------------------------------------
+Let's see what the app is showing:
+
+1. Open Vaunt app
+2. Go to your profile/account section
+3. Look for:
+   - Membership status
+   - Subscription info
+   - Any "Upgrade" buttons
+
+Take a screenshot and describe what you see.
+
+
+STEP 6: Intercept API Calls (Advanced)
+---------------------------------------
+If server-side validation is the issue, we need to see what the server
+is sending back.
+
+Install Charles Proxy or mitmproxy to see:
+- What API endpoints the app calls on launch
+- What membership data the server returns
+- If it's overwriting your local changes
+
