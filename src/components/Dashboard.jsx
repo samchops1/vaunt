@@ -192,11 +192,15 @@ function Dashboard() {
     setError(null)
 
     try {
+      appendLog(`🔄 Fetching all flights and user data...`, 'info')
+      
       const [user, flights, duffelOrders] = await Promise.all([
         fetchAPI(selectedAccountKey, '/v1/user'),
         fetchAPI(selectedAccountKey, '/v1/flight').catch(() => []),
         fetchAPI(selectedAccountKey, '/v1/app/duffel/orders').catch(() => null)
       ])
+
+      appendLog(`✅ Loaded ${flights.length} flights from API`, 'info')
 
       setData({
         user: user || null,
@@ -343,6 +347,47 @@ function Dashboard() {
       }
     },
     [account.key, account.userId, appendLog, rawRequest]
+  )
+
+  const attemptJoinWaitlist = useCallback(
+    async (flightId) => {
+      setActionBusy(`join-${flightId}`)
+      appendLog(`🎯 Attempting to join waitlist for flight #${flightId}`, 'info')
+
+      const attempts = [
+        { method: 'POST', endpoint: `/v1/flight/${flightId}/entrant`, body: { flightId } },
+        { method: 'POST', endpoint: `/v1/entrant`, body: { flightId } },
+        { method: 'POST', endpoint: `/v1/waitlist/join`, body: { flightId } },
+        { method: 'POST', endpoint: `/v1/flight/${flightId}/join`, body: {} }
+      ]
+
+      try {
+        for (const attempt of attempts) {
+          appendLog(`Trying: ${attempt.method} ${attempt.endpoint}`, 'info')
+          const res = await rawRequest(account.key, attempt.endpoint, {
+            method: attempt.method,
+            body: attempt.body
+          })
+          appendLog(
+            `${attempt.method} ${attempt.endpoint} → ${res.status}${
+              res.json ? ` :: ${JSON.stringify(res.json)}` : res.text ? ` :: ${res.text}` : ''
+            }`,
+            res.ok ? 'info' : 'error'
+          )
+          
+          if (res.ok) {
+            appendLog(`✅ Successfully joined waitlist for flight #${flightId}!`, 'info')
+            await handleCheckAll()
+            break
+          }
+        }
+      } catch (err) {
+        appendLog(`❌ Failed to join waitlist: ${err.message}`, 'error')
+      } finally {
+        setActionBusy(null)
+      }
+    },
+    [account.key, appendLog, rawRequest, handleCheckAll]
   )
 
   const attemptAutoBook = useCallback(
@@ -581,17 +626,74 @@ function Dashboard() {
       )}
 
       {data.flights.length > 0 && (
-        <div className="bg-white rounded-xl shadow-lg p-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-            ✈️ Flight Explorer (first {Math.min(data.flights.length, 12)} of {data.flights.length})
-          </h3>
-          <p className="text-sm text-gray-600 mb-4">
-            Every card is rendered directly from the API payload, including Azure blob banner images and the full entrant list.
-          </p>
-          <div className="space-y-6">
-            {data.flights.slice(0, 12).map((flight) => {
+        <>
+          {/* Your Waitlists Section */}
+          {(() => {
+            const yourWaitlists = data.flights.filter((flight) => {
               const entrants = Array.isArray(flight.entrants) ? flight.entrants : []
-              return (
+              return entrants.some((e) => e.id === account.userId)
+            })
+            
+            if (yourWaitlists.length === 0) return null
+            
+            return (
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl shadow-lg p-6 border-2 border-green-300">
+                <h3 className="text-2xl font-bold text-green-900 mb-4 flex items-center gap-2">
+                  🎯 Your Waitlists ({yourWaitlists.length})
+                </h3>
+                <div className="grid gap-4">
+                  {yourWaitlists.map((flight) => {
+                    const entrants = Array.isArray(flight.entrants) ? flight.entrants : []
+                    const yourEntry = entrants.find((e) => e.id === account.userId)
+                    return (
+                      <div key={flight.id} className="bg-white border-2 border-green-200 rounded-lg p-4 shadow-sm">
+                        <div className="flex flex-wrap justify-between items-start gap-3">
+                          <div className="flex-1">
+                            <p className="text-lg font-bold text-gray-900">
+                              Flight #{flight.id}
+                            </p>
+                            <p className="text-base font-semibold text-green-700 mt-1">
+                              {(flight.departAirport?.codeIata || flight.departAirport?.code || '???').toUpperCase()} →{' '}
+                              {(flight.arriveAirport?.codeIata || flight.arriveAirport?.code || '???').toUpperCase()}
+                            </p>
+                            <p className="text-sm text-gray-600">
+                              {flight.departAirport?.name || 'Unknown'} → {flight.arriveAirport?.name || 'Unknown'}
+                            </p>
+                            <p className="text-xs text-gray-500 mt-1">
+                              Departs: {formatIsoDate(flight.departDateTime)}
+                            </p>
+                          </div>
+                          <div className="text-right">
+                            <div className="bg-green-100 border-2 border-green-400 rounded-lg px-4 py-2 inline-block">
+                              <p className="text-xs text-green-700 font-semibold">YOUR POSITION</p>
+                              <p className="text-3xl font-bold text-green-900">#{yourEntry?.queuePosition ?? '?'}</p>
+                            </div>
+                            <p className="text-xs text-gray-500 mt-2">
+                              {entrants.length} total on waitlist
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            )
+          })()}
+          
+          {/* All Flights Section */}
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+              ✈️ All Flights ({data.flights.length} total)
+            </h3>
+            <p className="text-sm text-gray-600 mb-4">
+              Showing all {data.flights.length} flights with waitlist data and join options.
+            </p>
+            <div className="space-y-6">
+              {data.flights.map((flight) => {
+                const entrants = Array.isArray(flight.entrants) ? flight.entrants : []
+                const isOnWaitlist = entrants.some((e) => e.id === account.userId)
+                return (
                 <div key={flight.id} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                   {flight.bannerUrl && (
                     <div className="h-40 bg-gray-100">
@@ -600,11 +702,18 @@ function Dashboard() {
                   )}
                   <div className="p-5 space-y-4">
                     <div className="flex flex-wrap justify-between items-start gap-3">
-                      <div>
-                        <p className="text-lg font-semibold text-gray-900">
-                          {(flight.departAirport?.codeIata || flight.departAirport?.code || '???').toUpperCase()} →{' '}
-                          {(flight.arriveAirport?.codeIata || flight.arriveAirport?.code || '???').toUpperCase()}
-                        </p>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <p className="text-lg font-semibold text-gray-900">
+                            {(flight.departAirport?.codeIata || flight.departAirport?.code || '???').toUpperCase()} →{' '}
+                            {(flight.arriveAirport?.codeIata || flight.arriveAirport?.code || '???').toUpperCase()}
+                          </p>
+                          {isOnWaitlist && (
+                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-green-500 text-white">
+                              ✓ ON WAITLIST
+                            </span>
+                          )}
+                        </div>
                         <p className="text-sm text-gray-600">
                           {flight.departAirport?.name || 'Unknown departure'} →{' '}
                           {flight.arriveAirport?.name || 'Unknown arrival'}
@@ -613,11 +722,25 @@ function Dashboard() {
                           Departs {formatIsoDate(flight.departDateTime)} · Closeout {formatIsoDate(flight.closeoutDateTime)}
                         </p>
                       </div>
-                      <div className="text-right">
-                        <p className="text-sm text-gray-500">Flight #{flight.id}</p>
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700">
-                          Queue size: {entrants.length}
-                        </span>
+                      <div className="text-right space-y-2">
+                        <div>
+                          <p className="text-sm text-gray-500">Flight #{flight.id}</p>
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700">
+                            Queue size: {entrants.length}
+                          </span>
+                        </div>
+                        {!isOnWaitlist && (
+                          <button
+                            onClick={() => attemptJoinWaitlist(flight.id)}
+                            disabled={actionBusy !== null}
+                            className={classNames(
+                              'px-4 py-2 text-sm font-semibold rounded-lg bg-blue-600 text-white shadow-md hover:bg-blue-700 transition-all',
+                              actionBusy && 'opacity-50 cursor-not-allowed'
+                            )}
+                          >
+                            🎯 Join Waitlist
+                          </button>
+                        )}
                       </div>
                     </div>
 
@@ -678,6 +801,7 @@ function Dashboard() {
             })}
           </div>
         </div>
+        </>
       )}
 
       <div className="bg-white rounded-xl shadow-lg p-6">
