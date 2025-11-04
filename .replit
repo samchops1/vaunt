@@ -18,13 +18,13 @@ args = "apk-decompiler"
 name = "apk-decompiler"
 author = "agent"
 
+[workflows.workflow.metadata]
+outputType = "webview"
+
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "bash start.sh"
 waitForPort = 5000
-
-[workflows.workflow.metadata]
-outputType = "webview"
 
 [[ports]]
 localPort = 5000
@@ -55,7 +55,7 @@ localPort = 39287
 externalPort = 3000
 
 [[ports]]
-localPort = 39819
+localPort = 41041
 externalPort = 3001
 
 [nix]

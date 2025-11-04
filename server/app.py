@@ -95,7 +95,7 @@ def upload_apk():
         return jsonify({'error': 'No file provided'}), 400
     
     file = request.files['file']
-    if file.filename == '':
+    if not file.filename or file.filename == '':
         return jsonify({'error': 'No file selected'}), 400
     
     if not file.filename.endswith('.apk'):
@@ -105,7 +105,7 @@ def upload_apk():
     extract_path = None
     
     try:
-        filename = os.path.basename(file.filename)
+        filename = os.path.basename(file.filename or 'unknown.apk')
         safe_filename = ''.join(c for c in filename if c.isalnum() or c in ('_', '-', '.'))
         filepath = os.path.join(UPLOAD_FOLDER, safe_filename)
         file.save(filepath)
