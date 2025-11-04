@@ -168,6 +168,25 @@ def download_file(extract_id, filepath):
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/api/docs/<filename>')
+def get_document(filename):
+    try:
+        safe_filename = ''.join(c for c in filename if c.isalnum() or c in ('_', '-', '.'))
+        
+        if not safe_filename.endswith('.md'):
+            return jsonify({'error': 'Only markdown files allowed'}), 400
+        
+        doc_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), safe_filename)
+        
+        if os.path.exists(doc_path) and os.path.isfile(doc_path):
+            with open(doc_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            return content, 200, {'Content-Type': 'text/markdown; charset=utf-8'}
+        
+        return jsonify({'error': 'Document not found'}), 404
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 @app.route('/api/health')
 def health():
     return jsonify({'status': 'ok'})
