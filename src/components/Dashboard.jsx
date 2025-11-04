@@ -200,11 +200,19 @@ function Dashboard() {
         fetchAPI(selectedAccountKey, '/v1/app/duffel/orders').catch(() => null)
       ])
 
-      appendLog(`✅ Loaded ${flights.length} flights from API`, 'info')
+      const now = new Date()
+      const futureFlights = Array.isArray(flights) 
+        ? flights.filter(f => {
+            const departDate = f.departDateTime ? new Date(f.departDateTime) : null
+            return departDate && departDate > now
+          })
+        : []
+
+      appendLog(`✅ Loaded ${flights.length} total flights, ${futureFlights.length} upcoming`, 'info')
 
       setData({
         user: user || null,
-        flights: Array.isArray(flights) ? flights : [],
+        flights: futureFlights,
         duffelOrders
       })
 
@@ -629,13 +637,9 @@ function Dashboard() {
         <>
           {/* Your Waitlists Section */}
           {(() => {
-            const now = new Date()
             const yourWaitlists = data.flights.filter((flight) => {
               const entrants = Array.isArray(flight.entrants) ? flight.entrants : []
-              const isOnWaitlist = entrants.some((e) => e.id === account.userId)
-              const departDate = flight.departDateTime ? new Date(flight.departDateTime) : null
-              const isFuture = departDate && departDate > now
-              return isOnWaitlist && isFuture
+              return entrants.some((e) => e.id === account.userId)
             })
             
             if (yourWaitlists.length === 0) return null
@@ -643,7 +647,7 @@ function Dashboard() {
             return (
               <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl shadow-lg p-6 border-2 border-green-300">
                 <h3 className="text-2xl font-bold text-green-900 mb-4 flex items-center gap-2">
-                  🎯 Your Future Waitlists ({yourWaitlists.length})
+                  🎯 Your Waitlists ({yourWaitlists.length})
                 </h3>
                 <div className="grid gap-4">
                   {yourWaitlists.map((flight) => {
@@ -686,26 +690,18 @@ function Dashboard() {
           })()}
           
           {/* All Flights Section */}
-          {(() => {
-            const now = new Date()
-            const futureFlights = data.flights.filter((flight) => {
-              const departDate = flight.departDateTime ? new Date(flight.departDateTime) : null
-              return departDate && departDate > now
-            })
-            
-            return (
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  ✈️ Future Flights ({futureFlights.length} of {data.flights.length} total)
-                </h3>
-                <p className="text-sm text-gray-600 mb-4">
-                  Showing {futureFlights.length} upcoming flights with waitlist data and join options.
-                </p>
-                <div className="space-y-6">
-                  {futureFlights.map((flight) => {
-                    const entrants = Array.isArray(flight.entrants) ? flight.entrants : []
-                    const isOnWaitlist = entrants.some((e) => e.id === account.userId)
-                    return (
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+              ✈️ All Flights ({data.flights.length})
+            </h3>
+            <p className="text-sm text-gray-600 mb-4">
+              Showing upcoming flights with waitlist data and join options.
+            </p>
+            <div className="space-y-6">
+              {data.flights.map((flight) => {
+                const entrants = Array.isArray(flight.entrants) ? flight.entrants : []
+                const isOnWaitlist = entrants.some((e) => e.id === account.userId)
+                return (
                 <div key={flight.id} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                   {flight.bannerUrl && (
                     <div className="h-40 bg-gray-100">
@@ -811,10 +807,8 @@ function Dashboard() {
                 </div>
               )
             })}
+            </div>
           </div>
-        </div>
-            )
-          })()}
         </>
       )}
 
