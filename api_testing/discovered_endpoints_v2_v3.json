@@ -1,0 +1,20 @@
+[
+  {
+    "method": "POST",
+    "path": "/v2/flight/8800/enter",
+    "status": 200,
+    "response": "{\"updatedAt\":1762334608195,\"id\":8800,\"deletedAt\":null,\"uuid\":\"7f27bc77-213e-4956-b8a3-a796d750f703\",\"departDateTime\":\"2025-11-08T02:00:00.000Z\",\"departDateTimeLocal\":\"2025-11-07T18:00\",\"arriveDateTime"
+  },
+  {
+    "method": "POST",
+    "path": "/v2/flight/8800/reset",
+    "status": 200,
+    "response": "{\"updatedAt\":1762334610154,\"id\":8800,\"deletedAt\":null,\"uuid\":\"7f27bc77-213e-4956-b8a3-a796d750f703\",\"departDateTime\":\"2025-11-08T02:00:00.000Z\",\"departDateTimeLocal\":\"2025-11-07T18:00\",\"arriveDateTime"
+  },
+  {
+    "method": "GET",
+    "path": "/v3/flight",
+    "status": 200,
+    "response": "{\"data\":[{\"updatedAt\":1762334603417,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"close"
+  }
+]
