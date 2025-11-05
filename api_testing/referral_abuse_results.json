@@ -1,0 +1,619 @@
+{
+  "timestamp": "2025-11-05T17:22:33.731176",
+  "discovery": [
+    {
+      "endpoint": "/v1/referral",
+      "method": "GET",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "exists": false
+    },
+    {
+      "endpoint": "/v2/referral",
+      "method": "GET",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "exists": false
+    },
+    {
+      "endpoint": "/v3/referral",
+      "method": "GET",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "exists": false
+    },
+    {
+      "endpoint": "/v1/user/referrals",
+      "method": "GET",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "exists": false
+    },
+    {
+      "endpoint": "/v2/user/referrals",
+      "method": "GET",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "exists": false
+    },
+    {
+      "endpoint": "/v1/referral/code",
+      "method": "GET",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "exists": false
+    },
+    {
+      "endpoint": "/v1/referral/stats",
+      "method": "GET",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "exists": false
+    },
+    {
+      "endpoint": "/v1/credits",
+      "method": "GET",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "exists": false
+    },
+    {
+      "endpoint": "/v2/credits",
+      "method": "GET",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "exists": false
+    },
+    {
+      "endpoint": "/v1/user/credits",
+      "method": "GET",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "exists": false
+    },
+    {
+      "endpoint": "/v2/user/credits",
+      "method": "GET",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "exists": false
+    },
+    {
+      "endpoint": "/v1/bonus",
+      "method": "GET",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "exists": false
+    },
+    {
+      "endpoint": "/v1/promo",
+      "method": "GET",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "exists": false
+    },
+    {
+      "endpoint": "/v1/rewards",
+      "method": "GET",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "exists": false
+    },
+    {
+      "endpoint": "/v1/user/balance",
+      "method": "GET",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "exists": false
+    }
+  ],
+  "fake_referrals": [
+    {
+      "test": "Create fake referral - userId",
+      "endpoint": "/v1/referral/create",
+      "status": 404,
+      "payload": {
+        "referredUserId": 99999
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Create fake referral - direct",
+      "endpoint": "/v1/referral/create",
+      "status": 404,
+      "payload": {
+        "userId": 99999
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "V2 Register referral",
+      "endpoint": "/v2/referral/register",
+      "status": 404,
+      "payload": {
+        "referrer": 20254
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "V2 Register with IDs",
+      "endpoint": "/v2/referral/register",
+      "status": 404,
+      "payload": {
+        "referrerId": 20254,
+        "refereeId": 99999
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Refer fake email",
+      "endpoint": "/v1/user/refer",
+      "status": 404,
+      "payload": {
+        "email": "fake@test.com"
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Add referral count",
+      "endpoint": "/v1/referral/add",
+      "status": 404,
+      "payload": {
+        "count": 10
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "V1 Referral with email",
+      "endpoint": "/v1/referral",
+      "status": 404,
+      "payload": {
+        "referredEmail": "exploit@test.com"
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "V2 Referral creation",
+      "endpoint": "/v2/referral",
+      "status": 404,
+      "payload": {
+        "referredUserId": 88888
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    }
+  ],
+  "self_referral": [
+    {
+      "test": "Apply own referral code",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Claim with own ID",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Signup with own ID",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "V2 Self-referral",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    }
+  ],
+  "promo_codes": [],
+  "credit_manipulation": [
+    {
+      "test": "PATCH user credits",
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "status": 404,
+      "payload": {
+        "credits": 9999
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "PATCH V2 user credits",
+      "endpoint": "/v2/user",
+      "method": "PATCH",
+      "status": 404,
+      "payload": {
+        "credits": 9999
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Add credits directly",
+      "endpoint": "/v1/credits/add",
+      "method": "POST",
+      "status": 404,
+      "payload": {
+        "amount": 1000
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "V2 Add credits",
+      "endpoint": "/v2/credits/add",
+      "method": "POST",
+      "status": 404,
+      "payload": {
+        "amount": 1000
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Set balance",
+      "endpoint": "/v1/user/balance",
+      "method": "POST",
+      "status": 404,
+      "payload": {
+        "credits": 1000
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "PUT user credits",
+      "endpoint": "/v1/user/credits",
+      "method": "PUT",
+      "status": 404,
+      "payload": {
+        "credits": 5000
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "POST credits",
+      "endpoint": "/v1/credits",
+      "method": "POST",
+      "status": 404,
+      "payload": {
+        "credits": 2000
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "PATCH balance",
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "status": 404,
+      "payload": {
+        "balance": 9999
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Add credit value",
+      "endpoint": "/v1/user/credits/add",
+      "method": "POST",
+      "status": 404,
+      "payload": {
+        "value": 1000
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    }
+  ],
+  "referral_count_manipulation": [
+    {
+      "test": "Set referral count",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Set referrals",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Bulk add referrals",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "V2 Set referral count",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Increment referral count",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    }
+  ],
+  "bonus_claiming": [
+    {
+      "test": "Claim referral bonus",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "accessible": false
+    },
+    {
+      "test": "Referral payout",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "accessible": false
+    },
+    {
+      "test": "Get referral rewards",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "accessible": false
+    },
+    {
+      "test": "Claim bonus by type",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "accessible": false
+    },
+    {
+      "test": "Claim rewards",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "accessible": false
+    },
+    {
+      "test": "V2 Claim referral",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "accessible": false
+    },
+    {
+      "test": "Claim credits from referral",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "accessible": false
+    }
+  ],
+  "parameter_injection": [
+    {
+      "test": "Show all referrals",
+      "endpoint": "/v1/referral",
+      "params": {
+        "showAll": "true"
+      },
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Admin parameter",
+      "endpoint": "/v1/referral",
+      "params": {
+        "admin": "true"
+      },
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "High limit",
+      "endpoint": "/v1/referral",
+      "params": {
+        "userId": 20254,
+        "limit": 9999
+      },
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "V2 Include all",
+      "endpoint": "/v2/referral",
+      "params": {
+        "includeAll": "true"
+      },
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Show all credits",
+      "endpoint": "/v1/credits",
+      "params": {
+        "showAll": "true"
+      },
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Bypass parameter",
+      "endpoint": "/v1/user/referrals",
+      "params": {
+        "bypass": "true"
+      },
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    }
+  ],
+  "referral_history": [
+    {
+      "test": "User referral history",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "data_exposed": false
+    },
+    {
+      "test": "V2 Referrals list",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "data_exposed": false
+    },
+    {
+      "test": "All referrals",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "data_exposed": false
+    },
+    {
+      "test": "Referral list",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "data_exposed": false
+    },
+    {
+      "test": "Admin referrals endpoint",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "data_exposed": false
+    },
+    {
+      "test": "V2 All referrals",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "data_exposed": false
+    }
+  ],
+  "vulnerabilities": []
+}

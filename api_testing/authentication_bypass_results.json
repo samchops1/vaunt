@@ -1,0 +1,1179 @@
+{
+  "timestamp": "2025-11-05 17:24:16.271580",
+  "tests": [
+    {
+      "category": "JWT",
+      "test": "decode_jwt",
+      "timestamp": "2025-11-05 17:24:16.271984",
+      "success": true,
+      "decoded": {
+        "header": {
+          "alg": "HS256",
+          "typ": "JWT"
+        },
+        "payload": {
+          "user": 20254,
+          "iat": 1762231115,
+          "exp": 1764823115
+        },
+        "signature": "bOz6aK6v9G9B0H2BIXg_N5kWsiBizTbD-v1SlPl3B-Q"
+      }
+    },
+    {
+      "category": "JWT",
+      "test": "modified_user_id",
+      "timestamp": "2025-11-05 17:24:16.407089",
+      "modified_payload": {
+        "user": 26927,
+        "iat": 1762231115,
+        "exp": 1764823115
+      },
+      "result": {
+        "status": 403,
+        "elapsed": 0.13410305976867676,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:16 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-PatfYBLj4Um1qTm5zrukoLhNyPU\"",
+          "set-cookie": "sails.sid=s%3Alwwt0oyX8fGGfCVb1SJOrUJNgS9sBnvy.62EWpuSFTy8aXqaPzIpwRwoJwd8X9o%2FxH8KKl5%2Beo0E; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Forbidden"
+      }
+    },
+    {
+      "category": "JWT",
+      "test": "alg_none_attack",
+      "timestamp": "2025-11-05 17:24:16.528721",
+      "result": {
+        "status": 403,
+        "elapsed": 0.12064027786254883,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:16 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-PatfYBLj4Um1qTm5zrukoLhNyPU\"",
+          "set-cookie": "sails.sid=s%3A8LzFhmJT67Ce-Pen2JLsTMysOc_hib8c.EXYXB%2Bh4%2FqmMnZezKNOX1%2Fmo2RaMqK5BzflrOYN66RE; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Forbidden"
+      }
+    },
+    {
+      "category": "JWT",
+      "test": "empty_signature",
+      "timestamp": "2025-11-05 17:24:16.656101",
+      "result": {
+        "status": 403,
+        "elapsed": 0.12549042701721191,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:16 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-PatfYBLj4Um1qTm5zrukoLhNyPU\"",
+          "set-cookie": "sails.sid=s%3AUCUYSz0EWWFlSY327Jar4aXhSBKMg2Vi.7dz6igFWQHk8YaVIVEBvaYEH6cGsem%2BKdvaIahXZ3PY; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Forbidden"
+      }
+    },
+    {
+      "category": "JWT",
+      "test": "extended_expiry",
+      "timestamp": "2025-11-05 17:24:16.782242",
+      "result": {
+        "status": 403,
+        "elapsed": 0.1248483657836914,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:16 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-PatfYBLj4Um1qTm5zrukoLhNyPU\"",
+          "set-cookie": "sails.sid=s%3A-ohZTYtGTyCyaoJl6VXzl_IOxW2qrQoU.XCPtMv2eI2k0ITZBowzoMLJVguPY9M%2BSYsOuVjf6ldM; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Forbidden"
+      }
+    },
+    {
+      "category": "JWT",
+      "test": "complete_forgery",
+      "timestamp": "2025-11-05 17:24:16.909040",
+      "result": {
+        "status": 403,
+        "elapsed": 0.12565183639526367,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:16 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-PatfYBLj4Um1qTm5zrukoLhNyPU\"",
+          "set-cookie": "sails.sid=s%3ApCl3t1_RxEIji81g-_2Ll7wUSN4w3pw3.pKRk1Gpg2qKsG%2F87xunv27%2F2xhuoXkuuqU2WUOVtkYA; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Forbidden"
+      }
+    },
+    {
+      "category": "SMS",
+      "test": "v2_bypass",
+      "timestamp": "2025-11-05 17:24:21.760381",
+      "attempt": {
+        "code": "BYPASS"
+      },
+      "result": {
+        "status": 404,
+        "elapsed": 0.12090063095092773,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:21 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3A5u0X26M8muUE266WaVEi1O35pPT4UZb-.%2BiIgLPs80f5I17DEPmNqlRy0x5K0oYm5sjdSEJ95uB4; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "SMS",
+      "test": "v2_bypass",
+      "timestamp": "2025-11-05 17:24:22.090079",
+      "attempt": {
+        "code": "TEST"
+      },
+      "result": {
+        "status": 404,
+        "elapsed": 0.1283702850341797,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:22 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3Aqb-surhBxKqCSO4sE9NaKLj4anS3tz2L.Jnw9ATo%2BcLKoQ%2BlPAuBKyYw%2FcQgqXinUB5RWwBtt%2B70; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "SMS",
+      "test": "v2_bypass",
+      "timestamp": "2025-11-05 17:24:22.417830",
+      "attempt": {
+        "code": "DEBUG"
+      },
+      "result": {
+        "status": 404,
+        "elapsed": 0.12564492225646973,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:22 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3Ayo_v-M1m3BsPc3ZvBm1B5tD0Ko83-fm7.V48RRT2bT%2FVX6AIGzx5yxY58H6RMavRA21jhNaFsKcU; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "SMS",
+      "test": "v2_bypass",
+      "timestamp": "2025-11-05 17:24:22.743339",
+      "attempt": {
+        "skipVerification": true
+      },
+      "result": {
+        "status": 404,
+        "elapsed": 0.1235506534576416,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:22 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AdxEmshLov9yCkhC6lp2BCQZVI3OHt_Ic.RYd91PXuzS0vqJGJuThv7n2rHHWLLlnEYXpixZhzAxY; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "SMS",
+      "test": "v2_bypass",
+      "timestamp": "2025-11-05 17:24:23.074580",
+      "attempt": {
+        "skipVerification": true,
+        "code": "000000"
+      },
+      "result": {
+        "status": 404,
+        "elapsed": 0.12934350967407227,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:23 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3Auu9YlV69z6B9U-yXxRNzK3E_hqRHbVZw.8jWfbEZQSWXdHcSFh8WB5rmGegHc7nCeugVemugwjxM; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "SMS",
+      "test": "v2_bypass",
+      "timestamp": "2025-11-05 17:24:23.400089",
+      "attempt": {
+        "bypass": true
+      },
+      "result": {
+        "status": 404,
+        "elapsed": 0.12397265434265137,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:23 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3A4sLqXo4pdOovbiwp794dzslkNujcncVp.%2F5gD3xYra9mcjD8PEZBjBBvYhvqCrgzBO%2BKzHTu96gc; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "SMS",
+      "test": "skip_verification_flag",
+      "timestamp": "2025-11-05 17:24:23.985262",
+      "result": {
+        "status": 400,
+        "elapsed": 0.38410496711730957,
+        "headers": {
+          "content-length": "37",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:23 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"25-gQEQeVnGQ5Sl3nkB1YeseRbgf+Q\"",
+          "set-cookie": "sails.sid=s%3AiAb6_9z78fc12rOmB4JQ4gTP-6OF_okk.UZA42RwAVAoWuC%2FS%2BnIFYh5E4zbOZLHjcbP49Xv5vt8; Path=/; HttpOnly",
+          "vary": "Accept-Encoding",
+          "x-exit": "badChallengeCode"
+        },
+        "data": {
+          "error": "No active challenge code."
+        }
+      }
+    },
+    {
+      "category": "Enumeration",
+      "test": "phone_number",
+      "timestamp": "2025-11-05 17:24:25.325221",
+      "valid": {
+        "status": 200,
+        "elapsed": 0.6545534133911133,
+        "headers": {
+          "content-length": "2",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:24 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"2-nOO9QiTIwXgNtWtBJezz8kv3SLc\"",
+          "set-cookie": "sails.sid=s%3AqlVw2Fb6LAihTVYOde-K1e97DhOAqlHp.2UR5bgm0r5YyMl0Pd6S36dFgzkLgEYbQAQQw33pHznw; Path=/; HttpOnly",
+          "vary": "Accept-Encoding",
+          "x-exit": "success"
+        },
+        "data": "OK"
+      },
+      "invalid": {
+        "status": 500,
+        "elapsed": 0.6833629608154297,
+        "headers": {
+          "content-length": "21",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:25 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"15-/6VXivhc2MKdLfIkLcUE47K6aH0\"",
+          "set-cookie": "sails.sid=s%3ABlBrnokT7UrwUCRwZ40w7vikORw96X28.JYEMLNb6imiZqLs2cWbqMayhmzPslnIF08cRZwaPkF4; Path=/; HttpOnly",
+          "vary": "Accept-Encoding",
+          "x-exit": "verifyError"
+        },
+        "data": "Internal Server Error"
+      },
+      "time_diff": 0.028809547424316406,
+      "response_diff": true
+    },
+    {
+      "category": "Enumeration",
+      "test": "phone_number",
+      "timestamp": "2025-11-05 17:24:26.234530",
+      "valid": {
+        "status": 200,
+        "elapsed": 0.6545534133911133,
+        "headers": {
+          "content-length": "2",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:24 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"2-nOO9QiTIwXgNtWtBJezz8kv3SLc\"",
+          "set-cookie": "sails.sid=s%3AqlVw2Fb6LAihTVYOde-K1e97DhOAqlHp.2UR5bgm0r5YyMl0Pd6S36dFgzkLgEYbQAQQw33pHznw; Path=/; HttpOnly",
+          "vary": "Accept-Encoding",
+          "x-exit": "success"
+        },
+        "data": "OK"
+      },
+      "invalid": {
+        "status": 500,
+        "elapsed": 0.6079306602478027,
+        "headers": {
+          "content-length": "21",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:26 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"15-/6VXivhc2MKdLfIkLcUE47K6aH0\"",
+          "set-cookie": "sails.sid=s%3Albp0DK_R5s6q1kSBcBoD9rtIbj7ebf1_.GXmkmj2Flng7Y%2Fi5HoIC8Gwpc3NVKWE5Gdz5eCJL%2BZI; Path=/; HttpOnly",
+          "vary": "Accept-Encoding",
+          "x-exit": "verifyError"
+        },
+        "data": "Internal Server Error"
+      },
+      "time_diff": 0.04662275314331055,
+      "response_diff": true
+    },
+    {
+      "category": "Token",
+      "test": "refresh_without_auth",
+      "timestamp": "2025-11-05 17:24:26.657795",
+      "method": "POST",
+      "endpoint": "/v1/auth/refresh",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12145090103149414,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:26 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3ASXS-MuqDtNH5qGj2UxYhZJDjz_MpY4jm.CkcKfE0jXC2%2Bcwa3UUBnsC5MrxC0fAIf0ElVQ4cShUI; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Token",
+      "test": "refresh_without_auth",
+      "timestamp": "2025-11-05 17:24:26.984706",
+      "method": "POST",
+      "endpoint": "/v1/auth/renew",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12435173988342285,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:26 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3ANJo4akTjaCqkiqJ9R24gekfz_4RhFIts.XPR0Wwm9%2BglfwtZSfD49trXpIE10L5u9nwSC96VlALI; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Token",
+      "test": "refresh_without_auth",
+      "timestamp": "2025-11-05 17:24:27.306777",
+      "method": "POST",
+      "endpoint": "/v1/auth/renew",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12053751945495605,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:27 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AbttsS4HqkmRwQ_GB-3-bsxeLUSLF-F5N.T2LL4CRTi8lKCVjbkWeQ1Qvws0IL1txoGnOb%2Fw4MDKQ; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Token",
+      "test": "refresh_without_auth",
+      "timestamp": "2025-11-05 17:24:27.629697",
+      "method": "GET",
+      "endpoint": "/v1/auth/token?userId=20254",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12157654762268066,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:27 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AsxTbsDoMEs1plfDwv2ftzrH1UNcnBNEX.15koE6e5TUE0fZg%2BoqGAuRxesME%2Bu7UXZz61HAnrGrE; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Token",
+      "test": "refresh_without_auth",
+      "timestamp": "2025-11-05 17:24:27.954841",
+      "method": "GET",
+      "endpoint": "/v1/auth/token?userId=26927",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12322211265563965,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:27 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3Az2BESpqT4cAHxSI38WnmQ1VE4_A8YGBX.M6Z2icbWISRC0fo9egluZkAB%2FFZwOwKAg9aBBnZyWhc; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Token",
+      "test": "refresh_without_auth",
+      "timestamp": "2025-11-05 17:24:28.278762",
+      "method": "POST",
+      "endpoint": "/v1/auth/token",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12215232849121094,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:28 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3A0Uw0q1liWIPVHK4N1LCvWb9XhC69LqCE.oMV43HO7ZNJ9Wt4KFrxoUKIpuSMYHdszJ%2FcC0wU4%2BQ0; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Token",
+      "test": "refresh_without_auth",
+      "timestamp": "2025-11-05 17:24:28.603614",
+      "method": "POST",
+      "endpoint": "/v2/auth/refresh",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12294578552246094,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:28 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3A6jF3gWF_G_iY2sDw72FzqzD9kCt72P1m.2kAE9Itb9IX%2FfsL3Pp6pkfnnn0gq3%2BjLDH1An8ZKNcQ; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Session",
+      "test": "info_retrieval",
+      "timestamp": "2025-11-05 17:24:28.928837",
+      "endpoint": "/v1/auth/session",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12363505363464355,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:28 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AQlCKdbtN2zdaED57lIJWIkTEcCM7UJoh.MLH9p5KFbbx10d0TxJpPA7alYgjND1j8cXzBxlTyl7U; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Session",
+      "test": "info_retrieval",
+      "timestamp": "2025-11-05 17:24:29.260552",
+      "endpoint": "/v1/user/session",
+      "result": {
+        "status": 404,
+        "elapsed": 0.1261916160583496,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:29 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3A-97zvJA_6vfo_d7D0jgDIXHkvPqb93bD.qV0rsVjwN23B1BHN9IWh%2BcezY1dPg55Xfd1%2FwhUxTOc; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Session",
+      "test": "info_retrieval",
+      "timestamp": "2025-11-05 17:24:29.585187",
+      "endpoint": "/v1/session",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12287640571594238,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:29 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AtDp5l2vEiu6dpTdgCFVaz_Y7RjwAMEKL.njwNsu%2FY4NimupmJuP0V6UiPrNCp7sCi2uNvHYHtwKk; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Session",
+      "test": "info_retrieval",
+      "timestamp": "2025-11-05 17:24:29.908355",
+      "endpoint": "/v2/auth/session",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12152767181396484,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:29 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AjQfyOiFlLIePngVKXC2Rwp5fvUKqwOLD.q9Y5wIz6xWR545AObnjpAbywb8laUz3lIUdilRK3ohY; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Session",
+      "test": "info_retrieval",
+      "timestamp": "2025-11-05 17:24:30.230442",
+      "endpoint": "/v1/auth/sessions",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12062811851501465,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:30 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AhxQLTNLyH_7wibpeuDHeRsjcClsNf80f.9vs%2BOul8VOuP7eGainkILWnlL8lXR0yb57t8fwVX4Uw; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Password",
+      "test": "reset_exploitation",
+      "timestamp": "2025-11-05 17:24:30.765984",
+      "method": "POST",
+      "endpoint": "/v1/auth/reset-password",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12494254112243652,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:30 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3A-MSdJSPuLrfF0gElybylbVVH5zpldiK2.WSgQRvRNcVZdPNmuCdJ22w8lXstRKIB95eLcuCEgwIY; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Password",
+      "test": "reset_exploitation",
+      "timestamp": "2025-11-05 17:24:31.109452",
+      "method": "POST",
+      "endpoint": "/v1/auth/forgot-password",
+      "result": {
+        "status": 404,
+        "elapsed": 0.1415555477142334,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:31 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AnYzOgWKR7h0kGLT9LQj_Va_cDJ_pOBeO.8HVGrI%2B6tOH02SVc6mpPatd3MoKqwbfd%2BgYGzrAcs3k; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Password",
+      "test": "reset_exploitation",
+      "timestamp": "2025-11-05 17:24:31.431341",
+      "method": "POST",
+      "endpoint": "/v1/auth/reset",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12039446830749512,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:31 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AWuzqjeZoWzcLKdZGqoN-bSerwAqA5Xa2.v9PLeyINomESyr9yST4brm095bV45q88hIyBpMyDLUo; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Password",
+      "test": "reset_exploitation",
+      "timestamp": "2025-11-05 17:24:31.753221",
+      "method": "POST",
+      "endpoint": "/v2/auth/reset",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12005424499511719,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:31 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AEsTRAArwXfZrsDMjlHmdpuUlW5m5AGJc.%2Bodw4HOVZvEJ7gMhrPGKOlR8sGSDlAULjiBTuTSTGto; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Password",
+      "test": "reset_exploitation",
+      "timestamp": "2025-11-05 17:24:32.079736",
+      "method": "POST",
+      "endpoint": "/v1/auth/reset",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12434601783752441,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:32 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AUOt5-A38khHZ0VpmiRGnIIMmoSKPLY3w.qMIr02xGEot%2BtS9JIDxKDih4mDNt2Fc3jYiaG9FLb5Q; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Admin",
+      "test": "token_generation",
+      "timestamp": "2025-11-05 17:24:32.403067",
+      "method": "POST",
+      "endpoint": "/v1/auth/admin/token",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12044310569763184,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:32 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AVbEN5jkD3ZcFCG0R-luR32aPAsyYUZQ1.RPJAKA91BxWWvoStweTFkNmJCEoB27YBtJVvYwZUg6s; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Admin",
+      "test": "token_generation",
+      "timestamp": "2025-11-05 17:24:32.731778",
+      "method": "POST",
+      "endpoint": "/v1/auth/token",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12555766105651855,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:32 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AoWAR4Gek0K75BC-81hgsWcBz05mszKtF.DGFKVshlzSEc7Db7253iO%2BMgeOY8CP8jQ7ybN1GmVXE; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Admin",
+      "test": "token_generation",
+      "timestamp": "2025-11-05 17:24:33.060710",
+      "method": "POST",
+      "endpoint": "/v1/auth/token",
+      "result": {
+        "status": 404,
+        "elapsed": 0.1272881031036377,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:33 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AP_0wKz-Yk8lgHxr-WzcmBX-7bB50YH7F.SRndoDGA5%2FJS6bwBIdAZvY5yx9FIiqcL2Gm0Czub0n4; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Admin",
+      "test": "token_generation",
+      "timestamp": "2025-11-05 17:24:33.385212",
+      "method": "POST",
+      "endpoint": "/v1/auth/generate",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12304568290710449,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:33 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3APfJrOYJ6RRoNhCarmYKgNSP-5Is5XMqL.QRthByyeXXnm8yX7GhPCs42JoZZdDmtv56Rj9CLQQ%2FA; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Admin",
+      "test": "token_generation",
+      "timestamp": "2025-11-05 17:24:33.712042",
+      "method": "POST",
+      "endpoint": "/v1/admin/auth/token",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12480378150939941,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:33 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AOjXakPrG5Xx9qTpKry0AnJWa7nxxfRH1.gfdqLxDQWY51ct6rNon3SytJYmVzEXCV7FMs78bUjWc; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Admin",
+      "test": "token_generation",
+      "timestamp": "2025-11-05 17:24:34.056962",
+      "method": "GET",
+      "endpoint": "/v1/auth/admin/generate",
+      "result": {
+        "status": 404,
+        "elapsed": 0.14283275604248047,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:34 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AgikUSQE_7q-fLcZ2D1pn4ND2Lrzu7M4s.0tjso78ipEaKaEvpGWa9TdD95eoz4M78KhRuXKb0zBo; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "IDOR",
+      "test": "auth_endpoints",
+      "timestamp": "2025-11-05 17:24:34.380894",
+      "method": "POST",
+      "endpoint": "/v1/auth/token",
+      "target_user": 26927,
+      "result": {
+        "status": 404,
+        "elapsed": 0.12192630767822266,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:34 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AtYGBYdsAGChsHlgD-DRMLCX-nLiRd7eo.MfLmAY%2BLdDguqW42MZq6h4dM3i12ttelCjRyoyyLKvI; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "IDOR",
+      "test": "auth_endpoints",
+      "timestamp": "2025-11-05 17:24:34.706864",
+      "method": "GET",
+      "endpoint": "/v1/user/26927/token",
+      "target_user": 26927,
+      "result": {
+        "status": 404,
+        "elapsed": 0.12449288368225098,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:34 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3Adc3gpwKzIxkhsn84gVCIctyOEM25oToL.EEe2n8Unw7d5ci%2BK1fMs6D9WbEFMEmAJ6NnJQGV%2F4ns; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "IDOR",
+      "test": "auth_endpoints",
+      "timestamp": "2025-11-05 17:24:35.029518",
+      "method": "POST",
+      "endpoint": "/v1/auth/generate",
+      "target_user": 26927,
+      "result": {
+        "status": 404,
+        "elapsed": 0.1210486888885498,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:35 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AGzX3e0Khg6I_2sD4oXSG33Ikl2a4HEsp.nkAf%2BnmuVisdhAJwQItEZcFjnJypBXoHy%2Fbah%2BggsQs; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "IDOR",
+      "test": "auth_endpoints",
+      "timestamp": "2025-11-05 17:24:35.352905",
+      "method": "POST",
+      "endpoint": "/v2/auth/token",
+      "target_user": 26927,
+      "result": {
+        "status": 404,
+        "elapsed": 0.12121319770812988,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:35 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AGFpqlmC8ufjh8MFfNq6YBGWRvxzPuhbw.mAxg%2BeKfykcyjm2%2F77A02WVVThmbn1%2F%2FxFwyMookGQA; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "IDOR",
+      "test": "auth_endpoints",
+      "timestamp": "2025-11-05 17:24:35.684798",
+      "method": "GET",
+      "endpoint": "/v1/auth/user/26927",
+      "target_user": 26927,
+      "result": {
+        "status": 404,
+        "elapsed": 0.12665104866027832,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:35 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3A3j7DAjAKgOA_o5HqcHYtog3a2lpn-a2w.wCuvBWXwofxFIhqiqc399HADCi3YJQa%2Fgdn45q1ASzc; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Leakage",
+      "test": "token_exposure",
+      "timestamp": "2025-11-05 17:24:36.015808",
+      "endpoint": "/v1/logs",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12955093383789062,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:35 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3ALErYib0RCmC5RrENmttfgJyQtaLfnjgZ.DO5GNuGqmVo7D4Vinn9bTh13OI25gCy%2F1R4ZVinGbe0; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Leakage",
+      "test": "token_exposure",
+      "timestamp": "2025-11-05 17:24:36.349333",
+      "endpoint": "/v1/debug/tokens",
+      "result": {
+        "status": 404,
+        "elapsed": 0.1322777271270752,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:36 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AtpwETBifqP6E9AjFgrHUCPSBX9J1yyPY.86WBaPXyV82HHpZC0ShTYaBm40Ou8IhqLiVHZNRZKzs; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Leakage",
+      "test": "token_exposure",
+      "timestamp": "2025-11-05 17:24:36.676288",
+      "endpoint": "/v1/admin/sessions",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12563276290893555,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:36 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3ANKQcuW6QKBCpiuSQi4x4XNZ2Txtg2uF0.SvlbG%2BltZc1SDphBOz6p2qqVqTYXhgRY7M5OM%2BEb4YE; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Leakage",
+      "test": "token_exposure",
+      "timestamp": "2025-11-05 17:24:37.000336",
+      "endpoint": "/v1/auth/debug",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12256669998168945,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:36 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AIZFHieUfVDKidga9YzZbmIKofSeCtXeX.Rx20f90WTn%2BgMg%2BkOSS7WWkA2mnyWAAXmk3fuPs94rU; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Leakage",
+      "test": "token_exposure",
+      "timestamp": "2025-11-05 17:24:37.325220",
+      "endpoint": "/v1/debug",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12320971488952637,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:37 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3ASkFEDRcfuDhMppWzU1lCPsHhksAFzje9.shIaO%2BSoXwxpfxFOtQLY3APOwuzCsnz2IUxa8xOXnJs; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Leakage",
+      "test": "token_exposure",
+      "timestamp": "2025-11-05 17:24:37.651864",
+      "endpoint": "/v1/admin/users",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12549495697021484,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:37 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3A5_j1U1qcjkIZhzOdakMl-uFDhLfO-f4u.iTBS%2BFlEgz1rFOPNLaJ7BsFbfmz4Tn4Dwd7ND6bPdyQ; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Leakage",
+      "test": "token_exposure",
+      "timestamp": "2025-11-05 17:24:37.974605",
+      "endpoint": "/v1/admin/auth",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12132143974304199,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:37 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AebX1NqKpxGsK7NmAWI914EBHbL4idVOf.dnsJ%2FKZ2BLpsOzDHL%2Fyiv1I3R%2B8gw5Wd4BTdN9Y4mkg; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Leakage",
+      "test": "token_exposure",
+      "timestamp": "2025-11-05 17:24:38.297909",
+      "endpoint": "/health",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12202835083007812,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:38 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AnmEUAG5xUL8NIKCygu3v9k3d9h31bOoE.VPUTdOIf9xZMPfgwt6frXt9if7HQsvr1Bcc%2FwMsmwF0; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Leakage",
+      "test": "token_exposure",
+      "timestamp": "2025-11-05 17:24:38.625324",
+      "endpoint": "/status",
+      "result": {
+        "status": 404,
+        "elapsed": 0.1251668930053711,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:38 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AK7cthF7Y5lULL4PAuANGq7YSvdSoiMck.rULB8MVZUZwXGVBoiadRZuV5arrm5XpsZVIKxnZRoNc; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    },
+    {
+      "category": "Leakage",
+      "test": "token_exposure",
+      "timestamp": "2025-11-05 17:24:38.954112",
+      "endpoint": "/v1/system/info",
+      "result": {
+        "status": 404,
+        "elapsed": 0.12719416618347168,
+        "headers": {
+          "content-length": "9",
+          "content-type": "text/plain; charset=utf-8",
+          "date": "Wed, 05 Nov 2025 17:24:38 GMT",
+          "access-control-allow-origin": "*",
+          "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+          "set-cookie": "sails.sid=s%3AgiCLIMjKvIe04YASnYvoxu7BFVv7-pyL.iahQjebfMnQYy6eJ%2FJnQksJfVV6Ovxpj%2F2Nd2he08ZM; Path=/; HttpOnly",
+          "vary": "Accept-Encoding"
+        },
+        "data": "Not Found"
+      }
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "severity": "MEDIUM",
+      "title": "Phone Number Enumeration via Response",
+      "description": "Response differences allow user enumeration",
+      "cvss": 5.0,
+      "timestamp": "2025-11-05 17:24:25.325205"
+    },
+    {
+      "severity": "MEDIUM",
+      "title": "Phone Number Enumeration via Response",
+      "description": "Response differences allow user enumeration",
+      "cvss": 5.0,
+      "timestamp": "2025-11-05 17:24:26.234514"
+    },
+    {
+      "severity": "MEDIUM",
+      "title": "No Device Binding",
+      "description": "Sessions are not device-bound, enabling session hijacking",
+      "cvss": 6.0,
+      "timestamp": "2025-11-05 17:24:30.638603"
+    },
+    {
+      "severity": "CRITICAL",
+      "title": "No Rate Limiting on SMS Verification",
+      "description": "SMS verification codes can be brute forced (no rate limiting)",
+      "cvss": 9.5,
+      "timestamp": "2025-11-05 17:25:00.114160"
+    }
+  ],
+  "critical_findings": [
+    {
+      "severity": "CRITICAL",
+      "title": "No Rate Limiting on SMS Verification",
+      "description": "SMS verification codes can be brute forced (no rate limiting)",
+      "cvss": 9.5,
+      "timestamp": "2025-11-05 17:25:00.114160"
+    }
+  ]
+}

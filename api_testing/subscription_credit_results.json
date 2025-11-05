@@ -1,0 +1,243 @@
+{
+  "timestamp": "2025-11-05T17:25:30.898164",
+  "baseline": {},
+  "subscription_manipulation": [
+    {
+      "test": "Set premium tier via user",
+      "endpoint": "/v1/user",
+      "status": 404,
+      "payload": {
+        "subscriptionTier": "premium"
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Set VIP membership",
+      "endpoint": "/v1/user",
+      "status": 404,
+      "payload": {
+        "membership": "vip"
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Set corporate account",
+      "endpoint": "/v1/user",
+      "status": 404,
+      "payload": {
+        "accountType": "corporate"
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Upgrade to premium",
+      "endpoint": "/v1/subscription/upgrade",
+      "status": 404,
+      "payload": {
+        "tier": "premium"
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Create enterprise subscription",
+      "endpoint": "/v1/subscription",
+      "status": 404,
+      "payload": {
+        "tier": "enterprise"
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Activate premium subscription",
+      "endpoint": "/v1/subscription",
+      "status": 404,
+      "payload": {
+        "active": true,
+        "tier": "premium"
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Set unlimited level",
+      "endpoint": "/v1/user/subscription",
+      "status": 404,
+      "payload": {
+        "level": "unlimited"
+      },
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    }
+  ],
+  "payment_manipulation": [
+    {
+      "test": "Bypass payment",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Disable payment requirement",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Activate without payment",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Purchase flight for $0",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Set account balance",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Add payment credit",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    }
+  ],
+  "tier_escalation": [
+    {
+      "test": "Set admin role",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Enable admin flag",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Set admin privileges",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Set staff user type",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Set max access level",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Promote to operator",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    }
+  ],
+  "balance_manipulation": [],
+  "flight_credit_abuse": [
+    {
+      "test": "Set flight credits",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Set flight quota",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Set max flights",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Add flight credits",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Set free flights",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    },
+    {
+      "test": "Enable premium access",
+      "status": 404,
+      "response": {
+        "raw": "404 page not found\n"
+      },
+      "vulnerable": false
+    }
+  ],
+  "vulnerabilities": []
+}
