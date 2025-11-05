@@ -120,6 +120,8 @@ function Dashboard() {
   const [matches, setMatches] = useState([])
   const [selectedUserDetails, setSelectedUserDetails] = useState(null)
   const [loadingUserDetails, setLoadingUserDetails] = useState(false)
+  const [v3TestResults, setV3TestResults] = useState(null)
+  const [testingV3, setTestingV3] = useState(false)
 
   const account = useMemo(() => ACCOUNTS[selectedAccountKey], [selectedAccountKey])
 
@@ -449,6 +451,85 @@ function Dashboard() {
   const closeUserDetailsModal = useCallback(() => {
     setSelectedUserDetails(null)
   }, [])
+
+  const testV3Parameters = useCallback(async () => {
+    setTestingV3(true)
+    setV3TestResults(null)
+    appendLog('🔬 Starting V3 parameter injection testing...', 'info')
+
+    const testParameters = [
+      { name: 'Baseline', params: 'includeExpired=false&nearMe=false', description: 'Normal request' },
+      { name: 'showAll', params: 'includeExpired=false&nearMe=false&showAll=true', description: 'Show all flights' },
+      { name: 'debug', params: 'includeExpired=false&nearMe=false&debug=true', description: 'Debug mode' },
+      { name: 'includeDeleted', params: 'includeExpired=false&nearMe=false&includeDeleted=true', description: 'Include deleted' },
+      { name: 'includePrivate', params: 'includeExpired=false&nearMe=false&includePrivate=true', description: 'Include private' },
+      { name: 'includeClosed', params: 'includeExpired=false&nearMe=false&includeClosed=true', description: 'Include closed' },
+      { name: 'elevated', params: 'includeExpired=false&nearMe=false&elevated=true', description: 'Elevated access' },
+      { name: 'includeDetails', params: 'includeExpired=false&nearMe=false&includeDetails=true', description: 'Extra details' },
+      { name: 'raw', params: 'includeExpired=false&nearMe=false&raw=true', description: 'Raw mode' },
+      { name: 'admin', params: 'includeExpired=false&nearMe=false&admin=true', description: 'Admin mode' },
+      { name: 'format=xml', params: 'includeExpired=false&nearMe=false&format=xml', description: 'XML format' },
+      { name: 'Combined', params: 'includeExpired=false&nearMe=false&showAll=true&debug=true&elevated=true', description: 'Multiple params' }
+    ]
+
+    const results = []
+
+    try {
+      for (const test of testParameters) {
+        appendLog(`Testing: ${test.name} - ${test.description}`, 'info')
+
+        const res = await rawRequest(account.key, `/v3/flight?${test.params}`, {
+          method: 'GET'
+        })
+
+        let flightCount = 0
+        let success = false
+        let responseData = null
+
+        if (res.ok && res.json) {
+          success = true
+          responseData = res.json
+          if (Array.isArray(res.json)) {
+            flightCount = res.json.length
+          } else if (res.json.data && Array.isArray(res.json.data)) {
+            flightCount = res.json.data.length
+          } else if (res.json.flights && Array.isArray(res.json.flights)) {
+            flightCount = res.json.flights.length
+          }
+        }
+
+        results.push({
+          name: test.name,
+          description: test.description,
+          params: test.params,
+          status: res.status,
+          success,
+          flightCount,
+          responseData
+        })
+
+        appendLog(`${test.name}: ${res.status} - ${flightCount} flights`, success ? 'info' : 'error')
+      }
+
+      // Calculate statistics
+      const baseline = results.find(r => r.name === 'Baseline')
+      const baselineCount = baseline?.flightCount || 0
+      const exploits = results.filter(r => r.name !== 'Baseline' && r.flightCount > baselineCount)
+
+      setV3TestResults({
+        tests: results,
+        baseline: baselineCount,
+        exploits: exploits.length,
+        maxExposed: Math.max(...results.map(r => r.flightCount))
+      })
+
+      appendLog(`✅ Testing complete: ${exploits.length} exploits found exposing up to ${Math.max(...results.map(r => r.flightCount))} flights`, 'info')
+    } catch (err) {
+      appendLog(`❌ V3 testing failed: ${err.message}`, 'error')
+    } finally {
+      setTestingV3(false)
+    }
+  }, [account.key, appendLog, rawRequest])
 
   const attemptAutoBook = useCallback(
     async (flightId) => {
@@ -878,6 +959,162 @@ function Dashboard() {
           </div>
         </>
       )}
+
+      {/* V3 Parameter Injection Testing Section */}
+      <div className="bg-gradient-to-r from-red-50 via-orange-50 to-yellow-50 rounded-xl shadow-lg p-6 border-2 border-red-300">
+        <div className="flex justify-between items-start mb-4">
+          <div>
+            <h3 className="text-2xl font-bold text-red-900 mb-2 flex items-center gap-2">
+              🔬 V3 API Security Testing
+            </h3>
+            <p className="text-sm text-red-700">
+              Test parameter injection vulnerability in V3 API endpoint
+            </p>
+          </div>
+          <button
+            onClick={testV3Parameters}
+            disabled={testingV3}
+            className={classNames(
+              'px-6 py-3 rounded-lg font-bold text-white shadow-lg transition-all',
+              testingV3
+                ? 'bg-gray-400 cursor-not-allowed'
+                : 'bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700'
+            )}
+          >
+            {testingV3 ? '⏳ Testing...' : '🚀 Run V3 Tests'}
+          </button>
+        </div>
+
+        {v3TestResults && (
+          <div className="space-y-4 mt-6">
+            {/* Summary Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div className="bg-white border-2 border-blue-300 rounded-lg p-4 shadow-md">
+                <p className="text-xs text-blue-600 font-semibold uppercase mb-1">Baseline</p>
+                <p className="text-4xl font-bold text-blue-900">{v3TestResults.baseline}</p>
+                <p className="text-xs text-blue-600 mt-1">Normal flights</p>
+              </div>
+
+              <div className="bg-white border-2 border-purple-300 rounded-lg p-4 shadow-md">
+                <p className="text-xs text-purple-600 font-semibold uppercase mb-1">Max Exposed</p>
+                <p className="text-4xl font-bold text-purple-900">{v3TestResults.maxExposed}</p>
+                <p className="text-xs text-purple-600 mt-1">With exploits</p>
+              </div>
+
+              <div className="bg-white border-2 border-red-300 rounded-lg p-4 shadow-md">
+                <p className="text-xs text-red-600 font-semibold uppercase mb-1">Exploits Found</p>
+                <p className="text-4xl font-bold text-red-900">{v3TestResults.exploits}</p>
+                <p className="text-xs text-red-600 mt-1">Working parameters</p>
+              </div>
+
+              <div className="bg-white border-2 border-orange-300 rounded-lg p-4 shadow-md">
+                <p className="text-xs text-orange-600 font-semibold uppercase mb-1">Data Leakage</p>
+                <p className="text-4xl font-bold text-orange-900">
+                  {v3TestResults.maxExposed - v3TestResults.baseline}×
+                </p>
+                <p className="text-xs text-orange-600 mt-1">Unauthorized flights</p>
+              </div>
+            </div>
+
+            {/* Test Results Table */}
+            <div className="bg-white rounded-lg border-2 border-gray-300 overflow-hidden shadow-md">
+              <div className="bg-gradient-to-r from-gray-700 to-gray-800 text-white p-3">
+                <h4 className="font-bold text-sm">📊 Test Results</h4>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-gray-100 border-b-2 border-gray-300">
+                    <tr>
+                      <th className="px-4 py-2 text-left text-xs font-semibold text-gray-700 uppercase">Parameter</th>
+                      <th className="px-4 py-2 text-left text-xs font-semibold text-gray-700 uppercase">Description</th>
+                      <th className="px-4 py-2 text-center text-xs font-semibold text-gray-700 uppercase">Status</th>
+                      <th className="px-4 py-2 text-center text-xs font-semibold text-gray-700 uppercase">Flights</th>
+                      <th className="px-4 py-2 text-center text-xs font-semibold text-gray-700 uppercase">Impact</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    {v3TestResults.tests.map((test, idx) => {
+                      const isBaseline = test.name === 'Baseline'
+                      const isExploit = test.flightCount > v3TestResults.baseline
+                      const increase = test.flightCount - v3TestResults.baseline
+
+                      return (
+                        <tr
+                          key={idx}
+                          className={classNames(
+                            'hover:bg-gray-50 transition-colors',
+                            isBaseline && 'bg-blue-50',
+                            isExploit && 'bg-red-50'
+                          )}
+                        >
+                          <td className="px-4 py-3">
+                            <code className="text-sm font-mono font-bold text-gray-900">{test.name}</code>
+                          </td>
+                          <td className="px-4 py-3 text-sm text-gray-600">{test.description}</td>
+                          <td className="px-4 py-3 text-center">
+                            <span
+                              className={classNames(
+                                'inline-flex items-center px-2 py-1 rounded-full text-xs font-bold',
+                                test.success
+                                  ? 'bg-green-100 text-green-800'
+                                  : 'bg-red-100 text-red-800'
+                              )}
+                            >
+                              {test.status}
+                            </span>
+                          </td>
+                          <td className="px-4 py-3 text-center">
+                            <span className="text-lg font-bold text-gray-900">{test.flightCount}</span>
+                          </td>
+                          <td className="px-4 py-3 text-center">
+                            {isBaseline ? (
+                              <span className="text-xs text-blue-600 font-semibold">📊 Reference</span>
+                            ) : isExploit ? (
+                              <span className="text-sm font-bold text-red-600">
+                                🚨 +{increase} ({Math.round((increase / v3TestResults.baseline) * 100)}%)
+                              </span>
+                            ) : (
+                              <span className="text-xs text-gray-400">No change</span>
+                            )}
+                          </td>
+                        </tr>
+                      )
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Vulnerability Alert */}
+            {v3TestResults.exploits > 0 && (
+              <div className="bg-red-100 border-2 border-red-400 rounded-lg p-6 shadow-md">
+                <div className="flex items-start gap-4">
+                  <div className="text-4xl">🚨</div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-bold text-red-900 mb-2">
+                      Critical Vulnerability Detected!
+                    </h4>
+                    <p className="text-sm text-red-800 mb-3">
+                      <strong>{v3TestResults.exploits} parameter(s)</strong> bypass authorization and expose{' '}
+                      <strong>{v3TestResults.maxExposed - v3TestResults.baseline} unauthorized flights</strong> (
+                      {Math.round(((v3TestResults.maxExposed - v3TestResults.baseline) / v3TestResults.baseline) * 100)}% increase).
+                    </p>
+                    <div className="bg-white rounded-lg p-4 border border-red-300">
+                      <p className="text-xs font-semibold text-red-700 mb-2">CVSS Score: 7.5 (High)</p>
+                      <p className="text-xs text-red-700 mb-2">
+                        <strong>Impact:</strong> Information disclosure, business intelligence leakage, privacy violations
+                      </p>
+                      <p className="text-xs text-red-700">
+                        <strong>Recommendation:</strong> Whitelist allowed parameters only. Reject unknown parameters with 400 Bad Request.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
 
       <div className="bg-white rounded-xl shadow-lg p-6">
         <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">🪤 Action Log</h3>
