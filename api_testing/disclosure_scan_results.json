@@ -1,0 +1,22 @@
+{
+  "timestamp": "2025-11-05T17:47:37.882988",
+  "target": "https://vauntapi.flyvaunt.com",
+  "exposed_files": [],
+  "blocked_but_exists": [],
+  "debug_endpoints": [],
+  "secrets_found": [],
+  "server_info": {
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "date": "Wed, 05 Nov 2025 17:47:38 GMT",
+      "access-control-allow-origin": "*",
+      "content-encoding": "gzip",
+      "etag": "W/\"115a-VgP4UXTlFIZ0cZgXZErqaSkmTLY\"",
+      "set-cookie": "sails.sid=s%3AnpR2LUywc5vqGoPqjWD_-JTAWefIiCbY.R4jPe690M7PNT1U1iSw2QoidvJfK%2FalLVKD6PzG%2F8Es; Path=/; HttpOnly",
+      "vary": "Accept-Encoding",
+      "transfer-encoding": "chunked"
+    }
+  },
+  "total_tested": 220,
+  "vulnerabilities": []
+}

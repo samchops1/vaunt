@@ -1,0 +1,69 @@
+{
+  "tests": [
+    {
+      "test": "Credit Balance Underflow",
+      "status": "SECURE",
+      "details": "Proper credit validation",
+      "cvss": 0,
+      "timestamp": "2025-11-05T17:50:08.960966"
+    },
+    {
+      "test": "Referral Loop - Self Referral",
+      "status": "SECURE",
+      "details": "Self-referral properly blocked",
+      "cvss": 0,
+      "timestamp": "2025-11-05T17:50:09.097365"
+    },
+    {
+      "test": "Referral Loop - Multiple Codes",
+      "status": "SECURE",
+      "details": "Multiple referrals properly limited",
+      "cvss": 0,
+      "timestamp": "2025-11-05T17:50:09.610939"
+    },
+    {
+      "test": "Flight Overbooking",
+      "status": "VULNERABLE",
+      "details": "Flight already overbooked! 12 entrants for 1 capacity.",
+      "cvss": 6.0,
+      "timestamp": "2025-11-05T17:50:09.778249"
+    },
+    {
+      "test": "Concurrent State Changes",
+      "status": "INFO",
+      "details": "Concurrent operations completed: [('error', 200), ('error', 200), ('error', 200), ('error', 200), ('error', 200)]",
+      "cvss": 0,
+      "timestamp": "2025-11-05T17:50:12.222854"
+    },
+    {
+      "test": "Priority Score Race Condition",
+      "status": "SECURE",
+      "details": "Priority score unchanged despite concurrent attempts",
+      "cvss": 0,
+      "timestamp": "2025-11-05T17:50:15.246205"
+    },
+    {
+      "test": "Parameter Pollution",
+      "status": "SECURE",
+      "details": "Proper parameter validation",
+      "cvss": 0,
+      "timestamp": "2025-11-05T17:50:15.895817"
+    },
+    {
+      "test": "Token/Session Edge Cases",
+      "status": "SECURE",
+      "details": "Proper token validation",
+      "cvss": 0,
+      "timestamp": "2025-11-05T17:50:16.646620"
+    },
+    {
+      "test": "Mass Assignment",
+      "status": "SECURE",
+      "details": "Privileged fields properly protected",
+      "cvss": 0,
+      "timestamp": "2025-11-05T17:50:24.982421"
+    }
+  ],
+  "vulnerable": 1,
+  "secure": 7
+}
