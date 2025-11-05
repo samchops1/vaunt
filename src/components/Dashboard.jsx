@@ -473,6 +473,7 @@ function Dashboard() {
     ]
 
     const results = []
+    let allUnauthorizedFlights = new Map() // flightId -> flight details
 
     try {
       for (const test of testParameters) {
@@ -483,19 +484,54 @@ function Dashboard() {
         })
 
         let flightCount = 0
+        let unauthorizedCount = 0
         let success = false
         let responseData = null
+        let flights = []
 
         if (res.ok && res.json) {
           success = true
           responseData = res.json
+
+          // Extract flights array from response
           if (Array.isArray(res.json)) {
-            flightCount = res.json.length
+            flights = res.json
           } else if (res.json.data && Array.isArray(res.json.data)) {
-            flightCount = res.json.data.length
+            flights = res.json.data
           } else if (res.json.flights && Array.isArray(res.json.flights)) {
-            flightCount = res.json.flights.length
+            flights = res.json.flights
           }
+
+          flightCount = flights.length
+
+          // Filter out flights where user is involved (authorized data)
+          const unauthorizedFlights = flights.filter(flight => {
+            const entrants = Array.isArray(flight.entrants) ? flight.entrants : []
+            return !entrants.some(e => e.id === account.userId)
+          })
+          unauthorizedCount = unauthorizedFlights.length
+
+          // Extract detailed info from unauthorized flights
+          unauthorizedFlights.forEach(flight => {
+            if (!allUnauthorizedFlights.has(flight.id)) {
+              const entrants = Array.isArray(flight.entrants) ? flight.entrants : []
+              allUnauthorizedFlights.set(flight.id, {
+                id: flight.id,
+                route: `${flight.departAirport?.code || '???'} → ${flight.arriveAirport?.code || '???'}`,
+                departCity: flight.departAirport?.city || 'Unknown',
+                arriveCity: flight.arriveAirport?.city || 'Unknown',
+                departTime: flight.departDateTimeLocal || 'Unknown',
+                status: flight.status?.label || flight.status || 'Unknown',
+                entrantCount: entrants.length,
+                entrants: entrants.map(e => ({
+                  id: e.id,
+                  name: e.firstName ? `${e.firstName}${e.lastName ? ' ' + e.lastName.charAt(0) + '.' : ''}` : `User ${e.id}`,
+                  position: e.queuePosition ?? '?',
+                  priorityScore: e.priorityScore || 0
+                })).sort((a, b) => a.position - b.position)
+              })
+            }
+          })
         }
 
         results.push({
@@ -505,31 +541,36 @@ function Dashboard() {
           status: res.status,
           success,
           flightCount,
+          unauthorizedCount,
           responseData
         })
 
-        appendLog(`${test.name}: ${res.status} - ${flightCount} flights`, success ? 'info' : 'error')
+        appendLog(`${test.name}: ${res.status} - ${flightCount} total (${unauthorizedCount} unauthorized)`, success ? 'info' : 'error')
       }
 
       // Calculate statistics
       const baseline = results.find(r => r.name === 'Baseline')
-      const baselineCount = baseline?.flightCount || 0
-      const exploits = results.filter(r => r.name !== 'Baseline' && r.flightCount > baselineCount)
+      const baselineCount = baseline?.unauthorizedCount || 0
+      const exploits = results.filter(r => r.name !== 'Baseline' && r.unauthorizedCount > baselineCount)
+
+      const unauthorizedFlightsArray = Array.from(allUnauthorizedFlights.values())
 
       setV3TestResults({
         tests: results,
         baseline: baselineCount,
         exploits: exploits.length,
-        maxExposed: Math.max(...results.map(r => r.flightCount))
+        maxExposed: Math.max(...results.map(r => r.unauthorizedCount)),
+        unauthorizedFlights: unauthorizedFlightsArray,
+        totalUnique: unauthorizedFlightsArray.length
       })
 
-      appendLog(`✅ Testing complete: ${exploits.length} exploits found exposing up to ${Math.max(...results.map(r => r.flightCount))} flights`, 'info')
+      appendLog(`✅ Testing complete: ${exploits.length} exploits found exposing ${unauthorizedFlightsArray.length} unauthorized flights`, 'info')
     } catch (err) {
       appendLog(`❌ V3 testing failed: ${err.message}`, 'error')
     } finally {
       setTestingV3(false)
     }
-  }, [account.key, appendLog, rawRequest])
+  }, [account.key, account.userId, appendLog, rawRequest])
 
   const attemptAutoBook = useCallback(
     async (flightId) => {
@@ -992,13 +1033,13 @@ function Dashboard() {
               <div className="bg-white border-2 border-blue-300 rounded-lg p-4 shadow-md">
                 <p className="text-xs text-blue-600 font-semibold uppercase mb-1">Baseline</p>
                 <p className="text-4xl font-bold text-blue-900">{v3TestResults.baseline}</p>
-                <p className="text-xs text-blue-600 mt-1">Normal flights</p>
+                <p className="text-xs text-blue-600 mt-1">Authorized only</p>
               </div>
 
               <div className="bg-white border-2 border-purple-300 rounded-lg p-4 shadow-md">
-                <p className="text-xs text-purple-600 font-semibold uppercase mb-1">Max Exposed</p>
-                <p className="text-4xl font-bold text-purple-900">{v3TestResults.maxExposed}</p>
-                <p className="text-xs text-purple-600 mt-1">With exploits</p>
+                <p className="text-xs text-purple-600 font-semibold uppercase mb-1">Unique Exposed</p>
+                <p className="text-4xl font-bold text-purple-900">{v3TestResults.totalUnique || 0}</p>
+                <p className="text-xs text-purple-600 mt-1">Unauthorized flights</p>
               </div>
 
               <div className="bg-white border-2 border-red-300 rounded-lg p-4 shadow-md">
@@ -1010,9 +1051,9 @@ function Dashboard() {
               <div className="bg-white border-2 border-orange-300 rounded-lg p-4 shadow-md">
                 <p className="text-xs text-orange-600 font-semibold uppercase mb-1">Data Leakage</p>
                 <p className="text-4xl font-bold text-orange-900">
-                  {v3TestResults.maxExposed - v3TestResults.baseline}×
+                  {v3TestResults.totalUnique || 0}
                 </p>
-                <p className="text-xs text-orange-600 mt-1">Unauthorized flights</p>
+                <p className="text-xs text-orange-600 mt-1">Others' flights visible</p>
               </div>
             </div>
 
@@ -1035,8 +1076,8 @@ function Dashboard() {
                   <tbody className="divide-y divide-gray-200">
                     {v3TestResults.tests.map((test, idx) => {
                       const isBaseline = test.name === 'Baseline'
-                      const isExploit = test.flightCount > v3TestResults.baseline
-                      const increase = test.flightCount - v3TestResults.baseline
+                      const isExploit = test.unauthorizedCount > v3TestResults.baseline
+                      const increase = test.unauthorizedCount - v3TestResults.baseline
 
                       return (
                         <tr
@@ -1064,14 +1105,17 @@ function Dashboard() {
                             </span>
                           </td>
                           <td className="px-4 py-3 text-center">
-                            <span className="text-lg font-bold text-gray-900">{test.flightCount}</span>
+                            <div className="text-center">
+                              <span className="text-lg font-bold text-gray-900">{test.unauthorizedCount}</span>
+                              <span className="text-xs text-gray-500 ml-1">unauthorized</span>
+                            </div>
                           </td>
                           <td className="px-4 py-3 text-center">
                             {isBaseline ? (
                               <span className="text-xs text-blue-600 font-semibold">📊 Reference</span>
                             ) : isExploit ? (
                               <span className="text-sm font-bold text-red-600">
-                                🚨 +{increase} ({Math.round((increase / v3TestResults.baseline) * 100)}%)
+                                🚨 +{increase} ({v3TestResults.baseline > 0 ? Math.round((increase / v3TestResults.baseline) * 100) : '∞'}%)
                               </span>
                             ) : (
                               <span className="text-xs text-gray-400">No change</span>
@@ -1096,8 +1140,7 @@ function Dashboard() {
                     </h4>
                     <p className="text-sm text-red-800 mb-3">
                       <strong>{v3TestResults.exploits} parameter(s)</strong> bypass authorization and expose{' '}
-                      <strong>{v3TestResults.maxExposed - v3TestResults.baseline} unauthorized flights</strong> (
-                      {Math.round(((v3TestResults.maxExposed - v3TestResults.baseline) / v3TestResults.baseline) * 100)}% increase).
+                      <strong>{v3TestResults.totalUnique || 0} unauthorized flights</strong> containing private passenger data.
                     </p>
                     <div className="bg-white rounded-lg p-4 border border-red-300">
                       <p className="text-xs font-semibold text-red-700 mb-2">CVSS Score: 7.5 (High)</p>
@@ -1109,6 +1152,88 @@ function Dashboard() {
                       </p>
                     </div>
                   </div>
+                </div>
+              </div>
+            )}
+
+            {/* Detailed Unauthorized Flights */}
+            {v3TestResults.unauthorizedFlights && v3TestResults.unauthorizedFlights.length > 0 && (
+              <div className="bg-white rounded-lg border-2 border-red-300 overflow-hidden shadow-md">
+                <div className="bg-gradient-to-r from-red-700 to-red-800 text-white p-3">
+                  <h4 className="font-bold text-sm">🔓 Exposed Unauthorized Flight Data ({v3TestResults.unauthorizedFlights.length} flights)</h4>
+                  <p className="text-xs mt-1 opacity-90">Passenger names, priority scores, and routes you should NOT be able to see</p>
+                </div>
+                <div className="max-h-96 overflow-y-auto">
+                  {v3TestResults.unauthorizedFlights.map((flight, idx) => (
+                    <div key={flight.id} className={classNames(
+                      'p-4 border-b border-red-200',
+                      idx % 2 === 0 ? 'bg-red-50' : 'bg-white'
+                    )}>
+                      <div className="flex justify-between items-start mb-2">
+                        <div>
+                          <h5 className="font-bold text-gray-900">
+                            Flight #{flight.id}: {flight.route}
+                          </h5>
+                          <p className="text-xs text-gray-600">
+                            {flight.departCity} → {flight.arriveCity}
+                          </p>
+                        </div>
+                        <div className="text-right">
+                          <span className={classNames(
+                            'inline-flex items-center px-2 py-1 rounded-full text-xs font-bold',
+                            flight.status === 'PENDING' ? 'bg-yellow-100 text-yellow-800' :
+                            flight.status === 'CLOSED' ? 'bg-gray-100 text-gray-800' :
+                            'bg-green-100 text-green-800'
+                          )}>
+                            {flight.status}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="text-xs text-gray-600 mb-3">
+                        <span className="font-semibold">Departure:</span> {flight.departTime}
+                      </div>
+
+                      {flight.entrants.length > 0 && (
+                        <div className="bg-white rounded-lg p-3 border border-red-200">
+                          <p className="text-xs font-bold text-red-700 mb-2">
+                            🚨 UNAUTHORIZED ACCESS: {flight.entrantCount} Passenger{flight.entrantCount !== 1 ? 's' : ''} Exposed
+                          </p>
+                          <div className="space-y-1">
+                            {flight.entrants.slice(0, 5).map((entrant, eIdx) => (
+                              <div key={eIdx} className="flex justify-between items-center text-xs py-1 px-2 bg-red-50 rounded">
+                                <div className="flex items-center gap-2">
+                                  <span className={classNames(
+                                    'inline-flex items-center justify-center w-5 h-5 rounded-full text-xs font-bold',
+                                    entrant.position === 0 ? 'bg-yellow-400 text-yellow-900' :
+                                    entrant.position === 1 ? 'bg-gray-300 text-gray-900' :
+                                    'bg-gray-200 text-gray-700'
+                                  )}>
+                                    {entrant.position}
+                                  </span>
+                                  <span className="font-semibold text-gray-900">{entrant.name}</span>
+                                  <span className="text-gray-500">(ID: {entrant.id})</span>
+                                </div>
+                                <div className="text-right">
+                                  <span className="font-mono text-purple-700 font-semibold">
+                                    Score: {entrant.priorityScore.toLocaleString()}
+                                  </span>
+                                  <span className="ml-2 text-xs text-gray-500">
+                                    {new Date(entrant.priorityScore * 1000).toLocaleDateString()}
+                                  </span>
+                                </div>
+                              </div>
+                            ))}
+                            {flight.entrants.length > 5 && (
+                              <p className="text-xs text-gray-500 mt-2 text-center">
+                                ... and {flight.entrants.length - 5} more passenger{flight.entrants.length - 5 !== 1 ? 's' : ''}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
