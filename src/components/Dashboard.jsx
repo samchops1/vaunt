@@ -395,39 +395,34 @@ function Dashboard() {
   const attemptLeaveWaitlist = useCallback(
     async (flightId) => {
       setActionBusy(`leave-${flightId}`)
-      appendLog(`🚪 Leaving waitlist for flight #${flightId}`, 'info')
-
-      const attempts = [
-        { method: 'POST', endpoint: `/v1/flight/${flightId}/cancel` },
-        { method: 'POST', endpoint: `/v1/flight/${flightId}/exit` },
-        { method: 'DELETE', endpoint: `/v1/flight/${flightId}/exit` },
-        { method: 'POST', endpoint: `/v1/flight/${flightId}/leave` },
-        { method: 'DELETE', endpoint: `/v1/flight/${flightId}/leave` },
-        { method: 'DELETE', endpoint: `/v1/flight/${flightId}/enter` }
-      ]
+      appendLog(`🚪 Attempting to leave waitlist for flight #${flightId}`, 'info')
 
       try {
-        let success = false
-        for (const attempt of attempts) {
-          const res = await rawRequest(account.key, attempt.endpoint, {
-            method: attempt.method
-          })
+        const res = await rawRequest(account.key, `/v1/flight/${flightId}/cancel`, {
+          method: 'POST'
+        })
 
+        appendLog(
+          `POST /v1/flight/${flightId}/cancel → ${res.status}`,
+          res.ok ? 'info' : 'error'
+        )
+
+        if (res.ok) {
+          appendLog(`✅ Successfully left waitlist for flight #${flightId}!`, 'info')
+          await handleCheckAll()
+        } else if (res.status === 400) {
           appendLog(
-            `${attempt.method} ${attempt.endpoint} → ${res.status}`,
-            res.ok ? 'info' : 'error'
+            `❌ Cannot leave: ${res.text || 'Flight is PENDING (not CLOSED yet)'}`,
+            'error'
           )
-
-          if (res.ok) {
-            appendLog(`✅ Successfully left waitlist for flight #${flightId}!`, 'info')
-            success = true
-            await handleCheckAll()
-            break
-          }
-        }
-
-        if (!success) {
-          appendLog(`⚠️ All leave attempts returned errors. You may still be on the waitlist.`, 'warn')
+          appendLog(
+            `ℹ️ The /cancel endpoint only works for CLOSED flights. PENDING flights cannot be cancelled via API.`,
+            'warn'
+          )
+        } else if (res.status === 404) {
+          appendLog(`❌ Flight not found or endpoint unavailable`, 'error')
+        } else {
+          appendLog(`❌ Failed to leave: ${res.status} - ${res.text}`, 'error')
         }
       } catch (err) {
         appendLog(`❌ Failed to leave waitlist: ${err.message}`, 'error')
