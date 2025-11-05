@@ -1,0 +1,79 @@
+[
+  {
+    "param": "&showAll=true",
+    "description": "Show all flights",
+    "baseline_count": 1,
+    "new_count": 98,
+    "difference": 97
+  },
+  {
+    "param": "&debug=true",
+    "description": "Debug mode",
+    "baseline_count": 1,
+    "new_count": 98,
+    "difference": 97
+  },
+  {
+    "param": "&includeDeleted=true",
+    "description": "Include deleted",
+    "baseline_count": 1,
+    "new_count": 98,
+    "difference": 97
+  },
+  {
+    "param": "&includePrivate=true",
+    "description": "Include private",
+    "baseline_count": 1,
+    "new_count": 98,
+    "difference": 97
+  },
+  {
+    "param": "&includeClosed=true",
+    "description": "Include closed",
+    "baseline_count": 1,
+    "new_count": 98,
+    "difference": 97
+  },
+  {
+    "param": "&elevated=true",
+    "description": "Elevated privileges",
+    "baseline_count": 1,
+    "new_count": 98,
+    "difference": 97
+  },
+  {
+    "param": "&flightId=8800",
+    "description": "Specific flight ID",
+    "baseline_count": 1,
+    "new_count": 98,
+    "difference": 97
+  },
+  {
+    "param": "&includeDetails=true",
+    "description": "Include details",
+    "baseline_count": 1,
+    "new_count": 98,
+    "difference": 97
+  },
+  {
+    "param": "&raw=true",
+    "description": "Raw data",
+    "baseline_count": 1,
+    "new_count": 98,
+    "difference": 97
+  },
+  {
+    "param": "&userId=1 OR 1=1--",
+    "description": "SQL injection 2",
+    "baseline_count": 1,
+    "new_count": 98,
+    "difference": 97
+  },
+  {
+    "param": "&format=xml",
+    "description": "XML format",
+    "baseline_count": 1,
+    "new_count": 98,
+    "difference": 97
+  }
+]
