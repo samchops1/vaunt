@@ -362,44 +362,75 @@ function Dashboard() {
   const attemptJoinWaitlist = useCallback(
     async (flightId) => {
       setActionBusy(`join-${flightId}`)
-      appendLog(`🎯 Attempting to join waitlist for flight #${flightId}`, 'info')
+      appendLog(`🎯 Joining waitlist for flight #${flightId}`, 'info')
+
+      try {
+        const res = await rawRequest(account.key, `/v1/flight/${flightId}/enter`, {
+          method: 'POST',
+          body: {}
+        })
+
+        appendLog(
+          `POST /v1/flight/${flightId}/enter → ${res.status}${
+            res.json ? ` :: ${JSON.stringify(res.json).slice(0, 100)}` : ''
+          }`,
+          res.ok ? 'info' : 'error'
+        )
+
+        if (res.ok) {
+          appendLog(`✅ Successfully joined waitlist for flight #${flightId}!`, 'info')
+          await handleCheckAll()
+        } else {
+          appendLog(`❌ Failed to join: ${res.status} - ${res.text}`, 'error')
+        }
+      } catch (err) {
+        appendLog(`❌ Failed to join waitlist: ${err.message}`, 'error')
+      } finally {
+        setActionBusy(null)
+      }
+    },
+    [account.key, appendLog, rawRequest, handleCheckAll]
+  )
+
+  const attemptLeaveWaitlist = useCallback(
+    async (flightId) => {
+      setActionBusy(`leave-${flightId}`)
+      appendLog(`🚪 Leaving waitlist for flight #${flightId}`, 'info')
 
       const attempts = [
-        { method: 'POST', endpoint: `/v1/flight/${flightId}/entrant`, body: { flightId } },
-        { method: 'POST', endpoint: `/v1/entrant`, body: { flightId } },
-        { method: 'POST', endpoint: `/v1/waitlist/join`, body: { flightId } },
-        { method: 'POST', endpoint: `/v1/flight/${flightId}/join`, body: {} }
+        { method: 'POST', endpoint: `/v1/flight/${flightId}/cancel` },
+        { method: 'POST', endpoint: `/v1/flight/${flightId}/exit` },
+        { method: 'DELETE', endpoint: `/v1/flight/${flightId}/exit` },
+        { method: 'POST', endpoint: `/v1/flight/${flightId}/leave` },
+        { method: 'DELETE', endpoint: `/v1/flight/${flightId}/leave` },
+        { method: 'DELETE', endpoint: `/v1/flight/${flightId}/enter` }
       ]
 
       try {
         let success = false
         for (const attempt of attempts) {
-          appendLog(`Trying: ${attempt.method} ${attempt.endpoint}`, 'info')
           const res = await rawRequest(account.key, attempt.endpoint, {
-            method: attempt.method,
-            body: attempt.body
+            method: attempt.method
           })
+
           appendLog(
-            `${attempt.method} ${attempt.endpoint} → ${res.status}${
-              res.json ? ` :: ${JSON.stringify(res.json)}` : res.text ? ` :: ${res.text}` : ''
-            }`,
+            `${attempt.method} ${attempt.endpoint} → ${res.status}`,
             res.ok ? 'info' : 'error'
           )
-          
+
           if (res.ok) {
-            appendLog(`✅ Successfully joined waitlist for flight #${flightId}!`, 'info')
+            appendLog(`✅ Successfully left waitlist for flight #${flightId}!`, 'info')
             success = true
+            await handleCheckAll()
             break
           }
         }
-        
-        if (success) {
-          await handleCheckAll()
-        } else {
-          appendLog(`⚠️ All join attempts failed. Check logs above for details.`, 'warn')
+
+        if (!success) {
+          appendLog(`⚠️ All leave attempts returned errors. You may still be on the waitlist.`, 'warn')
         }
       } catch (err) {
-        appendLog(`❌ Failed to join waitlist: ${err.message}`, 'error')
+        appendLog(`❌ Failed to leave waitlist: ${err.message}`, 'error')
       } finally {
         setActionBusy(null)
       }
@@ -692,14 +723,24 @@ function Dashboard() {
                               Departs: {formatIsoDate(flight.departDateTime)}
                             </p>
                           </div>
-                          <div className="text-right">
+                          <div className="text-right space-y-2">
                             <div className="bg-green-100 border-2 border-green-400 rounded-lg px-4 py-2 inline-block">
                               <p className="text-xs text-green-700 font-semibold">YOUR POSITION</p>
                               <p className="text-3xl font-bold text-green-900">#{yourEntry?.queuePosition ?? '?'}</p>
                             </div>
-                            <p className="text-xs text-gray-500 mt-2">
+                            <p className="text-xs text-gray-500">
                               {entrants.length} total on waitlist
                             </p>
+                            <button
+                              onClick={() => attemptLeaveWaitlist(flight.id)}
+                              disabled={actionBusy !== null}
+                              className={classNames(
+                                'w-full px-4 py-2 text-sm font-semibold rounded-lg bg-red-600 text-white shadow-md hover:bg-red-700 transition-all',
+                                actionBusy && 'opacity-50 cursor-not-allowed'
+                              )}
+                            >
+                              🚪 Leave Waitlist
+                            </button>
                           </div>
                         </div>
                       </div>
