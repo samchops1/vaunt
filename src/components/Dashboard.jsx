@@ -365,13 +365,19 @@ function Dashboard() {
       appendLog(`🎯 Joining waitlist for flight #${flightId}`, 'info')
 
       try {
-        const res = await rawRequest(account.key, `/v1/flight/${flightId}/enter`, {
+        // Use v2/enter endpoint (discovered from mobile app network logs)
+        const res = await rawRequest(account.key, `/v2/flight/${flightId}/enter`, {
           method: 'POST',
-          body: {}
+          body: {},
+          headers: {
+            'x-app-platform': 'web',
+            'x-device-id': crypto.randomUUID ? crypto.randomUUID() : 'web-dashboard',
+            'x-build-number': '1'
+          }
         })
 
         appendLog(
-          `POST /v1/flight/${flightId}/enter → ${res.status}${
+          `POST /v2/flight/${flightId}/enter → ${res.status}${
             res.json ? ` :: ${JSON.stringify(res.json).slice(0, 100)}` : ''
           }`,
           res.ok ? 'info' : 'error'
@@ -379,6 +385,7 @@ function Dashboard() {
 
         if (res.ok) {
           appendLog(`✅ Successfully joined waitlist for flight #${flightId}!`, 'info')
+          appendLog(`ℹ️ Used v2 API /enter endpoint`, 'info')
           await handleCheckAll()
         } else {
           appendLog(`❌ Failed to join: ${res.status} - ${res.text}`, 'error')
@@ -398,27 +405,25 @@ function Dashboard() {
       appendLog(`🚪 Attempting to leave waitlist for flight #${flightId}`, 'info')
 
       try {
-        const res = await rawRequest(account.key, `/v1/flight/${flightId}/cancel`, {
-          method: 'POST'
+        // Use v2/reset endpoint (discovered from mobile app network logs)
+        const res = await rawRequest(account.key, `/v2/flight/${flightId}/reset`, {
+          method: 'POST',
+          headers: {
+            'x-app-platform': 'web',
+            'x-device-id': crypto.randomUUID ? crypto.randomUUID() : 'web-dashboard',
+            'x-build-number': '1'
+          }
         })
 
         appendLog(
-          `POST /v1/flight/${flightId}/cancel → ${res.status}`,
+          `POST /v2/flight/${flightId}/reset → ${res.status}`,
           res.ok ? 'info' : 'error'
         )
 
         if (res.ok) {
           appendLog(`✅ Successfully left waitlist for flight #${flightId}!`, 'info')
+          appendLog(`ℹ️ Used v2 API /reset endpoint (works for PENDING flights!)`, 'info')
           await handleCheckAll()
-        } else if (res.status === 400) {
-          appendLog(
-            `❌ Cannot leave: ${res.text || 'Flight is PENDING (not CLOSED yet)'}`,
-            'error'
-          )
-          appendLog(
-            `ℹ️ The /cancel endpoint only works for CLOSED flights. PENDING flights cannot be cancelled via API.`,
-            'warn'
-          )
         } else if (res.status === 404) {
           appendLog(`❌ Flight not found or endpoint unavailable`, 'error')
         } else {
