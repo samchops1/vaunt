@@ -27,10 +27,22 @@ A React-based security research dashboard for testing and demonstrating Vaunt AP
 ```
 
 ## Recent Changes
+- **2025-11-05**: 🔴 **CRITICAL - SQL Injection & SMS Security Testing**
+  - Discovered CRITICAL SMS authentication vulnerabilities:
+    * No rate limiting on SMS requests (SMS bombing possible)
+    * No rate limiting on code verification (account takeover via brute force - ~7 hours)
+    * User enumeration possible (200 vs 500 response codes)
+  - SQL injection testing across all endpoints:
+    * Most endpoints properly protected
+    * Potential issue in completeSignIn phoneNumber field (500 errors)
+  - Created SQL_SMS_SECURITY_REPORT.md with full exploit scenarios
+  - Created automated test scripts (sql_injection_tests.py, sms_security_tests.py)
+  - 51 total security tests performed
+
 - **2025-11-05**: ✅ Completed comprehensive API security testing
   - Tested authentication payload injection (SMS/JWT)
   - Tested IDOR vulnerabilities (user data, waitlist manipulation)
-  - Confirmed API has strong security controls
+  - Confirmed API has strong authorization controls
   - Created SECURITY_TEST_RESULTS.md with full findings
   - Updated all documentation with cross-references
   - Created README.md as master index

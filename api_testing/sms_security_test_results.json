@@ -1,0 +1,277 @@
+[
+  {
+    "test": "arbitrary_sms",
+    "phone": "+11111111111",
+    "status": 500,
+    "elapsed": 0.8091483116149902,
+    "response": "Internal Server Error",
+    "success": false
+  },
+  {
+    "test": "arbitrary_sms",
+    "phone": "+12222222222",
+    "status": 500,
+    "elapsed": 0.7106213569641113,
+    "response": "Internal Server Error",
+    "success": false
+  },
+  {
+    "test": "arbitrary_sms",
+    "phone": "+19999999999",
+    "status": 500,
+    "elapsed": 0.6722924709320068,
+    "response": "Internal Server Error",
+    "success": false
+  },
+  {
+    "test": "rate_limit_sms",
+    "attempt": 1,
+    "phone": "+13035234453",
+    "status": 200,
+    "elapsed": 0.6985228061676025,
+    "response": "OK",
+    "success": true
+  },
+  {
+    "test": "rate_limit_sms",
+    "attempt": 2,
+    "phone": "+13035234453",
+    "status": 200,
+    "elapsed": 0.8759758472442627,
+    "response": "OK",
+    "success": true
+  },
+  {
+    "test": "rate_limit_sms",
+    "attempt": 3,
+    "phone": "+13035234453",
+    "status": 200,
+    "elapsed": 0.6969084739685059,
+    "response": "OK",
+    "success": true
+  },
+  {
+    "test": "rate_limit_sms",
+    "attempt": 4,
+    "phone": "+13035234453",
+    "status": 200,
+    "elapsed": 0.8239076137542725,
+    "response": "OK",
+    "success": true
+  },
+  {
+    "test": "rate_limit_sms",
+    "attempt": 5,
+    "phone": "+13035234453",
+    "status": 200,
+    "elapsed": 0.6552786827087402,
+    "response": "OK",
+    "success": true
+  },
+  {
+    "test": "rate_limit_sms",
+    "attempt": 6,
+    "phone": "+13035234453",
+    "status": 200,
+    "elapsed": 0.8636162281036377,
+    "response": "OK",
+    "success": true
+  },
+  {
+    "test": "rate_limit_sms",
+    "attempt": 7,
+    "phone": "+13035234453",
+    "status": 200,
+    "elapsed": 0.8242371082305908,
+    "response": "OK",
+    "success": true
+  },
+  {
+    "test": "rate_limit_sms",
+    "attempt": 8,
+    "phone": "+13035234453",
+    "status": 200,
+    "elapsed": 0.7030181884765625,
+    "response": "OK",
+    "success": true
+  },
+  {
+    "test": "rate_limit_sms",
+    "attempt": 9,
+    "phone": "+13035234453",
+    "status": 200,
+    "elapsed": 0.6163890361785889,
+    "response": "OK",
+    "success": true
+  },
+  {
+    "test": "rate_limit_sms",
+    "attempt": 10,
+    "phone": "+13035234453",
+    "status": 200,
+    "elapsed": 0.6529536247253418,
+    "response": "OK",
+    "success": true
+  },
+  {
+    "test": "rate_limit_different",
+    "attempt": 1,
+    "phone": "+11111111111",
+    "status": 500,
+    "elapsed": 0.5986518859863281,
+    "response": "Internal Server Error",
+    "success": false
+  },
+  {
+    "test": "rate_limit_different",
+    "attempt": 2,
+    "phone": "+12222222222",
+    "status": 500,
+    "elapsed": 0.5406219959259033,
+    "response": "Internal Server Error",
+    "success": false
+  },
+  {
+    "test": "rate_limit_different",
+    "attempt": 3,
+    "phone": "+19999999999",
+    "status": 500,
+    "elapsed": 0.5478103160858154,
+    "response": "Internal Server Error",
+    "success": false
+  },
+  {
+    "test": "rate_limit_different",
+    "attempt": 4,
+    "phone": "+10000000000",
+    "status": 400,
+    "elapsed": 0.3762502670288086,
+    "response": "{\"message\":\"To continue, please enable SMS notifications by checking the box below. This allows us to send you verification codes (OTP) and keep you informed about your flight status and important upd",
+    "success": false
+  },
+  {
+    "test": "rate_limit_different",
+    "attempt": 5,
+    "phone": "+15555555555",
+    "status": 500,
+    "elapsed": 0.5904843807220459,
+    "response": "Internal Server Error",
+    "success": false
+  },
+  {
+    "test": "user_enumeration",
+    "registered": {
+      "phone": "+13035234453",
+      "status": 200,
+      "elapsed": 0.7043178081512451,
+      "response": "OK",
+      "success": true
+    },
+    "unregistered": {
+      "phone": "+19999999999",
+      "status": 500,
+      "elapsed": 0.8740546703338623,
+      "response": "Internal Server Error",
+      "success": false
+    },
+    "time_diff": 0.1697368621826172,
+    "response_diff": true
+  },
+  {
+    "test": "code_brute_force",
+    "attempt": 1,
+    "phone": "+13035234453",
+    "code": "000000",
+    "status": 400,
+    "elapsed": 0.4612143039703369,
+    "response": "{\"error\":\"No active challenge code.\"}",
+    "success": false
+  },
+  {
+    "test": "code_brute_force",
+    "attempt": 2,
+    "phone": "+13035234453",
+    "code": "111111",
+    "status": 400,
+    "elapsed": 0.5614972114562988,
+    "response": "{\"error\":\"No active challenge code.\"}",
+    "success": false
+  },
+  {
+    "test": "code_brute_force",
+    "attempt": 3,
+    "phone": "+13035234453",
+    "code": "123456",
+    "status": 400,
+    "elapsed": 0.49740052223205566,
+    "response": "{\"error\":\"No active challenge code.\"}",
+    "success": false
+  },
+  {
+    "test": "code_brute_force",
+    "attempt": 4,
+    "phone": "+13035234453",
+    "code": "999999",
+    "status": 400,
+    "elapsed": 0.4572725296020508,
+    "response": "{\"error\":\"No active challenge code.\"}",
+    "success": false
+  },
+  {
+    "test": "code_brute_force",
+    "attempt": 5,
+    "phone": "+13035234453",
+    "code": "000001",
+    "status": 400,
+    "elapsed": 0.6644036769866943,
+    "response": "{\"error\":\"No active challenge code.\"}",
+    "success": false
+  },
+  {
+    "test": "timing_attack",
+    "avg_time": 0.38544979095458987,
+    "variance": 0.03158712387084961,
+    "samples": [
+      {
+        "phone": "+13035234453",
+        "code": "277393",
+        "status": 400,
+        "elapsed": 0.4052746295928955,
+        "response": "{\"error\":\"No active challenge code.\"}",
+        "success": false
+      },
+      {
+        "phone": "+13035234453",
+        "code": "043572",
+        "status": 400,
+        "elapsed": 0.38183045387268066,
+        "response": "{\"error\":\"No active challenge code.\"}",
+        "success": false
+      },
+      {
+        "phone": "+13035234453",
+        "code": "822738",
+        "status": 400,
+        "elapsed": 0.38573527336120605,
+        "response": "{\"error\":\"No active challenge code.\"}",
+        "success": false
+      },
+      {
+        "phone": "+13035234453",
+        "code": "768088",
+        "status": 400,
+        "elapsed": 0.3736875057220459,
+        "response": "{\"error\":\"No active challenge code.\"}",
+        "success": false
+      },
+      {
+        "phone": "+13035234453",
+        "code": "653663",
+        "status": 400,
+        "elapsed": 0.3807210922241211,
+        "response": "{\"error\":\"No active challenge code.\"}",
+        "success": false
+      }
+    ]
+  }
+]

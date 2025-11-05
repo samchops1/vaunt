@@ -46,18 +46,29 @@ This dashboard is a **proof-of-concept security research tool** built to:
 
 | Document | Description | Status |
 |----------|-------------|--------|
-| **[SECURITY_TEST_RESULTS.md](SECURITY_TEST_RESULTS.md)** | ✅ Comprehensive API security testing results | **Latest** |
+| **[SQL_SMS_SECURITY_REPORT.md](SQL_SMS_SECURITY_REPORT.md)** | 🔴 **SQL injection & SMS security vulnerabilities** | **Nov 5, 2025** |
+| [SECURITY_TEST_RESULTS.md](SECURITY_TEST_RESULTS.md) | ✅ Comprehensive API security testing results | Nov 5, 2025 |
 | [SECURITY_ANALYSIS_REPORT.md](SECURITY_ANALYSIS_REPORT.md) | Mobile app decompilation & vulnerability analysis | Nov 3, 2025 |
 | [API_EXPLOITATION_GUIDE.md](API_EXPLOITATION_GUIDE.md) | API endpoint documentation & usage patterns | Oct 2024 |
 | [DUFFEL_BOOKING_ANALYSIS.md](DUFFEL_BOOKING_ANALYSIS.md) | Duffel booking integration analysis | Oct 2024 |
 
 ### Key Findings
 
-**✅ API Security: GOOD**
+**🔴 SMS Authentication: CRITICAL VULNERABILITIES** ⚠️ **NEW**
+- NO rate limiting on SMS requests (SMS bombing possible)
+- NO rate limiting on code verification (account takeover via brute force)
+- User enumeration possible (registered vs unregistered numbers)
+- See [SQL_SMS_SECURITY_REPORT.md](SQL_SMS_SECURITY_REPORT.md) for details
+
+**🟡 SQL Injection: LOW-MEDIUM RISK** ⚠️ **NEW**
+- Most endpoints properly protected
+- Potential issue: 500 errors in `completeSignIn` phoneNumber field
+- No data exfiltration possible
+
+**✅ API Authorization: GOOD**
 - No IDOR vulnerabilities found
-- Authentication properly implemented
 - Authorization controls working correctly
-- Input validation prevents injection attacks
+- Users can only access own data
 
 **🟡 Privacy Concern: MINOR**
 - Flight waitlist data exposes user names and positions

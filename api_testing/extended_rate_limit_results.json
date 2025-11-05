@@ -1,0 +1,1162 @@
+{
+  "sms_initiation": [
+    {
+      "test": "extended_sms_init",
+      "attempt": 1,
+      "status": 200,
+      "elapsed": 0.9923782348632812,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 2,
+      "status": 200,
+      "elapsed": 0.7173550128936768,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 3,
+      "status": 200,
+      "elapsed": 0.6070802211761475,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 4,
+      "status": 200,
+      "elapsed": 0.6655056476593018,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 5,
+      "status": 200,
+      "elapsed": 0.7020223140716553,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 6,
+      "status": 200,
+      "elapsed": 0.6324150562286377,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 7,
+      "status": 200,
+      "elapsed": 0.6555576324462891,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 8,
+      "status": 200,
+      "elapsed": 0.6975553035736084,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 9,
+      "status": 200,
+      "elapsed": 0.7412960529327393,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 10,
+      "status": 200,
+      "elapsed": 0.7391762733459473,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 11,
+      "status": 200,
+      "elapsed": 0.7653598785400391,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 12,
+      "status": 200,
+      "elapsed": 0.972743034362793,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 13,
+      "status": 200,
+      "elapsed": 0.6493165493011475,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 14,
+      "status": 200,
+      "elapsed": 0.5780987739562988,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 15,
+      "status": 200,
+      "elapsed": 0.6391510963439941,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 16,
+      "status": 200,
+      "elapsed": 0.6277689933776855,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 17,
+      "status": 200,
+      "elapsed": 0.6358332633972168,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 18,
+      "status": 200,
+      "elapsed": 0.6561567783355713,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 19,
+      "status": 200,
+      "elapsed": 0.7005796432495117,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 20,
+      "status": 200,
+      "elapsed": 0.7962169647216797,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 21,
+      "status": 200,
+      "elapsed": 0.7504909038543701,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 22,
+      "status": 200,
+      "elapsed": 0.6707096099853516,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 23,
+      "status": 200,
+      "elapsed": 0.6728336811065674,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 24,
+      "status": 200,
+      "elapsed": 0.6696381568908691,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 25,
+      "status": 200,
+      "elapsed": 0.7585868835449219,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 26,
+      "status": 200,
+      "elapsed": 0.6201932430267334,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 27,
+      "status": 200,
+      "elapsed": 0.6855776309967041,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 28,
+      "status": 200,
+      "elapsed": 0.6650300025939941,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 29,
+      "status": 200,
+      "elapsed": 0.6391294002532959,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 30,
+      "status": 200,
+      "elapsed": 0.6683003902435303,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 31,
+      "status": 200,
+      "elapsed": 0.5869626998901367,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 32,
+      "status": 200,
+      "elapsed": 0.615501880645752,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 33,
+      "status": 200,
+      "elapsed": 0.5924868583679199,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 34,
+      "status": 200,
+      "elapsed": 0.6389594078063965,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 35,
+      "status": 200,
+      "elapsed": 0.7242856025695801,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 36,
+      "status": 200,
+      "elapsed": 0.7479796409606934,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 37,
+      "status": 200,
+      "elapsed": 0.6279921531677246,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 38,
+      "status": 200,
+      "elapsed": 0.6945168972015381,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 39,
+      "status": 200,
+      "elapsed": 0.5903506278991699,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 40,
+      "status": 200,
+      "elapsed": 0.593268632888794,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 41,
+      "status": 200,
+      "elapsed": 0.6151421070098877,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 42,
+      "status": 200,
+      "elapsed": 0.6617445945739746,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 43,
+      "status": 200,
+      "elapsed": 0.7636451721191406,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 44,
+      "status": 200,
+      "elapsed": 0.9082932472229004,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 45,
+      "status": 200,
+      "elapsed": 0.7106735706329346,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 46,
+      "status": 200,
+      "elapsed": 0.6576995849609375,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 47,
+      "status": 200,
+      "elapsed": 1.15413498878479,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 48,
+      "status": 200,
+      "elapsed": 0.7090246677398682,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 49,
+      "status": 200,
+      "elapsed": 0.7815837860107422,
+      "response": "OK"
+    },
+    {
+      "test": "extended_sms_init",
+      "attempt": 50,
+      "status": 200,
+      "elapsed": 0.7174439430236816,
+      "response": "OK"
+    }
+  ],
+  "code_verification": [
+    {
+      "test": "extended_code_verify",
+      "attempt": 1,
+      "code": "000000",
+      "status": 400,
+      "elapsed": 0.4292593002319336,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 2,
+      "code": "000001",
+      "status": 400,
+      "elapsed": 0.43134427070617676,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 3,
+      "code": "000002",
+      "status": 400,
+      "elapsed": 0.43993473052978516,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 4,
+      "code": "000003",
+      "status": 400,
+      "elapsed": 0.48758769035339355,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 5,
+      "code": "000004",
+      "status": 400,
+      "elapsed": 0.5311458110809326,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 6,
+      "code": "000005",
+      "status": 400,
+      "elapsed": 0.447237491607666,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 7,
+      "code": "000006",
+      "status": 400,
+      "elapsed": 0.440295934677124,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 8,
+      "code": "000007",
+      "status": 400,
+      "elapsed": 0.45537352561950684,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 9,
+      "code": "000008",
+      "status": 400,
+      "elapsed": 0.4251823425292969,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 10,
+      "code": "000009",
+      "status": 400,
+      "elapsed": 0.49456191062927246,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 11,
+      "code": "000010",
+      "status": 400,
+      "elapsed": 0.4885711669921875,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 12,
+      "code": "000011",
+      "status": 400,
+      "elapsed": 0.463977575302124,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 13,
+      "code": "000012",
+      "status": 400,
+      "elapsed": 0.3977162837982178,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 14,
+      "code": "000013",
+      "status": 400,
+      "elapsed": 0.37293577194213867,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 15,
+      "code": "000014",
+      "status": 400,
+      "elapsed": 0.4033803939819336,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 16,
+      "code": "000015",
+      "status": 400,
+      "elapsed": 0.37040162086486816,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 17,
+      "code": "000016",
+      "status": 400,
+      "elapsed": 0.3989856243133545,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 18,
+      "code": "000017",
+      "status": 400,
+      "elapsed": 0.3841264247894287,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 19,
+      "code": "000018",
+      "status": 400,
+      "elapsed": 0.3840975761413574,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 20,
+      "code": "000019",
+      "status": 400,
+      "elapsed": 0.373272180557251,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 21,
+      "code": "000020",
+      "status": 400,
+      "elapsed": 0.377849817276001,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 22,
+      "code": "000021",
+      "status": 400,
+      "elapsed": 0.3956601619720459,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 23,
+      "code": "000022",
+      "status": 400,
+      "elapsed": 0.39280271530151367,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 24,
+      "code": "000023",
+      "status": 400,
+      "elapsed": 0.38927555084228516,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 25,
+      "code": "000024",
+      "status": 400,
+      "elapsed": 0.43773436546325684,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 26,
+      "code": "000025",
+      "status": 400,
+      "elapsed": 0.5978994369506836,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 27,
+      "code": "000026",
+      "status": 400,
+      "elapsed": 0.3867192268371582,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 28,
+      "code": "000027",
+      "status": 400,
+      "elapsed": 0.5153415203094482,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 29,
+      "code": "000028",
+      "status": 400,
+      "elapsed": 0.5337400436401367,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 30,
+      "code": "000029",
+      "status": 400,
+      "elapsed": 0.3762040138244629,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 31,
+      "code": "000030",
+      "status": 400,
+      "elapsed": 0.5667324066162109,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 32,
+      "code": "000031",
+      "status": 400,
+      "elapsed": 0.50180983543396,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 33,
+      "code": "000032",
+      "status": 400,
+      "elapsed": 0.37470459938049316,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 34,
+      "code": "000033",
+      "status": 400,
+      "elapsed": 0.5757129192352295,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 35,
+      "code": "000034",
+      "status": 400,
+      "elapsed": 0.484607458114624,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 36,
+      "code": "000035",
+      "status": 400,
+      "elapsed": 0.5212676525115967,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 37,
+      "code": "000036",
+      "status": 400,
+      "elapsed": 0.5942268371582031,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 38,
+      "code": "000037",
+      "status": 400,
+      "elapsed": 0.7148652076721191,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 39,
+      "code": "000038",
+      "status": 400,
+      "elapsed": 0.4467177391052246,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 40,
+      "code": "000039",
+      "status": 400,
+      "elapsed": 0.6184890270233154,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 41,
+      "code": "000040",
+      "status": 400,
+      "elapsed": 0.611107587814331,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 42,
+      "code": "000041",
+      "status": 400,
+      "elapsed": 0.4450242519378662,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 43,
+      "code": "000042",
+      "status": 400,
+      "elapsed": 0.6330792903900146,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 44,
+      "code": "000043",
+      "status": 400,
+      "elapsed": 0.6205153465270996,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 45,
+      "code": "000044",
+      "status": 400,
+      "elapsed": 0.6662318706512451,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 46,
+      "code": "000045",
+      "status": 400,
+      "elapsed": 0.41701436042785645,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 47,
+      "code": "000046",
+      "status": 400,
+      "elapsed": 0.5735516548156738,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 48,
+      "code": "000047",
+      "status": 400,
+      "elapsed": 0.4077272415161133,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 49,
+      "code": "000048",
+      "status": 400,
+      "elapsed": 0.4781672954559326,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 50,
+      "code": "000049",
+      "status": 400,
+      "elapsed": 0.7104933261871338,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 51,
+      "code": "000050",
+      "status": 400,
+      "elapsed": 0.5412027835845947,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 52,
+      "code": "000051",
+      "status": 400,
+      "elapsed": 0.48984622955322266,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 53,
+      "code": "000052",
+      "status": 400,
+      "elapsed": 0.6421968936920166,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 54,
+      "code": "000053",
+      "status": 400,
+      "elapsed": 0.43601322174072266,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 55,
+      "code": "000054",
+      "status": 400,
+      "elapsed": 0.6179099082946777,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 56,
+      "code": "000055",
+      "status": 400,
+      "elapsed": 0.43300795555114746,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 57,
+      "code": "000056",
+      "status": 400,
+      "elapsed": 0.5306181907653809,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 58,
+      "code": "000057",
+      "status": 400,
+      "elapsed": 0.42481374740600586,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 59,
+      "code": "000058",
+      "status": 400,
+      "elapsed": 0.5515480041503906,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 60,
+      "code": "000059",
+      "status": 400,
+      "elapsed": 0.386397123336792,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 61,
+      "code": "000060",
+      "status": 400,
+      "elapsed": 0.3783910274505615,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 62,
+      "code": "000061",
+      "status": 400,
+      "elapsed": 0.3750181198120117,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 63,
+      "code": "000062",
+      "status": 400,
+      "elapsed": 0.37279462814331055,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 64,
+      "code": "000063",
+      "status": 400,
+      "elapsed": 0.37982869148254395,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 65,
+      "code": "000064",
+      "status": 400,
+      "elapsed": 0.40308451652526855,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 66,
+      "code": "000065",
+      "status": 400,
+      "elapsed": 0.3769681453704834,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 67,
+      "code": "000066",
+      "status": 400,
+      "elapsed": 0.37563443183898926,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 68,
+      "code": "000067",
+      "status": 400,
+      "elapsed": 0.39724254608154297,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 69,
+      "code": "000068",
+      "status": 400,
+      "elapsed": 0.38802051544189453,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 70,
+      "code": "000069",
+      "status": 400,
+      "elapsed": 0.3838844299316406,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 71,
+      "code": "000070",
+      "status": 400,
+      "elapsed": 0.3702278137207031,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 72,
+      "code": "000071",
+      "status": 400,
+      "elapsed": 0.36822509765625,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 73,
+      "code": "000072",
+      "status": 400,
+      "elapsed": 0.3887217044830322,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 74,
+      "code": "000073",
+      "status": 400,
+      "elapsed": 0.3682520389556885,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 75,
+      "code": "000074",
+      "status": 400,
+      "elapsed": 0.39001965522766113,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 76,
+      "code": "000075",
+      "status": 400,
+      "elapsed": 0.3696107864379883,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 77,
+      "code": "000076",
+      "status": 400,
+      "elapsed": 0.3706083297729492,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 78,
+      "code": "000077",
+      "status": 400,
+      "elapsed": 0.3703336715698242,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 79,
+      "code": "000078",
+      "status": 400,
+      "elapsed": 0.4042396545410156,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 80,
+      "code": "000079",
+      "status": 400,
+      "elapsed": 0.38576221466064453,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 81,
+      "code": "000080",
+      "status": 400,
+      "elapsed": 0.37093400955200195,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 82,
+      "code": "000081",
+      "status": 400,
+      "elapsed": 0.5094826221466064,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 83,
+      "code": "000082",
+      "status": 400,
+      "elapsed": 0.37813639640808105,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 84,
+      "code": "000083",
+      "status": 400,
+      "elapsed": 0.6130897998809814,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 85,
+      "code": "000084",
+      "status": 400,
+      "elapsed": 0.4383671283721924,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 86,
+      "code": "000085",
+      "status": 400,
+      "elapsed": 0.6093177795410156,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 87,
+      "code": "000086",
+      "status": 400,
+      "elapsed": 0.7468822002410889,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 88,
+      "code": "000087",
+      "status": 400,
+      "elapsed": 0.44509410858154297,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 89,
+      "code": "000088",
+      "status": 400,
+      "elapsed": 0.7321627140045166,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 90,
+      "code": "000089",
+      "status": 400,
+      "elapsed": 0.4326796531677246,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 91,
+      "code": "000090",
+      "status": 400,
+      "elapsed": 0.580958366394043,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 92,
+      "code": "000091",
+      "status": 400,
+      "elapsed": 0.5797491073608398,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 93,
+      "code": "000092",
+      "status": 400,
+      "elapsed": 0.45607471466064453,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 94,
+      "code": "000093",
+      "status": 400,
+      "elapsed": 0.7687947750091553,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 95,
+      "code": "000094",
+      "status": 400,
+      "elapsed": 0.37557125091552734,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 96,
+      "code": "000095",
+      "status": 400,
+      "elapsed": 0.5678207874298096,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 97,
+      "code": "000096",
+      "status": 400,
+      "elapsed": 0.3828847408294678,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 98,
+      "code": "000097",
+      "status": 400,
+      "elapsed": 0.6071431636810303,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 99,
+      "code": "000098",
+      "status": 400,
+      "elapsed": 0.4728257656097412,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    },
+    {
+      "test": "extended_code_verify",
+      "attempt": 100,
+      "code": "000099",
+      "status": 400,
+      "elapsed": 0.4913158416748047,
+      "response": "{\"error\":\"No active challenge code.\"}"
+    }
+  ],
+  "summary": {
+    "sms_rate_limited": false,
+    "code_rate_limited": false,
+    "sms_attempts": 50,
+    "verify_attempts": 100
+  }
+}

