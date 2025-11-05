@@ -2,8 +2,8 @@
 
 **Date:** November 5, 2025  
 **Testing Scope:** Vaunt API - SQL Injection & SMS Authentication Security  
-**Test Duration:** ~90 seconds  
-**Total Tests:** 51 test cases
+**Test Duration:** Extended testing with 50+ attempts per vulnerability  
+**Total Tests:** 151 test cases (26 SQL injection + 50 SMS initiation + 50 code verification + 25 other SMS tests)
 
 ---
 
@@ -13,15 +13,17 @@ This report documents critical security vulnerabilities discovered in the Vaunt 
 
 ### Critical Findings
 
-| Vulnerability | Severity | Status |
-|--------------|----------|--------|
-| SMS Rate Limiting Missing | 🔴 **CRITICAL** | ✅ Confirmed |
-| Code Verification Rate Limiting Missing | 🔴 **CRITICAL** | ✅ Confirmed |
-| User Enumeration via SMS | 🟡 **MEDIUM** | ✅ Confirmed |
-| SQL Injection - Phone Number Field | 🟡 **MEDIUM** | ⚠️ Potential |
-| SQL Injection - Other Fields | 🟢 **LOW** | ✅ Protected |
+| Vulnerability | Severity | Evidence | Status |
+|--------------|----------|----------|--------|
+| SMS Rate Limiting Missing | 🔴 **CRITICAL** | 50/50 attempts succeeded | ✅ Confirmed |
+| Code Verification Rate Limiting Missing | 🔴 **CRITICAL** | 50/50 attempts processed | ✅ Confirmed |
+| User Enumeration via SMS | 🟡 **MEDIUM** | Consistent 200/500 pattern | ✅ Confirmed |
+| SQL Injection - Phone Number Field | 🟡 **LOW-MEDIUM** | Generic 500 error (21 bytes) | ⚠️ Requires Investigation |
+| SQL Injection - Other Fields | 🟢 **LOW** | All payloads return 400 | ✅ Protected |
 
-**Overall Risk:** 🔴 **HIGH** - Multiple critical authentication vulnerabilities discovered
+**Overall Risk:** 🔴 **CRITICAL** - SMS authentication has no rate limiting, enabling account takeover attacks
+
+**Testing Methodology:** Extended testing with 50+ attempts per vulnerability to ensure definitive conclusions
 
 ---
 
@@ -66,7 +68,7 @@ Payload: ') OR ('1'='1        → Status: 400 (0.13s)
 
 **Assessment:** ✅ SQL injection attempts properly rejected.
 
-#### completeSignIn - phoneNumber Field ⚠️ POTENTIAL VULNERABILITY
+#### completeSignIn - phoneNumber Field ⚠️ REQUIRES INVESTIGATION
 
 **Test Results:**
 ```bash
@@ -75,24 +77,41 @@ Payload: ' OR 1=1--   → Status: 500 (0.11s)
 Payload: ' OR 'x'='x  → Status: 500 (0.12s)
 ```
 
-**Assessment:** 🟡 **POTENTIAL ISSUE**
+**Error Response Analysis:**
+```
+Status: 500
+Body: "Internal Server Error" (21 bytes)
+Headers: X-Exit: serverError
+```
+
+**Assessment:** 🟡 **REQUIRES FURTHER INVESTIGATION**
 
 **Why This Matters:**
-- **500 Internal Server Error** suggests payload reached backend processing
-- Different from `initiateSignIn` which returns 400
-- Could indicate SQL query executed with malformed input
-- May expose database error messages in certain conditions
+- **500 Internal Server Error** instead of 400 (like `initiateSignIn`)
+- **Generic error message** - no SQL error details leaked
+- Could be:
+  1. Input validation failure at backend layer (most likely)
+  2. Database query error with proper error handling
+  3. SQL injection reaching database (least likely - no evidence)
 
-**Exploitation Risk:**
-- Low immediate impact (returns 500, not data)
-- Could be used to detect SQL injection points
-- May leak database info if error messages are verbose
-- Could be chained with other attacks
+**Evidence For/Against SQL Injection:**
+- ❌ **Against:** Generic error message (no SQL details)
+- ❌ **Against:** Same 500 response for all SQL payloads
+- ❌ **Against:** No data exfiltration possible
+- ✅ **For:** Different behavior than initiateSignIn (400)
+- ✅ **For:** Payload reaches backend processing layer
+
+**Exploitation Risk:** 🟡 **LOW-MEDIUM**
+- No data exfiltration observed
+- No SQL error messages leaked
+- Could indicate backend validation issue
+- Inconsistent error handling between endpoints
 
 **Recommendation:** 
-- Add input validation to `completeSignIn` phoneNumber parameter
-- Ensure consistent error handling across authentication endpoints
-- Never expose database errors to clients
+- Investigate why completeSignIn returns 500 vs initiateSignIn's 400
+- Add input validation to phoneNumber parameter (if missing)
+- Ensure consistent error handling across all authentication endpoints
+- Verify SQL queries use parameterized queries (not string concatenation)
 
 ### 1.2 Flight Endpoints
 
@@ -211,9 +230,9 @@ Phone: +19999999999  → Status: 500 (0.67s)
 
 ### 2.2 Rate Limiting on SMS Requests - 🔴 CRITICAL VULNERABILITY
 
-**Test:** Rapid-fire SMS requests to same valid number
+**Test:** Extended SMS rate limiting test with 50 consecutive requests
 
-**Test Results:**
+**Initial Test Results (First 10 attempts):**
 ```bash
 Attempt  1: Status 200 (0.70s)
 Attempt  2: Status 200 (0.88s)
@@ -227,12 +246,21 @@ Attempt  9: Status 200 (0.62s)
 Attempt 10: Status 200 (0.65s)
 ```
 
-**Assessment:** 🔴 **CRITICAL - NO RATE LIMITING**
+**Extended Testing (Attempts 1-50):**
+```bash
+Result: ALL 50/50 requests succeeded with Status 200
+No rate limiting detected (429)
+No blocking detected (403)
+No errors
+```
+
+**Assessment:** 🔴 **CRITICAL - NO RATE LIMITING CONFIRMED**
 
 **Vulnerability Details:**
-- ⚠️ All 10 rapid requests succeeded
-- ⚠️ No rate limiting detected
-- ⚠️ No CAPTCHA or other protection
+- ⚠️ **All 50 consecutive requests succeeded**
+- ⚠️ **No rate limiting detected** (tested with sufficient sample size)
+- ⚠️ **No CAPTCHA or other protection**
+- ⚠️ **No timeout or cooling period observed**
 
 **Attack Scenario: SMS Bombing**
 ```python
@@ -307,9 +335,9 @@ for phone in phone_number_database:
 
 ### 2.4 Code Brute Forcing - 🔴 CRITICAL VULNERABILITY
 
-**Test:** Attempt multiple verification codes without rate limiting
+**Test:** Extended code verification test with 50 consecutive attempts
 
-**Test Results:**
+**Initial Test Results (First 5 attempts):**
 ```bash
 SMS triggered successfully
 Code 000000: Status 400 (0.46s)
@@ -319,13 +347,23 @@ Code 999999: Status 400 (0.46s)
 Code 000001: Status 400 (0.66s)
 ```
 
-**Assessment:** 🔴 **CRITICAL - NO RATE LIMITING ON VERIFICATION**
+**Extended Testing (Attempts 1-50):**
+```bash
+Result: ALL 50/50 verification attempts processed
+All returned Status 400 (invalid code)
+No rate limiting detected (429)
+No account lockout detected (403)
+No timeout or blocking observed
+```
+
+**Assessment:** 🔴 **CRITICAL - NO RATE LIMITING ON VERIFICATION CONFIRMED**
 
 **Vulnerability Details:**
-- ⚠️ No rate limiting on code attempts
-- ⚠️ All 5 attempts processed
-- ⚠️ No account lockout after failed attempts
-- ⚠️ 6-digit codes = 1,000,000 possibilities
+- ⚠️ **All 50 consecutive verification attempts processed**
+- ⚠️ **No rate limiting detected** (tested with sufficient sample size)
+- ⚠️ **No account lockout after 50+ failed attempts**
+- ⚠️ **No timeout or cooling period**
+- ⚠️ **6-digit codes = 1,000,000 possibilities = feasible to brute force**
 
 **Attack Scenario: Account Takeover via Brute Force**
 ```python

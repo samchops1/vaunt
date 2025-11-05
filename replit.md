@@ -28,16 +28,17 @@ A React-based security research dashboard for testing and demonstrating Vaunt AP
 
 ## Recent Changes
 - **2025-11-05**: 🔴 **CRITICAL - SQL Injection & SMS Security Testing**
+  - **Extended testing methodology with 50+ attempts per vulnerability**
   - Discovered CRITICAL SMS authentication vulnerabilities:
-    * No rate limiting on SMS requests (SMS bombing possible)
-    * No rate limiting on code verification (account takeover via brute force - ~7 hours)
+    * No rate limiting on SMS requests - CONFIRMED (50/50 requests succeeded)
+    * No rate limiting on code verification - CONFIRMED (50/50 attempts processed)
     * User enumeration possible (200 vs 500 response codes)
   - SQL injection testing across all endpoints:
-    * Most endpoints properly protected
-    * Potential issue in completeSignIn phoneNumber field (500 errors)
-  - Created SQL_SMS_SECURITY_REPORT.md with full exploit scenarios
-  - Created automated test scripts (sql_injection_tests.py, sms_security_tests.py)
-  - 51 total security tests performed
+    * Most endpoints properly protected (return 400 errors)
+    * Requires investigation: completeSignIn phoneNumber field (generic 500 error, no SQL details)
+  - Created SQL_SMS_SECURITY_REPORT.md with evidence-based findings
+  - Created automated test scripts (sql_injection_tests.py, sms_security_tests.py, extended_sms_rate_limit_test.py)
+  - **151 total security tests performed** (26 SQL + 50 SMS init + 50 code verify + 25 other)
 
 - **2025-11-05**: ✅ Completed comprehensive API security testing
   - Tested authentication payload injection (SMS/JWT)
@@ -80,11 +81,20 @@ A React-based security research dashboard for testing and demonstrating Vaunt AP
 
 ## Security Research Findings
 
-### ✅ API Security: GOOD
-- **Authentication**: SMS-based JWT properly implemented, no bypass possible
+### 🔴 SMS Authentication: CRITICAL VULNERABILITIES
+- **SMS Rate Limiting**: NO rate limiting (50/50 requests succeeded)
+- **Code Verification**: NO rate limiting (50/50 attempts processed)
+- **User Enumeration**: Possible (200 vs 500 status codes)
+- **Impact**: SMS bombing, account takeover via brute force
+
+### ✅ API Authorization: GOOD
+- **JWT Token**: Payload injection properly blocked
 - **Authorization**: User data access properly restricted (no IDOR)
-- **Input Validation**: SQL injection and payload injection blocked
 - **Data Access**: Users can only access their own PII
+
+### 🟡 Input Validation: MOSTLY GOOD
+- **SQL Injection**: Most endpoints properly protected (return 400 errors)
+- **Potential Issue**: completeSignIn phoneNumber returns 500 (requires investigation)
 
 ### 🟡 Privacy Concern: MINOR
 - Flight waitlist data exposes user names and queue positions

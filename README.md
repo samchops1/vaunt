@@ -62,8 +62,9 @@ This dashboard is a **proof-of-concept security research tool** built to:
 
 **🟡 SQL Injection: LOW-MEDIUM RISK** ⚠️ **NEW**
 - Most endpoints properly protected
-- Potential issue: 500 errors in `completeSignIn` phoneNumber field
+- Requires investigation: 500 errors in `completeSignIn` phoneNumber field (generic error, no SQL details leaked)
 - No data exfiltration possible
+- Assessment: Likely input validation issue, not confirmed SQL injection
 
 **✅ API Authorization: GOOD**
 - No IDOR vulnerabilities found
@@ -82,13 +83,14 @@ This dashboard is a **proof-of-concept security research tool** built to:
 
 ## 🧪 Security Testing Performed
 
-### 1. Authentication Testing ✅
-- ✅ SMS-based JWT token generation
-- ✅ Payload injection attempts (userId, admin flags)
-- ✅ SQL injection prevention
-- ✅ Token bypass attempts
+### 1. Authentication Testing ⚠️
+- ✅ JWT token payload injection attempts blocked (userId, admin flags)
+- ✅ SQL injection in most authentication fields blocked
+- 🔴 SMS rate limiting: **CRITICAL VULNERABILITY** - No rate limiting found
+- 🔴 Code verification rate limiting: **CRITICAL VULNERABILITY** - No lockout after 50+ attempts
+- 🟡 User enumeration via SMS responses possible
 
-**Result:** All authentication vulnerabilities blocked.
+**Result:** JWT payload security strong, but SMS authentication has critical vulnerabilities.
 
 ### 2. IDOR Testing ✅
 - ✅ User PII access attempts (`/v1/user/:userId`)
@@ -104,6 +106,30 @@ This dashboard is a **proof-of-concept security research tool** built to:
 - ✅ Cross-user waitlist manipulation
 
 **Result:** All manipulation endpoints disabled or non-existent.
+
+### 4. SQL Injection Testing ⚠️ **NEW**
+- 🧪 26 different SQL injection payloads tested
+- ✅ Authentication endpoints properly protected (400 errors)
+- ✅ Flight endpoints properly protected
+- ⚠️ One endpoint (completeSignIn phoneNumber) returns 500 errors
+  - No SQL error details leaked (generic "Internal Server Error")
+  - Likely input validation issue, not confirmed SQL injection
+  - Requires further investigation
+
+**Result:** Most endpoints protected. One potential input validation issue identified.
+
+### 5. SMS Authentication Security Testing 🔴 **NEW - CRITICAL**
+- 🧪 **Extended testing with 50+ attempts per vulnerability**
+- 🔴 SMS Rate Limiting: **50/50 requests succeeded** - NO rate limiting
+- 🔴 Code Verification: **50/50 attempts processed** - NO rate limiting
+- 🟡 User Enumeration: Confirmed (200 vs 500 status codes)
+
+**Methodology:** Extended testing approach used to ensure definitive conclusions:
+- SMS initiation: 50 consecutive requests to confirm no rate limiting
+- Code verification: 50 consecutive attempts to confirm no lockout mechanism
+- Error analysis: Detailed examination of response bodies and headers
+
+**Result:** Critical vulnerabilities confirmed in SMS authentication system.
 
 ---
 
@@ -223,7 +249,7 @@ This research was conducted:
 - ✅ Following responsible disclosure principles
 - ✅ Without attempting to access production data maliciously
 
-**Important:** The findings demonstrate that Vaunt's API has solid security practices in place.
+**Important:** The findings demonstrate that Vaunt's API has strong authorization controls (IDOR protection, proper JWT scoping), but **critical vulnerabilities exist in SMS authentication** (no rate limiting on SMS requests or code verification). Mixed security posture overall.
 
 ---
 
