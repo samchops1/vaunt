@@ -1,17 +1,24 @@
 # Vaunt Flight App - Security Analysis Report
 
-**Date:** November 3, 2025
+**Date:** November 3, 2025  
+**Updated:** November 5, 2025 (API Security Testing Completed)  
 **App:** com.volato.vaunt
 **Version Analyzed:** Based on decompiled APK
 **Analysis Type:** Security Vulnerability Assessment
+
+> **📋 Related Report:** For comprehensive API security testing results, see [SECURITY_TEST_RESULTS.md](SECURITY_TEST_RESULTS.md)
+> 
+> **API Testing Summary (Nov 5, 2025):** Live API testing confirmed the backend has **strong security controls**. No critical vulnerabilities found in authentication, authorization, or data access. All IDOR attacks blocked. See full report for details.
 
 ---
 
 ## Executive Summary
 
-This security analysis identifies **CRITICAL VULNERABILITIES** in the Vaunt flight booking application that could allow malicious users to manipulate membership status, priority levels, and access premium features without authorization.
+This security analysis identifies **CRITICAL VULNERABILITIES** in the Vaunt flight booking **mobile application** that could allow malicious users to manipulate membership status, priority levels, and access premium features without authorization.
 
-**Risk Level: HIGH**
+**Risk Level: HIGH (Mobile App) | LOW (Backend API)**
+
+**Key Finding:** While the mobile app has client-side vulnerabilities, the backend API demonstrates robust security with proper authentication and authorization controls.
 
 ---
 
