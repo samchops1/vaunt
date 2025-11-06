@@ -1,0 +1,11 @@
+{
+  "total_tests": 68,
+  "webhooks_found": [],
+  "webhooks_accepting_data": [],
+  "signature_bypass": [],
+  "successful_exploits": [],
+  "critical_vulnerabilities": [],
+  "high_vulnerabilities": [],
+  "medium_vulnerabilities": [],
+  "low_vulnerabilities": []
+}

