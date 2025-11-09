@@ -1,0 +1,1902 @@
+{
+  "/v1/aircraft": [
+    {
+      "id": 1,
+      "tail": "N420HB",
+      "type": {
+        "id": 9,
+        "label": "Honda Jet HA-420",
+        "weightCapacity": 0,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 2,
+      "tail": "N107CX",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 3,
+      "tail": "N118CX",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 4,
+      "tail": "N125CX",
+      "type": {
+        "id": 9,
+        "label": "Honda Jet HA-420",
+        "weightCapacity": 0,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 5,
+      "tail": "N135CX",
+      "type": {
+        "id": 9,
+        "label": "Honda Jet HA-420",
+        "weightCapacity": 0,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 6,
+      "tail": "N147CX",
+      "type": {
+        "id": 9,
+        "label": "Honda Jet HA-420",
+        "weightCapacity": 0,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 7,
+      "tail": "N296CX",
+      "type": {
+        "id": 9,
+        "label": "Honda Jet HA-420",
+        "weightCapacity": 0,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 8,
+      "tail": "N311HJ",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 9
+    },
+    {
+      "id": 9,
+      "tail": "N420XE",
+      "type": {
+        "id": 9,
+        "label": "Honda Jet HA-420",
+        "weightCapacity": 0,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 10,
+      "tail": "N719SJ",
+      "type": {
+        "id": 9,
+        "label": "Honda Jet HA-420",
+        "weightCapacity": 0,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 11,
+      "tail": "N820JL",
+      "type": {
+        "id": 9,
+        "label": "Honda Jet HA-420",
+        "weightCapacity": 0,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 12,
+      "tail": "N829DL",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 9
+    },
+    {
+      "id": 13,
+      "tail": "N192WS",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 14,
+      "tail": "N193WS",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 15,
+      "tail": "N19JY",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 9
+    },
+    {
+      "id": 16,
+      "tail": "Aircraft to be Assigned",
+      "type": {
+        "id": 1,
+        "label": "Unassigned",
+        "weightCapacity": 0,
+        "seatCount": 0,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": null
+    },
+    {
+      "id": 17,
+      "tail": "N110HJ",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 18,
+      "tail": "N75VM",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 19,
+      "tail": "N267CL",
+      "type": {
+        "id": 3,
+        "label": "King Air 250",
+        "weightCapacity": 13420,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 20,
+      "tail": "N726TR",
+      "type": {
+        "id": 4,
+        "label": "King Air 350",
+        "weightCapacity": 16500,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 21,
+      "tail": "N904MA",
+      "type": {
+        "id": 7,
+        "label": "Citation Bravo",
+        "weightCapacity": 13300,
+        "seatCount": 7,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 22,
+      "tail": "N800WS",
+      "type": {
+        "id": 6,
+        "label": "Citation Sovereign",
+        "weightCapacity": 30000,
+        "seatCount": 12,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 23,
+      "tail": "N327MP",
+      "type": {
+        "id": 5,
+        "label": "Hawker 750",
+        "weightCapacity": 27000,
+        "seatCount": 9,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 24,
+      "tail": "N4LG",
+      "type": {
+        "id": 8,
+        "label": "King Air 300",
+        "weightCapacity": 15000,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 25,
+      "tail": "N929FD",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 26,
+      "tail": "N704JT",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": null
+    },
+    {
+      "id": 27,
+      "tail": "N615JT",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 28,
+      "tail": "N816JD",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 9
+    },
+    {
+      "id": 29,
+      "tail": "N103JT",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 30,
+      "tail": "N913JT",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 9
+    },
+    {
+      "id": 31,
+      "tail": "N223CX",
+      "type": {
+        "id": 9,
+        "label": "Honda Jet HA-420",
+        "weightCapacity": 0,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 32,
+      "tail": "N221CX",
+      "type": {
+        "id": 9,
+        "label": "Honda Jet HA-420",
+        "weightCapacity": 0,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 33,
+      "tail": "N416JT",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 9
+    },
+    {
+      "id": 34,
+      "tail": "N273C",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 35,
+      "tail": "N529JM",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 36,
+      "tail": "N225DB",
+      "type": {
+        "id": 2,
+        "label": "HondaJet",
+        "weightCapacity": 10600,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 37,
+      "tail": "N229CX",
+      "type": {
+        "id": 9,
+        "label": "Honda Jet HA-420",
+        "weightCapacity": 0,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 38,
+      "tail": "N932JS",
+      "type": {
+        "id": 6,
+        "label": "Citation Sovereign",
+        "weightCapacity": 30000,
+        "seatCount": 12,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 39,
+      "tail": "N735JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 40,
+      "tail": "N847JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 41,
+      "tail": "N852JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 42,
+      "tail": "N753JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 43,
+      "tail": "N928JS",
+      "type": {
+        "id": 12,
+        "label": "Citation X",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 44,
+      "tail": "N852JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 45,
+      "tail": "N701JS",
+      "type": {
+        "id": 21,
+        "label": "Citation Jet 3 - CJ3+",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 46,
+      "tail": "N739JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 47,
+      "tail": "N744JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 48,
+      "tail": "N701JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 49,
+      "tail": "N867JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 50,
+      "tail": "N720JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 51,
+      "tail": "N214PW",
+      "type": {
+        "id": 13,
+        "label": "Challenger 350",
+        "weightCapacity": 0,
+        "seatCount": 10,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 52,
+      "tail": "N821JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 53,
+      "tail": "N834JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 54,
+      "tail": "N715JS",
+      "type": {
+        "id": 21,
+        "label": "Citation Jet 3 - CJ3+",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 55,
+      "tail": "N743JS",
+      "type": {
+        "id": 21,
+        "label": "Citation Jet 3 - CJ3+",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 56,
+      "tail": "N868JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 57,
+      "tail": "N855JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 58,
+      "tail": "N857JS",
+      "type": {
+        "id": 14,
+        "label": "Citation Excel XLS",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 59,
+      "tail": "N749JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 60,
+      "tail": "N827JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 61,
+      "tail": "N707JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 62,
+      "tail": "N770JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 63,
+      "tail": "N810JS",
+      "type": {
+        "id": 14,
+        "label": "Citation Excel XLS",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 64,
+      "tail": "N807JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 65,
+      "tail": "N736JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 66,
+      "tail": "N799JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 67,
+      "tail": "N785JS",
+      "type": {
+        "id": 22,
+        "label": "Citation Jet 3 - CJ3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 68,
+      "tail": "N730JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 69,
+      "tail": "N751JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 70,
+      "tail": "N702JS",
+      "type": {
+        "id": 21,
+        "label": "Citation Jet 3 - CJ3+",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 71,
+      "tail": "N774JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 72,
+      "tail": "N301JT",
+      "type": {
+        "id": 9,
+        "label": "Honda Jet HA-420",
+        "weightCapacity": 0,
+        "seatCount": 4,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 73,
+      "tail": "N780JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 74,
+      "tail": "N782JS",
+      "type": {
+        "id": 22,
+        "label": "Citation Jet 3 - CJ3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 75,
+      "tail": "N794JS",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 76,
+      "tail": "N851JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 77,
+      "tail": "N839JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 78,
+      "tail": "N832JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 79,
+      "tail": "N755JG",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 80,
+      "tail": "N830JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 81,
+      "tail": "N864JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 82,
+      "tail": "N840JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 83,
+      "tail": "N843JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 84,
+      "tail": "N844JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 85,
+      "tail": "N837JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 86,
+      "tail": "N809JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 87,
+      "tail": "N752JS",
+      "type": {
+        "id": 22,
+        "label": "Citation Jet 3 - CJ3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 88,
+      "tail": "N592GB",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 89,
+      "tail": "N869JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 90,
+      "tail": "N853JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 91,
+      "tail": "N841JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 92,
+      "tail": "N845JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 93,
+      "tail": "MID",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 94,
+      "tail": "N860JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 95,
+      "tail": "N846JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 96,
+      "tail": "N842JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 97,
+      "tail": "N801JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 98,
+      "tail": "N865JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 99,
+      "tail": "N856JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 100,
+      "tail": "N833JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 101,
+      "tail": "N836JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 102,
+      "tail": "LIGHT",
+      "type": {
+        "id": 10,
+        "label": "Citation Jet 3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 103,
+      "tail": "N803JS",
+      "type": {
+        "id": 11,
+        "label": "Citation Excel",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 104,
+      "tail": "N189SB",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 105,
+      "tail": "N600SJ",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 106,
+      "tail": "N189SB",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 107,
+      "tail": "N461MC",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 108,
+      "tail": "N662AR",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 109,
+      "tail": "N208BH",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 110,
+      "tail": "N601CN",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 111,
+      "tail": "N420KV",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 112,
+      "tail": "N448GL",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 113,
+      "tail": "N924PS",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 114,
+      "tail": "N491CP",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 115,
+      "tail": "N220MD",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 116,
+      "tail": "N317MP",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 117,
+      "tail": "N415SG",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 118,
+      "tail": "N975LV",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 119,
+      "tail": "N198HB",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 120,
+      "tail": "N198HB",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 121,
+      "tail": "N750MG",
+      "type": {
+        "id": 16,
+        "label": "Pilatus PC-12/47",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 7
+    },
+    {
+      "id": 122,
+      "tail": "N404CD",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 123,
+      "tail": "N769EB",
+      "type": {
+        "id": 16,
+        "label": "Pilatus PC-12/47",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 7
+    },
+    {
+      "id": 124,
+      "tail": "N508ND",
+      "type": {
+        "id": 17,
+        "label": "Cessna Skyhawk 172S",
+        "weightCapacity": 855,
+        "seatCount": 2,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 8
+    },
+    {
+      "id": 125,
+      "tail": "N508ND",
+      "type": {
+        "id": 17,
+        "label": "Cessna Skyhawk 172S",
+        "weightCapacity": 855,
+        "seatCount": 2,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 8
+    },
+    {
+      "id": 126,
+      "tail": "N276BG",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 127,
+      "tail": "N812RP",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 128,
+      "tail": "N50GJ",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 129,
+      "tail": "N696RB",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 130,
+      "tail": "N618DH",
+      "type": {
+        "id": 17,
+        "label": "Cessna Skyhawk 172S",
+        "weightCapacity": 855,
+        "seatCount": 2,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 8
+    },
+    {
+      "id": 131,
+      "tail": "N600AJ",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 132,
+      "tail": "N385BL",
+      "type": {
+        "id": 18,
+        "label": "Cirrus SR22T",
+        "weightCapacity": 2348,
+        "seatCount": 1,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 2
+    },
+    {
+      "id": 133,
+      "tail": "N303JD",
+      "type": {
+        "id": 19,
+        "label": "Pilatus PC-12",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 10
+    },
+    {
+      "id": 134,
+      "tail": "N303JD",
+      "type": {
+        "id": 19,
+        "label": "Pilatus PC-12",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 10
+    },
+    {
+      "id": 135,
+      "tail": "N650MC",
+      "type": {
+        "id": 19,
+        "label": "Pilatus PC-12",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 10
+    },
+    {
+      "id": 136,
+      "tail": "N69P",
+      "type": {
+        "id": 19,
+        "label": "Pilatus PC-12",
+        "weightCapacity": 0,
+        "seatCount": 8,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 10
+    },
+    {
+      "id": 137,
+      "tail": "N711SE",
+      "type": {
+        "id": 15,
+        "label": "Learjet 60",
+        "weightCapacity": 1500,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 6
+    },
+    {
+      "id": 138,
+      "tail": "N414WJ",
+      "type": {
+        "id": 20,
+        "label": "Cessna 414",
+        "weightCapacity": 0,
+        "seatCount": 5,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 10
+    },
+    {
+      "id": 139,
+      "tail": "N414WJ",
+      "type": {
+        "id": 20,
+        "label": "Cessna 414",
+        "weightCapacity": 0,
+        "seatCount": 5,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 10
+    },
+    {
+      "id": 140,
+      "tail": "N765JS",
+      "type": {
+        "id": 22,
+        "label": "Citation Jet 3 - CJ3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 141,
+      "tail": "N757PC",
+      "type": {
+        "id": 22,
+        "label": "Citation Jet 3 - CJ3",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 142,
+      "tail": "N768BL",
+      "type": {
+        "id": 13,
+        "label": "Challenger 350",
+        "weightCapacity": 0,
+        "seatCount": 10,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 143,
+      "tail": "N703JA",
+      "type": {
+        "id": 13,
+        "label": "Challenger 350",
+        "weightCapacity": 0,
+        "seatCount": 10,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 144,
+      "tail": "N390JS",
+      "type": {
+        "id": 13,
+        "label": "Challenger 350",
+        "weightCapacity": 0,
+        "seatCount": 10,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 145,
+      "tail": "N391JS",
+      "type": {
+        "id": 13,
+        "label": "Challenger 350",
+        "weightCapacity": 0,
+        "seatCount": 10,
+        "notes": null,
+        "tierClassification": null
+      },
+      "airlineCarrier": 4
+    },
+    {
+      "id": 146,
+      "tail": "N714JS",
+      "type": {
+        "id": 21,
+        "label": "Citation Jet 3 - CJ3+",
+        "weightCapacity": 0,
+        "seatCount": 6,
+        "notes": null,
+        "tierClassification": "base"
+      },
+      "airlineCarrier": 4
+    }
+  ]
+}
