@@ -1,0 +1,273 @@
+[
+  {
+    "status": "ERROR",
+    "success": false,
+    "data": "Expecting value: line 1 column 1 (char 0)",
+    "description": "Change winner to Ashley"
+  },
+  {
+    "status": "ERROR",
+    "success": false,
+    "data": "Expecting value: line 1 column 1 (char 0)",
+    "description": "Clear winner field"
+  },
+  {
+    "status": "ERROR",
+    "success": false,
+    "data": "Expecting value: line 1 column 1 (char 0)",
+    "description": "Set multiple winners"
+  },
+  {
+    "status": "ERROR",
+    "success": false,
+    "data": "Expecting value: line 1 column 1 (char 0)",
+    "description": "Add Ashley as passenger"
+  },
+  {
+    "status": "ERROR",
+    "success": false,
+    "data": "Expecting value: line 1 column 1 (char 0)",
+    "description": "Modify passengers array"
+  },
+  {
+    "status": 400,
+    "success": false,
+    "data": {
+      "message": "Your subscription has expired. To continue enjoying our services, please enable auto-renewal in your settings. If you have any questions or need assistance, we're here to help.",
+      "type": "license-expired"
+    },
+    "description": "Join closed flight (Ashley)"
+  },
+  {
+    "status": "ERROR",
+    "success": false,
+    "data": "Expecting value: line 1 column 1 (char 0)",
+    "description": "Modify entrants array"
+  },
+  {
+    "status": "ERROR",
+    "success": false,
+    "data": "Expecting value: line 1 column 1 (char 0)",
+    "description": "Confirm flight win"
+  },
+  {
+    "status": "ERROR",
+    "success": false,
+    "data": "Expecting value: line 1 column 1 (char 0)",
+    "description": "Unconfirm flight"
+  },
+  {
+    "status": "ERROR",
+    "success": false,
+    "data": "Expecting value: line 1 column 1 (char 0)",
+    "description": "Set isConfirmedByWinner=true"
+  },
+  {
+    "status": "ERROR",
+    "success": false,
+    "data": "Expecting value: line 1 column 1 (char 0)",
+    "description": "Change status to PENDING"
+  },
+  {
+    "status": 200,
+    "success": true,
+    "data": {
+      "sweepstakesEntries": [],
+      "createdAt": 1710825847458,
+      "updatedAt": 1762725811707,
+      "id": 20254,
+      "phoneNumber": "+13035234453",
+      "email": "sameer.s.chopra@gmail.com",
+      "confirmedEmail": "sameer.s.chopra@gmail.com",
+      "priorityScore": 1963113847,
+      "firstName": "Sameer",
+      "middleName": "",
+      "lastName": "Chopra",
+      "dateOfBirth": "1991-08-14",
+      "weight": 140,
+      "gender": "Male",
+      "isCarbonOffsetEnrolled": true,
+      "successfulReferralCount": 0,
+      "lastFlightPurchase": null,
+      "eulaVersion": null,
+      "isEulaAccepted": false,
+      "hasStripePaymentDetails": false,
+      "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+      "stripeSubscriptionId": null,
+      "stripeSubscriptionPaymentIntentId": null,
+      "stripeFlightPurchasePaymentIntentId": null,
+      "subscriptionStartDate": 1760700980000,
+      "subscriptionRenewalDate": 1830297600000,
+      "lastActivityAt": 1762307406434,
+      "referralKey": "nBBMuS",
+      "smsOptIn": true,
+      "emailOptIn": true,
+      "trackingOptIn": false,
+      "isFlightNotificationEnabled": true,
+      "isAllFlightsNotificationEnabled": true,
+      "androidAppVersion": "1.1.40",
+      "androidBuildNumber": 183,
+      "iosAppVersion": "1.1.40",
+      "iosBuildNumber": 219,
+      "abandonedRegReminderSent": false,
+      "license": {
+        "createdAt": 1760700980000,
+        "updatedAt": 1760746044256,
+        "id": 3050,
+        "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+        "expiresAt": 1830297600000,
+        "isAssigned": true,
+        "stripeSubscriptionId": null,
+        "preferredStripeCreationDate": 1798761600000,
+        "membershipTier": {
+          "id": 2,
+          "name": "cabin+",
+          "priorityLevel": 2
+        },
+        "account": null,
+        "user": 20254,
+        "licenseRefund": null
+      },
+      "account": null,
+      "subscriptionStatus": 3,
+      "waitlistUpgrades": [
+        {
+          "createdAt": 1761856740189,
+          "updatedAt": 1761864095757,
+          "id": 7756,
+          "costToUse": 0,
+          "customAmount": null,
+          "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+          "usedOn": 1761864095757,
+          "priorityUpgradeTier": {
+            "id": 4,
+            "name": "cabin+_free",
+            "priorityLevel": 2,
+            "stripePriceId": null
+          },
+          "user": 20254,
+          "expiresOn": -1
+        }
+      ],
+      "termsStatus": {
+        "TermsAndConditions": {
+          "requiresAcceptance": false,
+          "currentVersion": "1.1",
+          "lastAcceptedVersion": "1.1",
+          "lastAcceptedDate": 1756848451030
+        },
+        "PrivacyPolicy": {
+          "requiresAcceptance": false,
+          "currentVersion": "1.1",
+          "lastAcceptedVersion": "1.1",
+          "lastAcceptedDate": 1756848451047
+        }
+      }
+    },
+    "description": "Revert priority score"
+  },
+  {
+    "status": 200,
+    "success": true,
+    "data": {
+      "sweepstakesEntries": [],
+      "createdAt": 1710825847458,
+      "updatedAt": 1762725812009,
+      "id": 20254,
+      "phoneNumber": "+13035234453",
+      "email": "sameer.s.chopra@gmail.com",
+      "confirmedEmail": "sameer.s.chopra@gmail.com",
+      "priorityScore": 1963113847,
+      "firstName": "Sameer",
+      "middleName": "",
+      "lastName": "Chopra",
+      "dateOfBirth": "1991-08-14",
+      "weight": 140,
+      "gender": "Male",
+      "isCarbonOffsetEnrolled": true,
+      "successfulReferralCount": 0,
+      "lastFlightPurchase": null,
+      "eulaVersion": null,
+      "isEulaAccepted": false,
+      "hasStripePaymentDetails": false,
+      "stripeCustomerId": "cus_PlS5D89fzdDYgF",
+      "stripeSubscriptionId": null,
+      "stripeSubscriptionPaymentIntentId": null,
+      "stripeFlightPurchasePaymentIntentId": null,
+      "subscriptionStartDate": 1760700980000,
+      "subscriptionRenewalDate": 1830297600000,
+      "lastActivityAt": 1762307406434,
+      "referralKey": "nBBMuS",
+      "smsOptIn": true,
+      "emailOptIn": true,
+      "trackingOptIn": false,
+      "isFlightNotificationEnabled": true,
+      "isAllFlightsNotificationEnabled": true,
+      "androidAppVersion": "1.1.40",
+      "androidBuildNumber": 183,
+      "iosAppVersion": "1.1.40",
+      "iosBuildNumber": 219,
+      "abandonedRegReminderSent": false,
+      "license": {
+        "createdAt": 1760700980000,
+        "updatedAt": 1760746044256,
+        "id": 3050,
+        "uuid": "b7d49fc6-cd3e-4560-b100-08edf4d3b922",
+        "expiresAt": 1830297600000,
+        "isAssigned": true,
+        "stripeSubscriptionId": null,
+        "preferredStripeCreationDate": 1798761600000,
+        "membershipTier": {
+          "id": 2,
+          "name": "cabin+",
+          "priorityLevel": 2
+        },
+        "account": null,
+        "user": 20254,
+        "licenseRefund": null
+      },
+      "account": null,
+      "subscriptionStatus": 3,
+      "waitlistUpgrades": [
+        {
+          "createdAt": 1761856740189,
+          "updatedAt": 1761864095757,
+          "id": 7756,
+          "costToUse": 0,
+          "customAmount": null,
+          "stripePaymentIntentId": "in_1SO2csBkrWmvysmuy0WfLjp3",
+          "usedOn": 1761864095757,
+          "priorityUpgradeTier": {
+            "id": 4,
+            "name": "cabin+_free",
+            "priorityLevel": 2,
+            "stripePriceId": null
+          },
+          "user": 20254,
+          "expiresOn": -1
+        }
+      ],
+      "termsStatus": {
+        "TermsAndConditions": {
+          "requiresAcceptance": false,
+          "currentVersion": "1.1",
+          "lastAcceptedVersion": "1.1",
+          "lastAcceptedDate": 1756848451030
+        },
+        "PrivacyPolicy": {
+          "requiresAcceptance": false,
+          "currentVersion": "1.1",
+          "lastAcceptedVersion": "1.1",
+          "lastAcceptedDate": 1756848451047
+        }
+      }
+    },
+    "description": "Boost priority score"
+  },
+  {
+    "status": "ERROR",
+    "success": false,
+    "data": "Expecting value: line 1 column 1 (char 0)",
+    "description": "Get flight details"
+  }
+]
